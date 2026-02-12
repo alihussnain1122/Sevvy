@@ -74,7 +74,7 @@ const Hero = () => {
             {/* Diamond Line (Mid Right) */}
             <path d="M820 280 H1040" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
             {/* Slack Line (Bottom Right) */}
-            <path d="M840 480 V350 H740" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
+            <path d="M960 480 V350 H740" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
             
              {/* Database Line (Top Center) */}
              <line x1="600" y1="220" x2="600" y2="180" stroke="#d1d5db" strokeWidth="1.5" />
@@ -146,7 +146,7 @@ const Hero = () => {
         </div>
 
         {/* Slack (Bottom Right) */}
-        <div className="absolute bottom-[15%] right-[15%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
+        <div className="absolute bottom-[20%] right-[19%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
              {/* UPDATE IMAGE: Slack */}
              <img src="/Home/hero/slack.png" alt="Slack" className="w-8 h-8 object-contain" />
         </div>
