@@ -41,7 +41,7 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="px-8 py-3.5 bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 mb-16">
+        <button className="px-8 py-3.5 bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
             Start 14 Days Free Trial
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
         </button>
@@ -197,6 +197,10 @@ const Hero = () => {
         </div>
 
       </div>
+
+      {/* Bottom Gradient Bar */}
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-orange-100 via-orange-300 to-orange-100 opacity-50"></div>
+
     </section>
   );
 };
