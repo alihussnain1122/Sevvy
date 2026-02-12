@@ -49,3 +49,38 @@
 .animate-icon-glow-centered {
   animation: icon-glow-centered 4s linear infinite;
 }
+
+/* Arrow dash animations */
+@keyframes dash-flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -16;
+  }
+}
+
+.animate-dash-tail {
+  animation: dash-flow 1.5s linear infinite;
+}
+
+.animate-dash-1 line,
+.animate-dash-1 path {
+  animation: dash-flow 1.5s linear infinite 0.1s;
+}
+
+.animate-dash-2 line {
+  animation: dash-flow 1.5s linear infinite 0.2s;
+}
+
+.animate-dash-3 line,
+.animate-dash-3 path {
+  animation: dash-flow 1.5s linear infinite 0.3s;
+}
+
+/* Futuristic font for headings */
+.futuristic-text {
+  font-family: 'Zen Dots', sans-serif;
+  text-transform: uppercase; /* Optional: Zen Dots looks great in caps */
+  color: #FF7A00; /* Matching that orange color from your image */
+}
