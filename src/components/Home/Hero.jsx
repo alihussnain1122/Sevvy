@@ -53,52 +53,73 @@ const Hero = () => {
         
         {/* SVG Connections Background */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Concentric Circles */}
+            {/* Concentric Circles - Base */}
             <circle cx="600" cy="300" r="80" stroke="#e5e7eb" strokeWidth="1.5" />
             <circle cx="600" cy="300" r="140" stroke="#e5e7eb" strokeWidth="1.5" />
             <circle cx="600" cy="300" r="200" stroke="#e5e7eb" strokeWidth="1.5" />
             <circle cx="600" cy="300" r="260" stroke="#e5e7eb" strokeWidth="1.5" />
+            
+            {/* Animated Circles - Beam */}
+            <circle cx="600" cy="300" r="80" stroke="#f97316" strokeWidth="2" className="animate-beam" style={{animationDelay: '0s'}} />
+            <circle cx="600" cy="300" r="140" stroke="#f97316" strokeWidth="2" className="animate-beam" style={{animationDelay: '0.3s'}} />
+            <circle cx="600" cy="300" r="200" stroke="#f97316" strokeWidth="2" className="animate-beam" style={{animationDelay: '0.6s'}} />
+            <circle cx="600" cy="300" r="260" stroke="#f97316" strokeWidth="2" className="animate-beam" style={{animationDelay: '0.9s'}} />
 
-            {/* Connection Lines (Paths) */}
+            {/* Connection Lines (Paths) - Base */}
             {/* Drive Line (Top Left) */}
             <path d="M220 120 V300 H340" stroke="#d1d5db" strokeWidth="1.5" fill="none" rx="20" /> 
+            <path d="M220 120 V300 H340" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.2s'}} />
+            
             {/* Stack Line (Mid Left) */}
             <path d="M160 250 H340" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
+            <path d="M160 250 H340" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.4s'}} />
+            
             {/* Asana Line (Inner Left) */}
             <path d="M280 280 H400" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
+            <path d="M280 280 H400" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.0s'}} />
+            
             {/* Trello Line (Bottom Left) */}
             <path d="M180 480 V350 H340" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
+            <path d="M180 480 V350 H340" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.6s'}} />
 
             {/* Audio Line (Top Right) */}
             <path d="M980 120 V300 H860" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
+            <path d="M980 120 V300 H860" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.3s'}} />
+            
             {/* Diamond Line (Mid Right) */}
             <path d="M820 280 H1040" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
+            <path d="M820 280 H1040" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.5s'}} />
+            
             {/* Slack Line (Bottom Right) */}
             <path d="M960 480 V350 H740" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
+            <path d="M960 480 V350 H740" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.7s'}} />
             
              {/* Database Line (Top Center) */}
              <line x1="600" y1="220" x2="600" y2="180" stroke="#d1d5db" strokeWidth="1.5" />
+             <line x1="600" y1="220" x2="600" y2="180" stroke="#f97316" strokeWidth="2.5" className="animate-beam" style={{animationDelay: '0.5s'}} />
+             
              {/* Robot Line (Bottom Center) */}
              <line x1="600" y1="380" x2="600" y2="440" stroke="#d1d5db" strokeWidth="1.5" />
+             <line x1="600" y1="380" x2="600" y2="440" stroke="#f97316" strokeWidth="2.5" className="animate-beam" style={{animationDelay: '0.7s'}} />
 
         </svg>
 
         {/* --- Center Elements --- */}
         
         {/* Center Character (Bot) */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full shadow-xl flex items-center justify-center border border-gray-100 z-20">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full shadow-xl flex items-center justify-center border border-gray-100 z-20 animate-icon-glow-centered" style={{animationDelay: '0.2s'}}>
              {/* UPDATE IMAGE: Center Bot */}
              <img src="/Home/hero/vframe.png" alt="Sevy Bot" className="w-16 h-16 object-contain" />
         </div>
 
         {/* Database Icon (Above) */}
-        <div className="absolute top-[28%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center">
+        <div className="absolute top-[28%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.5s'}}>
              {/* UPDATE IMAGE: Database */}
              <img src="/Home/hero/db.png" alt="Database" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Robot Head Icon (Below) */}
-        <div className="absolute bottom-[22%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center">
+        <div className="absolute bottom-[22%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.7s'}}>
              {/* UPDATE IMAGE: Robot Head */}
              <img src="/Home/hero/bot.png" alt="Robot" className="w-8 h-8 object-contain" />
         </div>
@@ -107,25 +128,25 @@ const Hero = () => {
         {/* --- Floating Icons (Left) --- */}
 
         {/* Google Drive (Top Left) */}
-        <div className="absolute top-[12%] left-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
+        <div className="absolute top-[12%] left-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.2s'}}>
             {/* UPDATE IMAGE: Google Drive */}
             <img src="/Home/hero/drive.png" alt="Drive" className="w-10 h-10 object-contain" />
         </div>
 
         {/* Stack/Monday (Mid Left) */}
-        <div className="absolute top-[38%] left-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
+        <div className="absolute top-[38%] left-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.4s'}}>
              {/* UPDATE IMAGE: Stack */}
              <img src="/Home/hero/clickup.png" alt="Stack" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Asana/Dots (Inner Left) */}
-        <div className="absolute top-[42%] left-[22%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
+        <div className="absolute top-[42%] left-[22%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.0s'}}>
              {/* UPDATE IMAGE: Asana */}
              <img src="/Home/hero/dots.png" alt="Asana" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Trello (Bottom Left) */}
-        <div className="absolute bottom-[15%] left-[13%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
+        <div className="absolute bottom-[15%] left-[13%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.6s'}}>
              {/* UPDATE IMAGE: Trello */}
              <img src="/Home/hero/trello.png" alt="Trello" className="w-8 h-8 object-contain" />
         </div>
@@ -134,19 +155,19 @@ const Hero = () => {
         {/* --- Floating Icons (Right) --- */}
 
         {/* Audio (Top Right) */}
-        <div className="absolute top-[12%] right-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
+        <div className="absolute top-[12%] right-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.3s'}}>
              {/* UPDATE IMAGE: Audio */}
              <img src="/Home/hero/audio.png" alt="Audio" className="w-10 h-10 object-contain" />
         </div>
 
         {/* Diamond (Mid Right) */}
-        <div className="absolute top-[42%] right-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
+        <div className="absolute top-[42%] right-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.5s'}}>
              {/* UPDATE IMAGE: Diamond/Linear */}
              <img src="/Home/hero/clickup.png" alt="Diamond" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Slack (Bottom Right) */}
-        <div className="absolute bottom-[20%] right-[19%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-110 transition-transform cursor-pointer z-10">
+        <div className="absolute bottom-[20%] right-[19%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.7s'}}>
              {/* UPDATE IMAGE: Slack */}
              <img src="/Home/hero/slack.png" alt="Slack" className="w-8 h-8 object-contain" />
         </div>
@@ -176,10 +197,6 @@ const Hero = () => {
         </div>
 
       </div>
-
-      {/* Bottom Gradient Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-orange-100 via-orange-300 to-orange-100 opacity-50"></div>
-
     </section>
   );
 };

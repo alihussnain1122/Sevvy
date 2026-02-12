@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+/* Beam animation - travels along SVG paths */
+@keyframes beam-flow {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Icon glow effect when beam reaches */
+@keyframes icon-glow {
+  0%, 30%, 100% {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-color: #e5e7eb;
+    transform: scale(1);
+  }
+  65% {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.6), 0 0 60px rgba(249, 115, 22, 0.3);
+    border-color: #f97316;
+    transform: scale(1.1);
+  }
+}
+
+/* For centered elements with translate */
+@keyframes icon-glow-centered {
+  0%, 30%, 100% {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-color: #e5e7eb;
+  }
+  65% {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.6), 0 0 60px rgba(249, 115, 22, 0.3);
+    border-color: #f97316;
+  }
+}
+
+.animate-beam {
+  stroke-dasharray: 60 740;
+  animation: beam-flow 4s linear infinite;
+  opacity: 0;
+}
+
+.animate-icon-glow {
+  animation: icon-glow 4s linear infinite;
+}
+
+.animate-icon-glow-centered {
+  animation: icon-glow-centered 4s linear infinite;
+}
