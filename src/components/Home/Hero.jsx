@@ -3,24 +3,12 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="relative w-full bg-[#f8f9fa] pt-20 pb-20 overflow-hidden">
-      
-      {/* 
-         IMAGE PATH CONFIGURATION GUIDE:
-         ------------------------------
-         For each icon below, replace the `src` attribute with the correct path to your image file.
-         
-         Example: 
-         src="/images/google-drive.png"  (if in public/images)
-         OR
-         import googleDrive from '../assets/google-drive.png';
-         src={googleDrive}
-      */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center z-10 relative">
         
         {/* Top Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-gray-200 rounded-full shadow-sm mb-8">
-            <span className="flex items-center justify-center w-5 h-5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full text-[10px] text-white">✨</span>
+            <span className="flex items-center justify-center w-5 h-5  text-white">✨</span>
             <span className="text-sm font-medium text-gray-700">A Unified Creative Management Engine</span>
         </div>
 
@@ -108,19 +96,19 @@ const Hero = () => {
         
         {/* Center Character (Bot) */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full shadow-xl flex items-center justify-center border border-gray-100 z-20 animate-icon-glow-centered" style={{animationDelay: '0.2s'}}>
-             {/* UPDATE IMAGE: Center Bot */}
+             {/* Center Bot */}
              <img src="/Home/hero/vframe.png" alt="Sevy Bot" className="w-16 h-16 object-contain" />
         </div>
 
         {/* Database Icon (Above) */}
         <div className="absolute top-[28%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.5s'}}>
-             {/* UPDATE IMAGE: Database */}
+             {/* Database */}
              <img src="/Home/hero/db.png" alt="Database" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Robot Head Icon (Below) */}
         <div className="absolute bottom-[22%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.7s'}}>
-             {/* UPDATE IMAGE: Robot Head */}
+             {/* Robot Head */}
              <img src="/Home/hero/bot.png" alt="Robot" className="w-8 h-8 object-contain" />
         </div>
 
@@ -129,25 +117,25 @@ const Hero = () => {
 
         {/* Google Drive (Top Left) */}
         <div className="absolute top-[12%] left-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.2s'}}>
-            {/* UPDATE IMAGE: Google Drive */}
+            {/* Google Drive */}
             <img src="/Home/hero/drive.png" alt="Drive" className="w-10 h-10 object-contain" />
         </div>
 
         {/* Stack/Monday (Mid Left) */}
         <div className="absolute top-[38%] left-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.4s'}}>
-             {/* UPDATE IMAGE: Stack */}
-             <img src="/Home/hero/clickup.png" alt="Stack" className="w-8 h-8 object-contain" />
+             {/* Clickup */}
+             <img src="/Home/hero/clickup.png" alt="Clickup" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Asana/Dots (Inner Left) */}
         <div className="absolute top-[42%] left-[22%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.0s'}}>
-             {/* UPDATE IMAGE: Asana */}
+             {/* Asana */}
              <img src="/Home/hero/dots.png" alt="Asana" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Trello (Bottom Left) */}
         <div className="absolute bottom-[15%] left-[13%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.6s'}}>
-             {/* UPDATE IMAGE: Trello */}
+             {/* Trello */}
              <img src="/Home/hero/trello.png" alt="Trello" className="w-8 h-8 object-contain" />
         </div>
 
@@ -156,19 +144,19 @@ const Hero = () => {
 
         {/* Audio (Top Right) */}
         <div className="absolute top-[12%] right-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.3s'}}>
-             {/* UPDATE IMAGE: Audio */}
+             {/* Audio */}
              <img src="/Home/hero/audio.png" alt="Audio" className="w-10 h-10 object-contain" />
         </div>
 
         {/* Diamond (Mid Right) */}
         <div className="absolute top-[42%] right-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.5s'}}>
-             {/* UPDATE IMAGE: Diamond/Linear */}
+             {/* Diamond */}
              <img src="/Home/hero/clickup.png" alt="Diamond" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Slack (Bottom Right) */}
         <div className="absolute bottom-[20%] right-[19%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.7s'}}>
-             {/* UPDATE IMAGE: Slack */}
+             {/*  Slack */}
              <img src="/Home/hero/slack.png" alt="Slack" className="w-8 h-8 object-contain" />
         </div>
 
@@ -197,10 +185,6 @@ const Hero = () => {
         </div>
 
       </div>
-
-      {/* Bottom Gradient Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-orange-100 via-orange-300 to-orange-100 opacity-50"></div>
-
     </section>
   );
 };
