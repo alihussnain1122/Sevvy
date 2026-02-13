@@ -23,14 +23,23 @@ const Operation = () => {
   ];
 
   return (
-    <section className="bg-[#FAF9F7] py-12 md:py-20 px-4 md:px-5 flex justify-center items-center">
+    <section className="bg-[#FAF9F7] py-12 md:py-20 px-4 md:px-5 flex justify-center items-center relative">
+      {/* Top background with gradient */}
+      <div 
+        className="absolute top-0 left-0 right-0 h-48"
+        style={{
+          background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+        }}
+      />
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
+          <h2 className="text-3xl md:text-[42px] font-semibold text-black mb-3 leading-tight">
             Creative Operations, <span className="text-[#FF8C42] font-Instrument italic">Explained</span>
           </h2>
-          <p className="text-base md:text-lg text-[#6B6B6B]">
+          <p className="text-base md:text-lg text-[#6B6B6B] font-bold">
             Articles on building structure without killing creativity.
           </p>
         </div>
