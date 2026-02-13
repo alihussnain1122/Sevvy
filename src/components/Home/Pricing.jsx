@@ -162,8 +162,9 @@ const Pricing = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <button className="bg-white text-black text-base font-semibold py-3.5 px-8 rounded-full flex items-center gap-2.5 transition-all duration-300 shadow-lg shadow-[#FF8C42]/30 hover:bg-[#FF8C42] hover:text-white hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#FF8C42]/40">
-            Pricing Detail <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+          <button className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg font-bold py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105">
+            Pricing Detail
+            <span className="text-xl font-bold">→</span>
           </button>
         </div>
       </div>
