@@ -21,7 +21,7 @@ const Who = () => {
           {/* Left Character */}
           <div className="lg:w-1/3 flex justify-center w-full px-4">
             <img 
-              src="/Home/who/cartoon.png" 
+              src="/Home/who/cartoon.webp" 
               alt="Sevvy mascot character" 
               className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto bg-transparent"
             />
@@ -108,7 +108,7 @@ const Who = () => {
               
               {/* Workflow Image */}
               <img 
-                src="/Home/who/agency.png" 
+                src="/Home/who/agency.webp" 
                 alt="Creative & Video Agencies workflow" 
                 className="w-full h-auto"
               />

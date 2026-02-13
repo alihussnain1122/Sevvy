@@ -4,19 +4,19 @@ const Operation = () => {
   const articles = [
     {
       id: 1,
-      image: '/Home/operation/Frame-1.png',
+      image: '/Home/operation/Frame-1.webp',
       title: 'The Cost of Creative Outload',
       size: 'large'
     },
     {
       id: 2,
-      image: '/Home/operation/Frame-2.png',
+      image: '/Home/operation/Frame-2.webp',
       title: 'Building Systems That Scale',
       size: 'small'
     },
     {
       id: 3,
-      image: '/Home/operation/Frame-3.png',
+      image: '/Home/operation/Frame-3.webp',
       title: 'Structure Without Boundaries',
       size: 'small'
     }

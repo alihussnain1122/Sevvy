@@ -4,32 +4,32 @@ import './Choose.css';
 const Choose = () => {
   const features = [
     {
-      icon: '/Home/choose/creativity.png',
+      icon: '/Home/choose/creativity.webp',
       title: 'Built for Creative Reality',
       description: 'Made for how creative teams actually work.'
     },
     {
-      icon: '/Home/choose/design.png',
+      icon: '/Home/choose/design.webp',
       title: 'Client-Ready by Design',
       description: 'Professional, shareable workspaces clients understand.'
     },
     {
-      icon: '/Home/choose/energy.png',
+      icon: '/Home/choose/energy.webp',
       title: 'One System, Zero Tool-Hopping',
       description: 'All creative work runs inside one connected system'
     },
     {
-      icon: '/Home/choose/flow.png',
+      icon: '/Home/choose/flow.webp',
       title: 'Flow Over Features',
       description: 'A system that moves work forward, not menus.'
     },
     {
-      icon: '/Home/choose/team.png',
+      icon: '/Home/choose/team.webp',
       title: 'Scales with Your Team',
       description: 'Grows with volume, not complexity'
     },
     {
-      icon: '/Home/choose/afford.png',
+      icon: '/Home/choose/afford.webp',
       title: 'Affordable by Default',
       description: 'Powerful without the heavy cost.'
     }

@@ -217,19 +217,19 @@ const Hero = () => {
         {/* Center Character (Bot) */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full shadow-xl flex items-center justify-center border border-gray-100 z-20 animate-icon-glow-centered" style={{animationDelay: '0.2s'}}>
              {/* Center Bot */}
-             <img src="/Home/hero/vframe.png" alt="Sevy Bot" className="w-16 h-16 object-contain" />
+             <img src="/Home/hero/vframe.webp" alt="Sevy Bot" className="w-16 h-16 object-contain" />
         </div>
 
         {/* Database Icon (Above) */}
         <div className="absolute top-[28%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.5s'}}>
              {/* Database */}
-             <img src="/Home/hero/db.png" alt="Database" className="w-8 h-8 object-contain" />
+             <img src="/Home/hero/db.webp" alt="Database" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Robot Head Icon (Below) */}
         <div className="absolute bottom-[22%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.7s'}}>
              {/* Robot Head */}
-             <img src="/Home/hero/bot.png" alt="Robot" className="w-8 h-8 object-contain" />
+             <img src="/Home/hero/bot.webp" alt="Robot" className="w-8 h-8 object-contain" />
         </div>
 
 
@@ -238,25 +238,25 @@ const Hero = () => {
         {/* Google Drive (Top Left) */}
         <div className="absolute top-[12%] left-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.2s'}}>
             {/* Google Drive */}
-            <img src="/Home/hero/drive.png" alt="Drive" className="w-10 h-10 object-contain" />
+            <img src="/Home/hero/drive.webp" alt="Drive" className="w-10 h-10 object-contain" />
         </div>
 
         {/* Stack/Monday (Mid Left) */}
         <div className="absolute top-[38%] left-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.4s'}}>
              {/* Clickup */}
-             <img src="/Home/hero/clickup.png" alt="Clickup" className="w-8 h-8 object-contain" />
+             <img src="/Home/hero/clickup.webp" alt="Clickup" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Asana/Dots (Inner Left) */}
         <div className="absolute top-[42%] left-[22%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.0s'}}>
              {/* Asana */}
-             <img src="/Home/hero/dots.png" alt="Asana" className="w-8 h-8 object-contain" />
+             <img src="/Home/hero/dots.webp" alt="Asana" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Trello (Bottom Left) */}
         <div className="absolute bottom-[15%] left-[13%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.6s'}}>
              {/* Trello */}
-             <img src="/Home/hero/trello.png" alt="Trello" className="w-8 h-8 object-contain" />
+             <img src="/Home/hero/trello.webp" alt="Trello" className="w-8 h-8 object-contain" />
         </div>
 
 
@@ -265,19 +265,19 @@ const Hero = () => {
         {/* Audio (Top Right) */}
         <div className="absolute top-[12%] right-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.3s'}}>
              {/* Audio */}
-             <img src="/Home/hero/audio.png" alt="Audio" className="w-10 h-10 object-contain" />
+             <img src="/Home/hero/audio.webp" alt="Audio" className="w-10 h-10 object-contain" />
         </div>
 
         {/* Diamond (Mid Right) */}
         <div className="absolute top-[42%] right-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.5s'}}>
              {/* Diamond */}
-             <img src="/Home/hero/clickup.png" alt="Diamond" className="w-8 h-8 object-contain" />
+             <img src="/Home/hero/clickup.webp" alt="Diamond" className="w-8 h-8 object-contain" />
         </div>
 
         {/* Slack (Bottom Right) */}
         <div className="absolute bottom-[20%] right-[19%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.7s'}}>
              {/*  Slack */}
-             <img src="/Home/hero/slack.png" alt="Slack" className="w-8 h-8 object-contain" />
+             <img src="/Home/hero/slack.webp" alt="Slack" className="w-8 h-8 object-contain" />
         </div>
 
 

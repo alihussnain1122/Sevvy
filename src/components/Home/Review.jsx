@@ -25,6 +25,18 @@ const testimonials = [
     role: 'CEO Universal',
     avatar: 'https://randomuser.me/api/portraits/men/4.jpg',
   },
+  {
+    quote: 'On the other righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure.',
+    name: 'Serhiy Hipskyy',
+    role: 'CEO Universal',
+    avatar: 'https://randomuser.me/api/portraits/men/4.jpg',
+  },
+  {
+    quote: 'On the other righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure.',
+    name: 'Serhiy Hipskyy',
+    role: 'CEO Universal',
+    avatar: 'https://randomuser.me/api/portraits/men/4.jpg',
+  }
 ];
 
 const StarIcon = (props) => (
@@ -44,7 +56,7 @@ const StarIcon = (props) => (
 
 const Review = () => {
   return (
-    <section className="py-12 md:py-24 bg-gray-100">
+    <section className="py-12 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
@@ -55,38 +67,50 @@ const Review = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 relative mt-8"
-            >
-              <div className="absolute -top-6 left-6 w-12 h-12 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white text-3xl font-serif">“</span>
-              </div>
-              <div className="flex text-orange-500 mt-8 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="h-5 w-5" />
-                ))}
-              </div>
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                {testimonial.quote}
-              </p>
-              <div className="border-t border-gray-200 pt-4">
-                <div className="flex items-center gap-4">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-semibold text-gray-800">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+        {/* Smooth Scrolling Testimonials */}
+        <div className="relative w-full overflow-x-hidden">
+          <div className="flex gap-8 animate-review-scroll will-change-transform min-w-[1800px]">
+            {testimonials.concat(testimonials).map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 relative mt-8 min-w-[320px] max-w-[340px] flex-shrink-0"
+              >
+                <div className="absolute -top-6 left-6 w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                  <span className="text-white text-3xl font-serif">“</span>
+                </div>
+                <div className="flex text-orange-500 mt-8 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} className="h-5 w-5" />
+                  ))}
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                  {testimonial.quote}
+                </p>
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="font-semibold text-gray-800">{testimonial.name}</p>
+                      <p className="text-sm text-gray-500">{testimonial.role}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <style>{`
+            @keyframes review-scroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-review-scroll {
+              animation: review-scroll 32s linear infinite;
+            }
+          `}</style>
         </div>
 
         <div className="text-center mt-12 md:mt-16">

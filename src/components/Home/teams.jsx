@@ -51,7 +51,7 @@ const Teams = () => {
           {/* Right Image */}
           <div className="lg:w-1/2">
             <img 
-              src="/Home/teams/tools.png" 
+              src="/Home/teams/tools.webp" 
               alt="Fragmented tools across creative stack" 
               className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow"
             />
@@ -84,7 +84,7 @@ const Teams = () => {
           {/* Left Image */}
           <div className="lg:w-1/2">
             <img 
-              src="/Home/teams/system.png" 
+              src="/Home/teams/system.webp" 
               alt="No system for publishing" 
               className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow"
             />
@@ -117,7 +117,7 @@ const Teams = () => {
           {/* Right Image */}
           <div className="lg:w-1/2">
             <img 
-              src="/Home/teams/cost.png" 
+              src="/Home/teams/cost.webp" 
               alt="Unstructured feedback loops" 
               className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow"
             />
@@ -150,7 +150,7 @@ const Teams = () => {
           {/* Left Image */}
           <div className="lg:w-1/2">
             <img 
-              src="/Home/teams/cost.png" 
+              src="/Home/teams/cost.webp" 
               alt="Rising costs from tool stacking" 
               className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow"
             />

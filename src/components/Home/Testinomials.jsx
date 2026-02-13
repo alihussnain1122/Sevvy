@@ -93,54 +93,30 @@ const Testimonials = () => {
           Trusted by <span className="text-orange-500 italic font-serif">leading</span> brands 
         </h2>
 
-        {/* Brand Logos - Placeholders */}
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 lg:gap-14 mb-20">
-          
-          {/* GUMROAD */}
-          <div className="text-lg font-bold tracking-widest text-gray-900 uppercase">
-            GUMROAD
+        {/* Brand Logos - Animated Scroll */}
+        <div className="relative w-full overflow-x-hidden mb-20">
+          <div className="flex items-center gap-10 animate-logo-scroll will-change-transform" style={{ minWidth: '900px' }}>
+            <img src="/Home/testimonial/gumroad.webp" alt="Gumroad" className="w-36 h-16 object-contain" />
+            <img src="/Home/testimonial/coinbase.webp" alt="Coinbase" className="w-36 h-16 object-contain" />
+            <img src="/Home/testimonial/raycast.webp" alt="Raycast" className="w-36 h-16 object-contain" />
+            <img src="/Home/testimonial/together.webp" alt="Together.ai" className="w-36 h-16 object-contain" />
+            <img src="/Home/testimonial/openai.webp" alt="OpenAI" className="w-36 h-16 object-contain rounded" />
+            {/* Repeat for infinite effect */}
+            <img src="/Home/testimonial/gumroad.webp" alt="Gumroad" className="w-36 h-16 object-contain opacity-50" />
+            <img src="/Home/testimonial/coinbase.webp" alt="Coinbase" className="w-36 h-16 object-contain opacity-50" />
+            <img src="/Home/testimonial/raycast.webp" alt="Raycast" className="w-36 h-16 object-contain opacity-50" />
+            <img src="/Home/testimonial/together.webp" alt="Together.ai" className="w-36 h-16 object-contain opacity-50" />
+            <img src="/Home/testimonial/openai.webp" alt="OpenAI" className="w-36 h-16 object-contain rounded opacity-50" />
           </div>
-
-          {/* coinbase */}
-          <div className="text-lg font-semibold text-orange-500">
-            coinbase
-          </div>
-
-          {/* Raycast */}
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 2L4 6v6l8 4 8-4V6l-8-4z"/>
-              <path d="M12 22v-8"/>
-              <path d="M20 6l-8 4-8-4"/>
-            </svg>
-            <span className="text-lg font-semibold text-gray-900">Raycast</span>
-          </div>
-
-          {/* Circular Logo */}
-          <div className="w-8 h-8 border-2 border-gray-900 rounded-full flex items-center justify-center">
-            <div className="w-4 h-4 border-2 border-gray-900 rounded-full"></div>
-          </div>
-
-          {/* Alibaba */}
-          <div className="flex items-center gap-1">
-            <span className="text-orange-500 font-bold">@</span>
-            <span className="text-lg font-bold text-gray-900">Alibaba</span>
-          </div>
-
-          {/* OpenAI */}
-          <div className="flex items-center gap-1">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-            <span className="text-lg font-semibold text-gray-900">OpenAI</span>
-          </div>
-
-          {/* together.ai */}
-          <div className="text-lg font-semibold text-gray-900">
-            together.ai
-          </div>
-
+          <style>{`
+            @keyframes logo-scroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-logo-scroll {
+              animation: logo-scroll 18s linear infinite;
+            }
+          `}</style>
         </div>
 
         {/* Tabs */}
