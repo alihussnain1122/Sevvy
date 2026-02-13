@@ -13,31 +13,31 @@ const Hero = () => {
         </div>
 
         {/* Headings */}
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight text-center mb-2">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight text-center mb-2">
           Streamline Your Content
         </h1>
-        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent tracking-tight text-center mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent tracking-tight text-center mb-6">
           Workflow With Sevy
         </h1>
 
         {/* Subtitle & Description */}
-        <p className="text-xl font-semibold text-gray-800 text-center mb-2">
+        <p className="text-lg md:text-xl font-semibold text-gray-800 text-center mb-2">
             Designed by Creators for Creators
         </p>
-        <p className="text-gray-500 text-center mb-8 max-w-xl">
+        <p className="text-sm md:text-base text-gray-500 text-center mb-8 max-w-xl px-4">
             Replace fragmented tools with a unified AI-powered platform
         </p>
 
         {/* CTA Button */}
-        <button className="px-8 py-3.5 bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+        <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 text-sm md:text-base">
             Start 14 Days Free Trial
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
         </button>
 
       </div>
 
-      {/* Diagram Section */}
-      <div className="relative w-full max-w-[1200px] mx-auto h-[600px]">
+      {/* Diagram Section - Desktop only */}
+      <div className="relative w-full max-w-[1200px] mx-auto md:h-[600px] h-[300px] hidden sm:block">
         
         {/* SVG Connections Background */}
         <svg

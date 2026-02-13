@@ -97,20 +97,20 @@ const FAQ = () => {
       />
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading Area */}
-        <div className="text-center mb-12 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
+        <div className="text-center mb-10 md:mb-12 relative z-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-2">
             Got <span className="italic text-orange-500">Questions</span> Before You Start?
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-orange-500 mb-4">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-500 mb-4">
             We Got You !
           </h3>
-          <p className="text-lg text-gray-500 mt-4">
+          <p className="text-base md:text-lg text-gray-500 mt-4 px-4">
             Here's everything You Need To Know About Sevy Workflow
           </p>
         </div>
 
         {/* Tabs Section */}
-        <div className="flex flex-wrap justify-center space-x-8 mb-12 relative z-10">
+        <div className="flex flex-wrap justify-center gap-3 md:space-x-8 md:gap-0 mb-12 relative z-10">
           {tabs.map((tab, idx) => (
             <div key={tab} className={`relative${idx === 0 ? '' : ' ml-0'}`}>
               <button
@@ -118,12 +118,12 @@ const FAQ = () => {
                   setActiveTab(tab);
                   setOpenIndex(0);
                 }}
-                className={`px-8 py-4 rounded-md font-medium text-lg transition-all duration-300 ${
+                className={`px-4 md:px-8 py-3 md:py-4 rounded-md font-medium text-sm md:text-lg transition-all duration-300 ${
                   activeTab === tab
                     ? 'bg-gradient-to-r from-orange-500 to-orange-400 text-white shadow-lg'
                     : 'bg-white text-gray-800 border border-gray-200 hover:border-orange-300 hover:shadow-md'
                 }`}
-                style={{ minWidth: 200 }}
+                style={{ minWidth: 'auto' }}
               >
                 {tab}
               </button>

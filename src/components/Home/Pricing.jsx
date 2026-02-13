@@ -78,20 +78,20 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-20 px-5 flex justify-center items-center">
+    <section className="py-12 md:py-20 px-4 md:px-5 flex justify-center items-center">
       <div className="max-w-7xl w-full">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-3xl md:text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
             Start Where Your <span className="text-[#FF8C42] italic">Workflow</span> is
           </h2>
-          <p className="text-lg text-[#6B6B6B]">
+          <p className="text-base md:text-lg text-[#6B6B6B]">
             Scale when the work scales, not before.
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-start">
           {pricingPlans.map((plan, index) => (
             <div 
               key={index} 
