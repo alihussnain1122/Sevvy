@@ -90,7 +90,7 @@ const Testimonials = () => {
         
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-gray-800">
-          Trusted by <span className="text-orange-500 italic font-serif">leading</span> brands 
+          Trusted by <span className="text-orange-500 italic font-Instrument">leading</span> brands 
         </h2>
 
         {/* Brand Logos - Animated Scroll */}

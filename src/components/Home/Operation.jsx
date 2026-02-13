@@ -28,7 +28,7 @@ const Operation = () => {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
-            Creative Operations, <span className="text-[#FF8C42] ">Explained</span>
+            Creative Operations, <span className="text-[#FF8C42] font-Instrument italic">Explained</span>
           </h2>
           <p className="text-base md:text-lg text-[#6B6B6B]">
             Articles on building structure without killing creativity.

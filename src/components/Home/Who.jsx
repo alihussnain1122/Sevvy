@@ -8,7 +8,7 @@ const Who = () => {
         {/* Header Section */}
         <div className="text-center mb-12 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-2">
-            Who Is <span className="text-orange-500 italic font-serif">Sevvy</span> for
+            Who Is <span className="text-orange-500 italic font-Instrument">Sevvy</span> for
           </h1>
           <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto px-4">
             Creative teams & individuals who are tired of juggling and paying multiple project management tools and never ending content chaos.

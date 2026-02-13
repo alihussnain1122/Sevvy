@@ -54,7 +54,7 @@ const Choose = () => {
       <div className="choose-container">
         <div className="choose-header">
           <h2 className="choose-title">
-            Why Agencies Choose <span className="highlight">Sevy</span> Workflow
+            Why Agencies Choose <span className="highlight font-Instrument">Sevy</span> Workflow
           </h2>
           <p className="choose-subtitle">
             Not another tool, a system built for<br />real creative operations.
