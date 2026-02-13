@@ -4,6 +4,8 @@ import Teams from '../components/Home/teams.jsx';
 import Who from '../components/Home/Who.jsx';
 import Choose from '../components/Home/Choose.jsx';
 import Pricing from '../components/Home/Pricing.jsx';
+import Operation from '../components/Home/Operation.jsx';
+
 
 export default function Home() {
     return (
@@ -14,6 +16,7 @@ export default function Home() {
             <Who />
             <Choose />
             <Pricing />
+            <Operation />
         </>
     );
 }

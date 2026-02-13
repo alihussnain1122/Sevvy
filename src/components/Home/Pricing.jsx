@@ -91,7 +91,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-start">
           {pricingPlans.map((plan, index) => (
             <div 
               key={index} 
@@ -108,13 +108,13 @@ const Pricing = () => {
                     <span className="text-base text-[#6B6B6B] ml-1 group-hover:text-white">{plan.period}</span>
                   </div>
                 )}
-                <p className="text-sm text-[#6B6B6B] leading-relaxed group-hover:text-white">
+                <p className="text-sm text-[#6B6B6B] font-bold leading-relaxed group-hover:text-white">
                   {plan.subtitle}
                 </p>
               </div>
 
               {/* Card Body */}
-              <div className="flex-1 mb-6">
+              <div className="mb-6">
                 {plan.description && (
                   <p className="text-[13px] text-[#6B6B6B] leading-relaxed mb-5 group-hover:text-white">
                     {plan.description}
@@ -127,6 +127,7 @@ const Pricing = () => {
                   </p>
                 )}
 
+                <hr className="border-t border-[#E8E8E8] mb-4 group-hover:border-white" />
                 <ul className="space-y-3">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-[13px]">
