@@ -124,7 +124,7 @@ const Hero = () => {
             x1="600"
             y1="220"
             x2="600"
-            y2="180"
+            y2="80"
             stroke="#f97316"
             strokeWidth="2"
             strokeLinecap="round"
@@ -149,7 +149,7 @@ const Hero = () => {
 
           {/* Left Lines */}
           <path
-            d="M220 120 V300 H340"
+            d="M220 80 V300 H340"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -181,7 +181,7 @@ const Hero = () => {
 
           {/* Right Lines */}
           <path
-            d="M980 120 V300 H860"
+            d="M980 80 V300 H860"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -221,7 +221,7 @@ const Hero = () => {
         </div>
 
         {/* Database Icon (Above) */}
-        <div className="absolute top-[28%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.5s'}}>
+        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.5s'}}>
              {/* Database */}
              <img src="/Home/hero/db.webp" alt="Database" className="w-8 h-8 object-contain" />
         </div>
@@ -236,7 +236,7 @@ const Hero = () => {
         {/* --- Floating Icons (Left) --- */}
 
         {/* Google Drive (Top Left) */}
-        <div className="absolute top-[12%] left-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.2s'}}>
+        <div className="absolute top-[5%] left-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.2s'}}>
             {/* Google Drive */}
             <img src="/Home/hero/drive.webp" alt="Drive" className="w-10 h-10 object-contain" />
         </div>
@@ -263,7 +263,7 @@ const Hero = () => {
         {/* --- Floating Icons (Right) --- */}
 
         {/* Audio (Top Right) */}
-        <div className="absolute top-[12%] right-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.3s'}}>
+        <div className="absolute top-[5%] right-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.3s'}}>
              {/* Audio */}
              <img src="/Home/hero/audio.webp" alt="Audio" className="w-10 h-10 object-contain" />
         </div>
