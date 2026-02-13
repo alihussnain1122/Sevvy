@@ -1,95 +1,89 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const navLinks = [
+  { name: 'Sevvy', to: '/' },
+  { name: 'How it works', to: '/how-it-works' },
+  { name: 'Pricing', to: '/pricing' },
+  { name: 'Blogs', to: '/blog' },
+];
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-50 py-6">
+    <nav className="w-full bg-gray-100 py-6">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-2xl shadow-sm px-8 py-4">
-          <div className="flex items-center justify-between">
-            {/* Left Side: Logo + Navigation Links */}
-            <div className="flex items-center gap-9">
-              {/* Logo */}
-              <Link to="/" className="text-2xl font-semibold text-gray-900 tracking-tight">
-                sevvy<span className="text-orange-500">.</span>
-              </Link>
-
-              {/* Navigation Links */}
-              <div className="hidden md:flex items-center space-x-9">
-                <Link 
-                  to="/how-it-works" 
-                  className="text-gray-700 hover:text-gray-900 text-[15px] font-normal transition-colors"
+        <div className="bg-white rounded-full shadow-sm flex items-center justify-between h-[70px] px-6">
+          {/* Left: Logo + NavLinks */}
+          <div className="flex items-center space-x-8">
+            <Link to="/" className="font-bold text-lg text-gray-800">sevvy<span className="text-orange-500">.</span></Link>
+            <div className="hidden md:flex items-center space-x-8">
+              {navLinks.slice(1).map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.to}
+                  className="text-base text-gray-500 hover:text-black font-medium transition-colors duration-200"
                 >
-                  How it works
+                  {link.name}
                 </Link>
-                
-                {/* <div className="relative">
-                  <button
-                    onClick={() => setFeaturesOpen(!featuresOpen)}
-                    className="flex items-center gap-1 text-gray-700 hover:text-gray-900 text-[15px] font-normal transition-colors"
-                  >
-                    Features
-                    <svg 
-                      className="w-4 h-4 text-gray-500" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                </div> */}
-
-                <Link 
-                  to="/pricing" 
-                  className="text-gray-700 hover:text-gray-900 text-[15px] font-normal transition-colors"
-                >
-                  Pricing
-                </Link>
-
-                <Link 
-                  to="/blog" 
-                  className="text-gray-700 hover:text-gray-900 text-[15px] font-normal transition-colors"
-                >
-                  Blogs
-                </Link>
-
-                {/* <div className="relative">
-                  <button
-                    onClick={() => setPlatformsOpen(!platformsOpen)}
-                    className="flex items-center gap-1 text-gray-700 hover:text-gray-900 text-[15px] font-normal transition-colors"
-                  >
-                    Platforms
-                    <svg 
-                      className="w-4 h-4 text-gray-500" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                </div> */}
-              </div>
+              ))}
             </div>
+          </div>
 
-            {/* Join Waitlist Button - Right Side */}
-            <Link 
-              to="/waitlist"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-lg text-[15px] font-medium flex items-center gap-2 transition-all duration-200 shadow-sm hover:shadow-md"
+          {/* Hamburger Icon (Mobile) */}
+          <button
+            className="md:hidden flex items-center justify-center p-2 focus:outline-none"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Open Menu"
+          >
+            <svg
+              className="w-7 h-7 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Join Waitlist
-              <svg 
-                className="w-4 h-4" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+
+          {/* Right Side Button */}
+          <Link
+            to="/waitlist"
+            className="ml-4 bg-gradient-to-r from-orange-500 to-orange-400 text-white font-medium px-6 py-2 rounded-full shadow transition-transform duration-200 hover:scale-105 hidden md:inline-block"
+          >
+            Join Waitlist →
+          </Link>
+        </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="md:hidden mt-4 bg-white rounded-2xl shadow-lg py-4 px-6 flex flex-col items-center space-y-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.to}
+                className="text-base text-gray-700 hover:text-black font-medium transition-colors duration-200"
+                onClick={() => setMenuOpen(false)}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+                {link.name}
+              </Link>
+            ))}
+            <Link
+              to="/waitlist"
+              className="w-full text-center bg-gradient-to-r from-orange-500 to-orange-400 text-white font-medium px-6 py-2 rounded-full shadow transition-transform duration-200 hover:scale-105"
+              onClick={() => setMenuOpen(false)}
+            >
+              Join Waitlist →
             </Link>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );

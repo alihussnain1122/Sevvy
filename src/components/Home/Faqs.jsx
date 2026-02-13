@@ -110,25 +110,26 @@ const FAQ = () => {
         </div>
 
         {/* Tabs Section */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 relative z-10">
-          {tabs.map((tab) => (
-            <div key={tab} className="relative">
+        <div className="flex flex-wrap justify-center space-x-8 mb-12 relative z-10">
+          {tabs.map((tab, idx) => (
+            <div key={tab} className={`relative${idx === 0 ? '' : ' ml-0'}`}>
               <button
                 onClick={() => {
                   setActiveTab(tab);
                   setOpenIndex(0);
                 }}
-                className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${
+                className={`px-8 py-4 rounded-md font-medium text-lg transition-all duration-300 ${
                   activeTab === tab
                     ? 'bg-gradient-to-r from-orange-500 to-orange-400 text-white shadow-lg'
                     : 'bg-white text-gray-800 border border-gray-200 hover:border-orange-300 hover:shadow-md'
                 }`}
+                style={{ minWidth: 200 }}
               >
                 {tab}
               </button>
               {activeTab === tab && (
                 <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
-                  <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-orange-500"></div>
+                  <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-orange-500"></div>
                 </div>
               )}
             </div>
