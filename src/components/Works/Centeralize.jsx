@@ -2,11 +2,15 @@ import React from "react";
 
 const Centralization = () => {
   return (
-    <section className="relative w-full bg-[#F4F1EC] py-24 overflow-hidden">
+    <section className="relative w-full bg-[#fffaf7]  overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Heading Area */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-6" style={{
+          background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+        }}>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             One <span className="italic text-orange-500 font-Instrument">Centralized Workspace</span> that
             <br />
@@ -20,7 +24,7 @@ const Centralization = () => {
         </div>
 
         {/* Circles Container */}
-        <div className="relative w-full h-[500px] md:h-[600px] mt-16 mb-12">
+        <div className="relative w-full h-[500px] md:h-[600px] mt-8 mb-2">
           
           {/* Top Row - Left Circle: Intake (Purple) */}
             <div className="absolute top-16 left-1/2 -translate-x-[280px] md:-translate-x-[320px] w-[220px] h-[220px] md:w-[260px] md:h-[260px] rounded-full border-[8px] border-purple-300 bg-transparent flex flex-col items-center justify-center">
@@ -103,7 +107,7 @@ const Centralization = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mb-8">
           <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
             Unify Your Creative Stack Today
           </button>
