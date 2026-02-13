@@ -44,7 +44,7 @@ const StarIcon = (props) => (
 
 const Review = () => {
   return (
-    <section className="bg-gray-100 py-24">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800">

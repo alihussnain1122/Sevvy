@@ -84,3 +84,9 @@
   text-transform: uppercase; /* Optional: Zen Dots looks great in caps */
   color: #FF7A00; /* Matching that orange color from your image */
 }
+.font-Tangerine {
+  font-family: 'Tangerine', cursive;
+}
+.font-Instrument {
+  font-family: 'Instrument Serif', serif, italic;
+}
