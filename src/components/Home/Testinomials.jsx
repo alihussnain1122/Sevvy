@@ -222,7 +222,7 @@ const Testimonials = () => {
                 {currentContent.cardButtons.map((button, index) => (
                   <button
                     key={index}
-                    className="px-5 py-2.5 rounded-lg text-sm font-medium transition-all bg-gray-100 text-gray-700 border border-gray-200 hover:bg-orange-500 hover:text-white hover:border-orange-500"
+                    className="px-5 py-2.5 rounded-lg text-sm font-medium transition-all bg-black text-white border-none hover:bg-orange-500 hover:text-white"
                   >
                     {button}
                   </button>

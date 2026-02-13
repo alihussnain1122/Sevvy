@@ -47,7 +47,7 @@ const Operation = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12 md:ml-8 lg:ml-40">
           {/* Large Card - Left */}
-          <div className="relative rounded-3xl overflow-hidden h-[300px] md:h-[420px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
+          <div className="relative rounded-3xl overflow-hidden h-[220px] md:h-[320px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
             <img 
               src={articles[0].image} 
               alt={articles[0].title}
@@ -60,9 +60,9 @@ const Operation = () => {
           </div>
 
           {/* Right Side - Two Small Cards */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-3">
             {/* Top Small Card */}
-            <div className="relative rounded-3xl overflow-hidden h-50 w-80 md:h-[198px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
+            <div className="relative rounded-3xl overflow-hidden h-30 w-80 md:h-[160px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
               <img 
                 src={articles[1].image} 
                 alt={articles[1].title}
@@ -76,7 +76,7 @@ const Operation = () => {
             </div>
 
             {/* Bottom Small Card */}
-            <div className="relative rounded-3xl overflow-hidden h-50 w-80 md:h-[198px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
+            <div className="relative rounded-3xl overflow-hidden h-30 w-80 md:h-[160px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
               <img 
                 src={articles[2].image} 
                 alt={articles[2].title}

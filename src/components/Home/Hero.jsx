@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center z-10 relative">
         
         {/* Top Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-gray-200 rounded-full shadow-sm mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-black rounded-full shadow-sm mb-8">
             <span className="flex items-center justify-center w-5 h-5  text-white">✨</span>
             <span className="text-sm font-medium text-gray-700">A Unified Creative Management Engine</span>
         </div>
