@@ -59,7 +59,7 @@ const Hero = () => {
               .beam {
                 stroke-dasharray: 1200;
                 stroke-dashoffset: 1200;
-                animation: beamAnim 2.5s ease-out infinite;
+                animation: beamAnim 4s ease-out infinite;
               }
               @keyframes beamAnim {
                 0% { stroke-dashoffset: 1200; opacity: 0; }
@@ -67,7 +67,7 @@ const Hero = () => {
                 100% { stroke-dashoffset: 0; opacity: 0; }
               }
               .ringPulse {
-                animation: ringAnim 3s ease-out infinite;
+                animation: ringAnim 5s ease-out infinite;
                 transform-origin: center;
               }
               @keyframes ringAnim {
