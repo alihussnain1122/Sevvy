@@ -73,7 +73,7 @@ const Choose = () => {
           ))}
         </div>
 
-        <div className="benefits-section">
+        <div className="benefits-section font-bold">
           {benefits.map((benefit, index) => (
             <div key={index} className="benefit-item">
               <span className="checkmark">✓</span>

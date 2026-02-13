@@ -97,19 +97,25 @@
   margin: 0;
 }
 
+
 .benefits-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 0;
   margin-bottom: 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .benefit-item {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex: 1 1 0;
+  justify-content: center;
 }
 
 .checkmark {
@@ -119,10 +125,11 @@
 }
 
 .benefit-text {
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
   font-style: italic;
-  color: #2D2D2D;
+  color: #222;
+  font-family: inherit;
 }
 
 .cta-section {
