@@ -40,56 +40,176 @@ const Hero = () => {
       <div className="relative w-full max-w-[1200px] mx-auto h-[600px]">
         
         {/* SVG Connections Background */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Concentric Circles - Base */}
-            <circle cx="600" cy="300" r="80" stroke="#e5e7eb" strokeWidth="1.5" />
-            <circle cx="600" cy="300" r="140" stroke="#e5e7eb" strokeWidth="1.5" />
-            <circle cx="600" cy="300" r="200" stroke="#e5e7eb" strokeWidth="1.5" />
-            <circle cx="600" cy="300" r="260" stroke="#e5e7eb" strokeWidth="1.5" />
-            
-            {/* Animated Circles - Beam */}
-            <circle cx="600" cy="300" r="80" stroke="#f97316" strokeWidth="2" className="animate-beam" style={{animationDelay: '0s'}} />
-            <circle cx="600" cy="300" r="140" stroke="#f97316" strokeWidth="2" className="animate-beam" style={{animationDelay: '0.3s'}} />
-            <circle cx="600" cy="300" r="200" stroke="#f97316" strokeWidth="2" className="animate-beam" style={{animationDelay: '0.6s'}} />
-            <circle cx="600" cy="300" r="260" stroke="#f97316" strokeWidth="2" className="animate-beam" style={{animationDelay: '0.9s'}} />
+        <svg
+          viewBox="0 0 1200 600"
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            {/* Glow Filter */}
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            {/* Beam Animation */}
+            <style>{`
+              .beam {
+                stroke-dasharray: 1200;
+                stroke-dashoffset: 1200;
+                animation: beamAnim 2.5s ease-out infinite;
+              }
+              @keyframes beamAnim {
+                0% { stroke-dashoffset: 1200; opacity: 0; }
+                20% { opacity: 1; }
+                100% { stroke-dashoffset: 0; opacity: 0; }
+              }
+              .ringPulse {
+                animation: ringAnim 3s ease-out infinite;
+                transform-origin: center;
+              }
+              @keyframes ringAnim {
+                0% { transform: scale(0.8); opacity: 0.6; }
+                70% { transform: scale(1.3); opacity: 0; }
+                100% { transform: scale(1.3); opacity: 0; }
+              }
+            `}</style>
+          </defs>
 
-            {/* Connection Lines (Paths) - Base */}
-            {/* Drive Line (Top Left) */}
-            <path d="M220 120 V300 H340" stroke="#d1d5db" strokeWidth="1.5" fill="none" rx="20" /> 
-            <path d="M220 120 V300 H340" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.2s'}} />
-            
-            {/* Stack Line (Mid Left) */}
-            <path d="M160 250 H340" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
-            <path d="M160 250 H340" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.4s'}} />
-            
-            {/* Asana Line (Inner Left) */}
-            <path d="M280 280 H400" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
-            <path d="M280 280 H400" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.0s'}} />
-            
-            {/* Trello Line (Bottom Left) */}
-            <path d="M180 480 V350 H340" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
-            <path d="M180 480 V350 H340" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.6s'}} />
+          {/* Base Rings */}
+          {[80, 140, 200, 260].map((r, i) => (
+            <circle
+              key={i}
+              cx="600"
+              cy="300"
+              r={r}
+              stroke="#e5e7eb"
+              strokeWidth="1.5"
+              fill="none"
+            />
+          ))}
 
-            {/* Audio Line (Top Right) */}
-            <path d="M980 120 V300 H860" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
-            <path d="M980 120 V300 H860" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.3s'}} />
-            
-            {/* Diamond Line (Mid Right) */}
-            <path d="M820 280 H1040" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
-            <path d="M820 280 H1040" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.5s'}} />
-            
-            {/* Slack Line (Bottom Right) */}
-            <path d="M960 480 V350 H740" stroke="#d1d5db" strokeWidth="1.5" fill="none" />
-            <path d="M960 480 V350 H740" stroke="#f97316" strokeWidth="2.5" fill="none" className="animate-beam" style={{animationDelay: '1.7s'}} />
-            
-             {/* Database Line (Top Center) */}
-             <line x1="600" y1="220" x2="600" y2="180" stroke="#d1d5db" strokeWidth="1.5" />
-             <line x1="600" y1="220" x2="600" y2="180" stroke="#f97316" strokeWidth="2.5" className="animate-beam" style={{animationDelay: '0.5s'}} />
-             
-             {/* Robot Line (Bottom Center) */}
-             <line x1="600" y1="380" x2="600" y2="440" stroke="#d1d5db" strokeWidth="1.5" />
-             <line x1="600" y1="380" x2="600" y2="440" stroke="#f97316" strokeWidth="2.5" className="animate-beam" style={{animationDelay: '0.7s'}} />
+          {/* Animated Rings */}
+          {[80, 140, 200, 260].map((r, i) => (
+            <circle
+              key={`a-${i}`}
+              cx="600"
+              cy="300"
+              r={r}
+              stroke="#f97316"
+              strokeWidth="2"
+              fill="none"
+              filter="url(#glow)"
+              className="beam"
+              style={{ animationDelay: `${i * 0.3}s` }}
+            />
+          ))}
 
+          {/* Center Pulse */}
+          <circle
+            cx="600"
+            cy="300"
+            r="60"
+            stroke="#f97316"
+            strokeWidth="2"
+            fill="none"
+            filter="url(#glow)"
+            className="ringPulse"
+          />
+
+          {/* Top Center Line */}
+          <line
+            x1="600"
+            y1="220"
+            x2="600"
+            y2="180"
+            stroke="#f97316"
+            strokeWidth="2"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "0.5s" }}
+          />
+
+          {/* Bottom Center Line */}
+          <line
+            x1="600"
+            y1="380"
+            x2="600"
+            y2="440"
+            stroke="#f97316"
+            strokeWidth="2"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "0.7s" }}
+          />
+
+          {/* Left Lines */}
+          <path
+            d="M220 120 V300 H340"
+            stroke="#f97316"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "1.2s" }}
+          />
+          <path
+            d="M160 250 H340"
+            stroke="#f97316"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "1.4s" }}
+          />
+          <path
+            d="M180 480 V350 H340"
+            stroke="#f97316"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "1.6s" }}
+          />
+
+          {/* Right Lines */}
+          <path
+            d="M980 120 V300 H860"
+            stroke="#f97316"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "1.3s" }}
+          />
+          <path
+            d="M820 280 H1040"
+            stroke="#f97316"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "1.5s" }}
+          />
+          <path
+            d="M960 480 V350 H740"
+            stroke="#f97316"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "1.7s" }}
+          />
         </svg>
 
         {/* --- Center Elements --- */}
