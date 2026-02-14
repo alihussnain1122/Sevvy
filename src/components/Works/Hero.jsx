@@ -16,7 +16,7 @@ export default function Hero() {
           </h2>
           <p className="font-poppins text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
             Creative work slows down when systems fragment. Sevvy replaces scattered tools
-            <br /> with a unified, connected workflow that moves content forward without friction. Briefs,
+            with a unified, connected workflow that moves content forward without friction. Briefs,
             assets, feedback, approvals, publishing, and client visibility live inside one platform,
             so teams stay aligned and output stays predictable.
           </p>

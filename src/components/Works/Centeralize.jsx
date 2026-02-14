@@ -77,7 +77,7 @@ const Centralization = () => {
             {/* Review */}
             <div className="relative z-10 w-[230px] h-[230px] md:w-[260px] md:h-[260px]
           rounded-full border-[8px] border-green-300
-          flex flex-col items-center justify-center text-center px-6" style={{ background: 'none' }}>
+          flex flex-col items-center justify-center text-center px-6 -mt-8">
 
               <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="26.5" cy="26.5" r="26.5" fill="#D3FFC0" fill-opacity="0.2" />
