@@ -28,14 +28,14 @@ export default function Hero() {
           
           {/* Layer 1 (outermost): Elements.webp — subscribe, instagram, revenue, sales, wavy lines etc */}
           <img 
-            src="/public/Elements.webp" 
+            src="/HowItWorks/hero/Elements.webp" 
             alt="UI Elements Background" 
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto object-contain z-0 pointer-events-none select-none"
           />
 
           {/* Layer 2 (middle): Kits.webp — data analytics, dashboard widgets */}
           <img 
-            src="/public/Kits.webp" 
+            src="/HowItWorks/hero/Kits.webp" 
             alt="Data Kits and Analytics" 
             className="absolute left-1/2 mt-[520px] -translate-x-1/2 -translate-y-[45%] w-[900px]  h-auto object-contain z-10 pointer-events-none select-none"
           />
@@ -43,7 +43,7 @@ export default function Hero() {
           {/* Layer 3 (topmost): character.webp + "How Sevvy Works" text */}
           <div className="relative z-20 flex items-start justify-center gap-4 md:gap-6 -mt-8">
             <img 
-              src="/public/character.webp" 
+              src="/HowItWorks/hero/character.webp" 
               alt="Sevvy Character" 
               className="w-[220px] h-auto drop-shadow-2xl"
             />
