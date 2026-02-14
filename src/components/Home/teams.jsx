@@ -17,8 +17,8 @@ const Teams = () => {
 
         {/* Header Section */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl text-black mb-4">
-            Creative Teams Don't Break<br /> from <span className="text-orange-500 italic font-Instrument">talent</span>
+          <h1 className="text-3xl md:text-4xl text-black mb-4">
+            Creative Teams Don't Break<br /> from <span className="text-orange-300 italic font-Instrument">talent</span>
           </h1>
           <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">
             They break when tools fragment the work, the <br /> context, and the flow

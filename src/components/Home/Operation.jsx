@@ -23,10 +23,10 @@ const Operation = () => {
   ];
 
   return (
-    <section className="bg-[#FAF9F7] py-12 md:py-20 px-4 md:px-5 flex justify-center items-center relative">
+    <section className="bg-[#FAF9F7] py-4 md:py-6 px-4 md:px-5 flex justify-center items-center relative ">
       {/* Top background with gradient */}
       <div 
-        className="absolute top-0 left-0 right-0 h-48"
+        className="absolute top-0 left-0 right-0 h-25"
         style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
           maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
@@ -39,7 +39,7 @@ const Operation = () => {
           <h2 className="text-3xl md:text-[42px] font-semibold text-black mb-3 leading-tight">
             Creative Operations, <span className="text-[#FF8C42] font-Instrument italic">Explained</span>
           </h2>
-          <p className="text-base md:text-lg text-[#6B6B6B] font-bold">
+          <p className="text-base md:text-lg text-black font-bold">
             Articles on building structure without killing creativity.
           </p>
         </div>
