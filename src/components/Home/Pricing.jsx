@@ -78,7 +78,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-5 flex justify-center items-center">
+    <section className="py-12 md:py-20 px-6 pl-8 md:px-8 md:pl-12 flex justify-center items-center">
       <div className="max-w-7xl w-full">
         {/* Header */}
         <div className="text-center mb-10 md:mb-12">
