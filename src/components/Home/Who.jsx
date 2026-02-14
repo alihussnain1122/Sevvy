@@ -7,11 +7,11 @@ const Who = () => {
         
         {/* Header Section */}
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-2">
-            Who Is <span className="text-orange-500 italic font-Instrument">Sevvy</span> for
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 mb-3 md:mb-4 px-2">
+            Who Is <span className="text-orange-300 italic font-Instrument">Sevvy</span> for
           </h1>
-          <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto px-4">
-            Creative teams & individuals who are tired of juggling and paying multiple project management tools and never ending content chaos.
+          <p className="text-black text-sm md:text-base max-w-3xl mx-auto px-4">
+            Creative teams & individuals who are tired of juggling and paying multiple <br /> project management tools and never ending content chaos.
           </p>
         </div>
 
@@ -89,22 +89,25 @@ const Who = () => {
           
           {/* Right Card */}
           <div className="lg:w-1/3 flex justify-center w-full px-4">
-            <div className="bg-white rounded-2xl shadow-lg p-5 md:p-6 max-w-md w-full relative overflow-visible">
-              {/* Top border accent */}
-              <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 w-4/5 h-2 md:h-3 rounded-t-2xl bg-white border-t-4 border-[#f3f3f3] z-10"></div>
+            <div className="bg-white rounded-2xl shadow-lg p-3 md:p-4 max-w-sm w-full relative overflow-visible">
+              {/* Double Top Borders */}
+              <div className="absolute -top-5 left-0 w-full h-2 z-20 flex flex-col items-center">
+                <div className="w-full py-4 border-t-4 border-gray-100 rounded-t-2xl"></div>
+                <div className="w-full py-4 border-t-4 border-gray-100 rounded-t-2xl mt-2"></div>
+              </div>
               {/* Card Header */}
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-2 md:mb-3">
+              <h3 className="text-orange-500 text-lg sm:text-xl md:text-2xl font-bold text-center mt-3 mb-2 md:mb-3">
                 Creative &<br />
                 <span className="text-orange-500">Video Agencies</span>
               </h3>
               
               {/* Description */}
               <p className="text-gray-600 text-xs sm:text-sm text-center mb-4 md:mb-6 px-2">
-                Streamline your creative workflow from ideation to delivery. Manage multiple client projects, collaborate with your team, and deliver exceptional results faster.
+                Boost productivity: manage projects, collaborate, and deliver top‑notch results faster..
               </p>
               
               {/* Divider Line */}
-              <div className="border-t border-gray-200 mb-4 md:mb-6"></div>
+              <div className="border-t border-gray-100 mb-4 md:mb-6"></div>
               
               {/* Workflow Image */}
               <img 
@@ -119,10 +122,10 @@ const Who = () => {
 
         {/* CTA Section */}
         <div className="text-center px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl futuristic-text underline font-bold text-orange-500 mb-6 md:mb-8">
-            Get a 14 Days Free Trial<br />Before You Pay
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl futuristic-text underline decoration-2 underline-offset-8 font-bold text-orange-500 mb-6 md:mb-8 capitalize">
+            Get 14 Days Free Trial<br />Before You Pay
           </h2>
-          <button className="inline-flex items-center gap-2 md:gap-3 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-medium transition-all text-base md:text-lg hover:scale-105" style={{background: 'linear-gradient(90deg, #f97316 0%, #ffa86b 100%)'}}>
+          <button className="inline-flex items-center gap-2 md:gap-3 text-white px-8 md:px-12 py-2 md:py-2.5 rounded-full font-medium transition-all text-base md:text-lg hover:scale-105" style={{background: 'linear-gradient(90deg, #f97316 0%, #ffa86b 100%)'}}>
             Learn More
             <svg className="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7"/>

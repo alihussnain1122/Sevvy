@@ -81,8 +81,8 @@
 /* Futuristic font for headings */
 .futuristic-text {
   font-family: 'Zen Dots', sans-serif;
-  text-transform: uppercase; /* Optional: Zen Dots looks great in caps */
-  color: #FF7A00; /* Matching that orange color from your image */
+  text-transform: capitalize; 
+  color: #FF7A00; 
 }
 .font-Tangerine {
   font-family: 'Tangerine', cursive;

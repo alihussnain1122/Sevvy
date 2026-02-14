@@ -2,26 +2,26 @@ import React from 'react';
 
 const Teams = () => {
   return (
-    <section className="w-full bg-[#fffaf7] py-20 relative">
+    <section className="w-full bg-[#fffaf7] py-8 relative">
       {/* Top background with gradient */}
-      <div 
+      <div
         className="absolute top-0 left-0 right-0 h-48"
         style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+          maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }}
       ></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Header Section */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl text-black mb-4">
             Creative Teams Don't Break<br /> from <span className="text-orange-500 italic font-Instrument">talent</span>
           </h1>
           <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">
-            They break when tools fragment the work, the context, and the flow
+            They break when tools fragment the work, the <br /> context, and the flow
           </p>
         </div>
 
@@ -38,22 +38,40 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               No shared context. No single view.
             </p>
-            <button className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-all">
-              View unified system
-              <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+            <button className="inline-flex items-center 
+                   bg-gradient-to-r from-orange-500 to-orange-200  
+                   text-white 
+                   pl-8 pr-3 py-1 
+                   rounded-full 
+                   cursor-pointer
+                   transition-all duration-3000">
+
+              <span className="font-medium">
+                View unified system
+              </span>
+
+              <span className="ml-4 
+                   bg-white 
+                   rounded-full 
+                   w-12 h-12 
+                   flex items-center justify-center">
+
+                <svg width="20" height="20" viewBox="0 0 21 22" fill="none">
+                  <path d="M0 11H18" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" />
+                  <path d="M9 2L18 11L9 20" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" />
                 </svg>
-              </div>
+
+              </span>
             </button>
+
           </div>
-          
+
           {/* Right Image */}
           <div className="lg:w-1/2">
-            <img 
-              src="/Home/teams/tools.webp" 
-              alt="Fragmented tools across creative stack" 
-              className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow"
+            <img
+              src="/Home/teams/tools.webp"
+              alt="Fragmented tools across creative stack"
+              className="w-full h-auto rounded-3xl  transition-shadow"
             />
           </div>
         </div>
@@ -71,22 +89,40 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Manual publishing, delayed posting
             </p>
-            <button className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-all">
-              Extend content lifecycle
-              <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+            <button className="inline-flex items-center 
+                   bg-gradient-to-r from-orange-500 to-orange-200  
+                   text-white 
+                   pl-8 pr-3 py-1 
+                   rounded-full 
+                   cursor-pointer
+                   transition-all duration-300">
+
+              <span className="font-medium">
+                Extend content lifecycle
+              </span>
+
+              <span className="ml-4 
+                   bg-white 
+                   rounded-full 
+                   w-12 h-12 
+                   flex items-center justify-center">
+
+                <svg width="20" height="20" viewBox="0 0 21 22" fill="none">
+                  <path d="M0 11H18" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" />
+                  <path d="M9 2L18 11L9 20" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" />
                 </svg>
-              </div>
+
+              </span>
             </button>
+
           </div>
-          
+
           {/* Left Image */}
           <div className="lg:w-1/2">
-            <img 
-              src="/Home/teams/system.webp" 
-              alt="No system for publishing" 
-              className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow"
+            <img
+              src="/Home/teams/system.webp"
+              alt="No system for publishing"
+              className="w-full h-auto rounded-3xl transition-shadow"
             />
           </div>
         </div>
@@ -104,22 +140,40 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Too many voices. No clear signal.
             </p>
-            <button className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-all">
-              Fix review flow
-              <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+            <button className="inline-flex items-center 
+                   bg-gradient-to-r from-orange-500 to-orange-200  
+                   text-white 
+                   pl-8 pr-3 py-1 
+                   rounded-full 
+                   cursor-pointer
+                   transition-all duration-300">
+
+              <span className="font-medium">
+                Fix review flow
+              </span>
+
+              <span className="ml-4 
+                   bg-white 
+                   rounded-full 
+                   w-12 h-12 
+                   flex items-center justify-center">
+
+                <svg width="20" height="20" viewBox="0 0 21 22" fill="none">
+                  <path d="M0 11H18" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" />
+                  <path d="M9 2L18 11L9 20" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" />
                 </svg>
-              </div>
+
+              </span>
             </button>
+
           </div>
-          
+
           {/* Right Image */}
           <div className="lg:w-1/2">
-            <img 
-              src="/Home/teams/cost.webp" 
-              alt="Unstructured feedback loops" 
-              className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow"
+            <img
+              src="/Home/teams/cost.webp"
+              alt="Unstructured feedback loops"
+              className="w-full h-auto rounded-3xl transition-shadow"
             />
           </div>
         </div>
@@ -137,22 +191,40 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Internal expense rises, reducing profits
             </p>
-            <button className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-all">
-              Reduce tool costs
-              <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+            <button className="inline-flex items-center 
+                   bg-gradient-to-r from-orange-500 to-orange-200  
+                   text-white 
+                   pl-8 pr-3 py-1 
+                   rounded-full 
+                   cursor-pointer
+                   transition-all duration-300">
+
+              <span className="font-medium">
+                Reduce tool Costs
+              </span>
+
+              <span className="ml-4 
+                   bg-white 
+                   rounded-full 
+                   w-12 h-12 
+                   flex items-center justify-center">
+
+                <svg width="20" height="20" viewBox="0 0 21 22" fill="none">
+                  <path d="M0 11H18" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" />
+                  <path d="M9 2L18 11L9 20" stroke="#F97316" strokeWidth="2.5" strokeLinecap="round" />
                 </svg>
-              </div>
+
+              </span>
             </button>
+
           </div>
-          
+
           {/* Left Image */}
           <div className="lg:w-1/2">
-            <img 
-              src="/Home/teams/cost.webp" 
-              alt="Rising costs from tool stacking" 
-              className="w-full h-auto rounded-3xl shadow-lg hover:shadow-xl transition-shadow"
+            <img
+              src="/Home/teams/cost.webp"
+              alt="Rising costs from tool stacking"
+              className="w-full h-auto rounded-3xl transition-shadow"
             />
           </div>
         </div>

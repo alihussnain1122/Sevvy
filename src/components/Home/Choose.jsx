@@ -47,8 +47,8 @@ const Choose = () => {
         className="gradient-overlay"
         style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+          maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }}
       />
       <div className="choose-container">
@@ -67,23 +67,29 @@ const Choose = () => {
               <div className="feature-icon">
                 <img src={feature.icon} alt={feature.title} />
               </div>
-              <h3 className="feature-title">{feature.title}</h3>
+              <h3 className="text-orange-500 text-xl font-bold">{feature.title}</h3>
               <p className="feature-description">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="benefits-section font-bold">
+        <div className="benefits-section font-extrabold">
           {benefits.map((benefit, index) => (
             <div key={index} className="benefit-item">
-              <span className="checkmark">✓</span>
-              <span className="benefit-text">{benefit}</span>
+              <span className="checkmark font-extrabold">✓</span>
+              <span className="benefit-text font-extrabold">{benefit}</span>
             </div>
           ))}
         </div>
 
         <div className="cta-section">
-          <button className="explore-btn ">
+          <button className="inline-flex items-center 
+                   bg-gradient-to-r from-orange-500 to-orange-200  
+                   text-white 
+                   pl-10 pr-6 py-2 
+                   rounded-full 
+                   cursor-pointer
+                   transition-all duration-300">
             Explore More <span className="arrow">→</span>
           </button>
         </div>

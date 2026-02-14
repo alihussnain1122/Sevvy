@@ -29,8 +29,8 @@ const Operation = () => {
         className="absolute top-0 left-0 right-0 h-48"
         style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+          maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }}
       />
       <div className="max-w-7xl mx-auto w-full">
@@ -60,9 +60,9 @@ const Operation = () => {
           </div>
 
           {/* Right Side - Two Small Cards */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-row md:flex-col gap-3 w-full">
             {/* Top Small Card */}
-            <div className="relative rounded-3xl overflow-hidden h-30 w-80 md:h-[160px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
+            <div className="relative rounded-3xl overflow-hidden h-30 w-1/2 min-w-0 md:w-80 md:h-[160px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
               <img 
                 src={articles[1].image} 
                 alt={articles[1].title}
@@ -76,7 +76,7 @@ const Operation = () => {
             </div>
 
             {/* Bottom Small Card */}
-            <div className="relative rounded-3xl overflow-hidden h-30 w-80 md:h-[160px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
+            <div className="relative rounded-3xl overflow-hidden h-30 w-1/2 min-w-0 md:w-80 md:h-[160px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]">
               <img 
                 src={articles[2].image} 
                 alt={articles[2].title}
@@ -93,7 +93,7 @@ const Operation = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <button className="bg-[#FF8C42] text-white text-sm md:text-base font-semibold py-3 md:py-3.5 px-6 md:px-8 rounded-full flex items-center gap-2.5 transition-all duration-300 shadow-lg shadow-[#FF8C42]/30 hover:bg-[#FF7A2E] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#FF8C42]/40">
+          <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white text-sm md:text-base font-semibold py-3 md:py-3.5 px-6 md:px-8 rounded-full flex items-center gap-2.5 transition-all duration-300 shadow-lg hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#FF8C42]/40">
             Explore More <span className="text-lg transition-transform duration-300">→</span>
           </button>
         </div>

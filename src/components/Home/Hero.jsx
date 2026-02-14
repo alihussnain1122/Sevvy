@@ -29,7 +29,7 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 text-sm md:text-base">
+        <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 text-sm md:text-base">
             Start 14 Days Free Trial
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
         </button>
@@ -284,21 +284,21 @@ const Hero = () => {
         {/* --- Speech Bubbles --- */}
         
         {/* Left Bubble */}
-        <div className="absolute top-[45%] left-[28%] bg-white border border-orange-200 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
+        <div className="absolute top-[45%] left-[28%] bg-[#efefef]  border border-orange-400 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
             <p className="text-[10px] text-gray-600 font-medium leading-tight">
                 Who seems most unknowledgeable on this topic?
             </p>
         </div>
 
         {/* Right Top Bubble */}
-        <div className="absolute top-[35%] right-[20%] bg-orange-50 border border-orange-200 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
+        <div className="absolute top-[35%] right-[20%] bg-[#efefef] border border-orange-400 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
             <p className="text-[10px] text-gray-700 font-medium leading-tight">
                 What was the user's past few orders?
             </p>
         </div>
 
         {/* Right Bottom Bubble */}
-        <div className="absolute bottom-[35%] right-[25%] bg-white border border-orange-200 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
+        <div className="absolute bottom-[37%] right-[27%] bg-[#efefef] border border-orange-400 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
             <p className="text-[10px] text-gray-600 font-medium leading-tight">
                 How does the team fix this problem?
             </p>

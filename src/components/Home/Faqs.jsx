@@ -77,7 +77,7 @@ const faqData = {
 
 const FAQ = () => {
   const [activeTab, setActiveTab] = useState('About');
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   const tabs = ['About', 'Subscription', 'Services', 'Process & Policies'];
 
@@ -91,14 +91,14 @@ const FAQ = () => {
         className="absolute top-0 left-0 right-0 h-48 pointer-events-none"
         style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+          maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }}
       />
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading Area */}
         <div className="text-center mb-10 md:mb-12 relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-2">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-800 mb-2">
             Got <span className="italic text-orange-500 font-Instrument">Questions</span> Before You Start?
           </h2>
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-500 italic mb-4">
@@ -110,26 +110,25 @@ const FAQ = () => {
         </div>
 
         {/* Tabs Section */}
-        <div className="flex flex-wrap justify-center gap-3 md:space-x-8 md:gap-0 mb-12 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-12 relative z-10">
           {tabs.map((tab, idx) => (
-            <div key={tab} className={`relative${idx === 0 ? '' : ' ml-0'}`}>
+            <div key={tab} className="relative w-full flex flex-col items-center">
               <button
                 onClick={() => {
                   setActiveTab(tab);
                   setOpenIndex(0);
                 }}
-                className={`px-4 md:px-8 py-3 md:py-4 rounded-md font-medium text-sm md:text-lg transition-all duration-300 ${
+                className={`w-full py-4 rounded-lg font-bold text-lg transition-all duration-300 focus:outline-none border-2 ${
                   activeTab === tab
-                    ? 'bg-gradient-to-r from-orange-500 to-orange-400 text-white shadow-lg'
-                    : 'bg-white text-gray-800 border border-gray-200 hover:border-orange-300 hover:shadow-md'
+                    ? 'bg-gradient-to-r from-orange-500 to-orange-200 text-white border-transparent shadow-lg relative'
+                    : 'bg-white text-gray-800 border-[#E5E5E5] hover:border-orange-300 hover:shadow-md'
                 }`}
-                style={{ minWidth: 'auto' }}
               >
                 {tab}
               </button>
               {activeTab === tab && (
-                <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
-                  <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-orange-500"></div>
+                <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-orange-400"></div>
                 </div>
               )}
             </div>
