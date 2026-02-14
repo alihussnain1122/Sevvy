@@ -14,7 +14,7 @@ const Inside = () => {
         <div className="hidden md:block relative w-full min-h-[650px]">
           
           {/* Center Mascot */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">32
             <img 
               src="/HowItWorks/Inside/mascot.webp" 
               alt="Sevvy Mascot" 

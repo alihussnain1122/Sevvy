@@ -9,7 +9,7 @@ const Stages = () => {
         <div className="mb-16">
           <div className="text-center mb-8">
             <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 1</p>
-            <h2 className="text-2xl md:text-4xl  text-gray-900">Intake & Alignment</h2>
+            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Intake & Alignment</h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -26,7 +26,7 @@ const Stages = () => {
             <div>
               <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Start with clarity</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Defined goals, formats, deadlines, and references reduce  <br /> early rework by up to 30% and align teams before execution begins.
+                Defined goals, formats, deadlines, and references reduce  <br /> early rework by up to 30% and align teams before <br /> execution begins.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="text-gray-700 flex items-start">
@@ -58,22 +58,20 @@ const Stages = () => {
           <div className="bg-[#fffbf8] rounded-3xl p-12 relative overflow-hidden">
             {/* Top gradient overlay */}
             <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{
-              background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
-              maskImage: 'linear-gradient(to top, transparent 0%, black 50%, black 50%), linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 50%, black 50%), linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-              maskComposite: 'intersect',
-              WebkitMaskComposite: 'source-in'
-            }} />
+          background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
+        }} />
             <div className="text-center mb-8 relative z-10">
               <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 2</p>
-              <h2 className="text-2xl md:text-4xl  text-gray-900">Workflow & Visibility</h2>
+              <h2 className="text-2xl md:text-4xl font-semibold  text-gray-900">Workflow & Visibility</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
               <div>
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Track progress clearly</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Flexible views and real-time dashboards help teams save 3–5 hours weekly by reducing coordination and manual status tracking.
+                  Flexible views and real-time dashboards help <br /> teams save 3–5 hours weekly by reducing <br /> coordination and manual status tracking.
                 </p>
                 <ul className="space-y-3 mb-6">
                   <li className="text-gray-700 flex items-start">
@@ -114,7 +112,7 @@ const Stages = () => {
         <div className="mb-16">
           <div className="text-center mb-8">
             <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 3</p>
-            <h2 className="text-2xl md:text-4xl text-gray-900">Review & Feedback</h2>
+            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Feedback & Collaboration</h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -131,7 +129,7 @@ const Stages = () => {
             <div>
               <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Centralize feedback</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Pin-point annotations and threaded comments eliminate version confusion, cut revision cycles by 40%, and keep all stakeholders aligned.
+                Disconnected reviews can double turnaround time.<br /> Timestamped, in-context feedback keeps revisions <br /> structured and predictable.
               </p>
               <ul className="space-y-3 mb-6">
                 {/* <li className="text-gray-700 flex items-start">
@@ -163,22 +161,20 @@ const Stages = () => {
           <div className="bg-[#fffbf8] rounded-3xl p-12 relative overflow-hidden">
             {/* Top gradient overlay */}
             <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{
-              background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
-              maskImage: 'linear-gradient(to top, transparent 0%, black 50%, black 50%), linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 50%, black 50%), linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-              maskComposite: 'intersect',
-              WebkitMaskComposite: 'source-in'
-            }} />
+          background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
+        }} />
             <div className="text-center mb-8">
               <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 4</p>
-              <h2 className="text-2xl md:text-4xl text-gray-900">Approval & Version Control</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Approval & Publishing</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
               <div>
-                <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Maintain control</h3>
+                <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Ship without delays</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Structured approval workflows and automated versioning prevent unauthorized changes and ensure compliance teams can audit every decision.
+                  Undefined approval states can extend timelines by <br /> 50%. Clear status controls and live notifications <br />prevent delivery bottlenecks.
                 </p>
                 <ul className="space-y-3 mb-6">
                   <li className="text-gray-700 flex items-start">
@@ -219,7 +215,7 @@ const Stages = () => {
         <div className="mb-16">
           <div className="text-center mb-8">
             <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 5</p>
-            <h2 className="text-2xl md:text-4xl text-gray-900">Publishing & Asset Library</h2>
+            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Showcase, Reuse & Scale</h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

@@ -7,12 +7,10 @@ const Vision = () => {
         <div className="bg-[#fffbf8] rounded-3xl p-12 relative overflow-hidden">
             {/* Top gradient overlay */}
             <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{
-              background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
-              maskImage: 'linear-gradient(to top, transparent 0%, black 50%, black 50%), linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 50%, black 50%), linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)',
-              maskComposite: 'intersect',
-              WebkitMaskComposite: 'source-in'
-            }} />
+          background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
+          maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
+        }} />
           
           {/* Heading */}
           <div className="text-center mb-16">

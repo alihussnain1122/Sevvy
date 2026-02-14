@@ -11,8 +11,8 @@ const Centralization = () => {
           maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }}>
-          <h2 className="text-4xl mt-4 md:text-5xl text-gray-900 mb-4 font-poppins">
-            One <span className="italic text-orange-400 font-Instrument">Centralized Workspace</span> that
+          <h2 className="text-2xl mt-4 md:text-4xl text-gray-900 mb-4 font-poppins">
+            One <span className="italic text-[#ffb47b] font-Instrument">Centralized Workspace</span> that
             <br />
             Replaces Everything
           </h2>
