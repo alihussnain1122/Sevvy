@@ -1,4 +1,9 @@
+
 @import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 /* Beam animation - travels along SVG paths */
 @keyframes beam-flow {

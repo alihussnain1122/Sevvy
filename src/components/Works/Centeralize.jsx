@@ -8,11 +8,11 @@ const Centralization = () => {
         {/* Heading Area */}
         <div className="text-center mb-6" style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+          maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }}>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            One <span className="italic text-orange-500 font-Instrument">Centralized Workspace</span> that
+          <h2 className="text-4xl mt-4 md:text-5xl text-gray-900 mb-4 font-poppins">
+            One <span className="italic text-orange-400 font-Instrument">Centralized Workspace</span> that
             <br />
             Replaces Everything
           </h2>
@@ -108,7 +108,7 @@ const Centralization = () => {
 
         {/* CTA Button */}
         <div className="text-center mb-8">
-          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
             Unify Your Creative Stack Today
           </button>
         </div>
