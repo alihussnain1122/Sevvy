@@ -1,136 +1,79 @@
 import React from "react";
 
 const Inside = () => {
+  // Image ke mutabiq exact angles
+  const items = [
+    { img: "/HowItWorks/Inside/adobe.webp", label: "Work with **Adobe**\n**Creative Cloud** files\ninside live projects", angle: 240 }, // Top Left
+    { img: "/HowItWorks/Inside/analytics.webp", label: "**Track live ads** and \ncreative references\n centrally", angle: 300 }, // Top Right
+    { img: "/HowItWorks/Inside/drive.webp", label: "Pull videos directly from \n**Google Drive** without \nduplication", angle: 190 }, // Mid Left
+    { img: "/HowItWorks/Inside/dashboard.webp", label: "Share **branded client \nportals** under your \nbusiness name", angle: -10 }, // Mid Right (Slightly above center)
+    { img: "/HowItWorks/Inside/zoom.webp", label: "Run **Zoom** feedback \nsessions with notes tied \nto assets", angle: 150 }, // Bottom Left
+    { img: "/HowItWorks/Inside/advertising.webp", label: "**Capture ads** and \ninspiration using the \nChrome extension", angle: 30 },  // Bottom Right
+    { img: "/HowItWorks/Inside/record.webp", label: "**Record screen** \nwalkthroughs for clearer \ndirection", angle: 110 },      // Bottom Mid-Left
+    { img: "/HowItWorks/Inside/facebook.webp", label: "Publish approved \ncontent through \n**Facebook APIs**", angle: 70 },        // Bottom Mid-Right
+  ];
+
+  // Oval shape settings
+  const radiusX = 420; // Width of the oval
+  const radiusY = 240; // Height of the oval (Kam karne se shape flat oval banegi)
+
   return (
-    <section className="w-full py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        
-        {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-20">
-          What You Can Do <span className="italic text-orange-500 font-Instrument">Inside Sevvy</span>
+    <section className="w-full py-4 bg-white overflow-hidden font-sans">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-2xl md:text-4xl text-gray-900 text-center mb-24">
+          What You Can Do <span className="italic text-orange-300 font-Instrument">Inside Sevvy</span>
         </h2>
 
-        {/* Main Content Area - Desktop */}
-        <div className="hidden md:block relative w-full min-h-[650px]">
-          
-          {/* Center Mascot */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">32
+
+        {/* Responsive Oval Layout (Always visible, scales for mobile) */}
+        <div className="-mt-26 relative w-full h-[420px] md:h-[650px]">
+          {/* Mascot Center */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <img 
               src="/HowItWorks/Inside/mascot.webp" 
-              alt="Sevvy Mascot" 
-              className="w-[280px] h-auto"
+              alt="Mascot" 
+              className="w-[140px] h-auto md:w-[280px]"
             />
           </div>
-
-          {/* Top Left - Adobe */}
-          <div className="absolute top-8 left-8 text-center w-[180px]">
-            <img src="/HowItWorks/Inside/adobe.webp" alt="Adobe" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900 leading-tight">
-              Work with <span className="font-bold">Adobe Creative Cloud</span> files inside live projects
-            </p>
-          </div>
-
-          {/* Middle Left - Google Drive */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-8 text-center w-[180px]">
-            <img src="/HowItWorks/Inside/drive.webp" alt="Google Drive" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900 leading-tight">
-              Pull videos directly from <span className="font-bold">Google Drive</span> without duplication
-            </p>
-          </div>
-
-          {/* Bottom Left - Zoom */}
-          <div className="absolute bottom-32 left-8 text-center w-[180px]">
-            <img src="/HowItWorks/Inside/zoom.webp" alt="Zoom" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900 leading-tight">
-              Run <span className="font-bold">Zoom</span> feedback sessions with notes tied to assets
-            </p>
-          </div>
-
-          {/* Bottom Center Left - Record */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-[120px] text-center w-[160px]">
-            <img src="/HowItWorks/Inside/record.webp" alt="Record" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900 leading-tight">
-              <span className="font-bold">Record screen</span> walkthroughs for clearer direction
-            </p>
-          </div>
-
-          {/* Bottom Center Right - Facebook */}
-          <div className="absolute bottom-2 left-1/2 translate-x-[20px] text-center w-[160px]">
-            <img src="/HowItWorks/Inside/facebook.webp" alt="Facebook" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900 leading-tight">
-              Publish approved content through <span className="font-bold">Facebook APIs</span>
-            </p>
-          </div>
-
-          {/* Top Right - Track Ads */}
-          <div className="absolute top-8 right-8 text-center w-[180px]">
-            <img src="/HowItWorks/Inside/analytics.webp" alt="Track Ads" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900 leading-tight">
-              <span className="font-bold">Track live ads</span> and creative references centrally
-            </p>
-          </div>
-
-          {/* Middle Right - Client Portal */}
-          <div className="absolute top-1/2 -translate-y-1/2 right-8 text-center w-[180px]">
-            <img src="/HowItWorks/Inside/analytics.webp" alt="Client Portal" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900 leading-tight">
-              Share <span className="font-bold">branded client portals</span> under your business name
-            </p>
-          </div>
-
-          {/* Bottom Right - Capture */}
-          <div className="absolute bottom-32 right-8 text-center w-[180px]">
-            <img src="/HowItWorks/Inside/advertising.webp" alt="Capture" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900 leading-tight">
-              <span className="font-bold">Capture ads</span> and inspiration using the Chrome extension
-            </p>
-          </div>
-
+          {items.map((item, index) => {
+            // Responsive oval radii
+            const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+            const rX = isMobile ? 180 : radiusX;
+            const rY = isMobile ? 110 : radiusY;
+            const radian = (item.angle * Math.PI) / 180;
+            const x = rX * Math.cos(radian);
+            const y = rY * Math.sin(radian);
+            return (
+              <div
+                key={index}
+                className="absolute flex flex-col items-center text-center w-[140px] md:w-[220px]"
+                style={{
+                  left: `calc(50% + ${x}px)`,
+                  top: `calc(50% + ${y}px)`,
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <img src={item.img} alt="" className="w-8 h-8 md:w-12 md:h-12 object-contain mb-2 md:mb-3" />
+                <p className="text-xs md:text-[13px] text-gray-800 leading-tight">
+                  {item.label.split("\n").map((line, idx) => (
+                    <span key={idx} className="block">
+                      {line.split("**").map((part, i) =>
+                        i % 2 === 1 ? <b key={i} className="font-bold text-black">{part}</b> : part
+                      )}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Mobile Layout - Simple Grid */}
-        <div className="md:hidden grid grid-cols-1 gap-8">
-          <div className="text-center">
-            <img src="/HowItWorks/Inside/adobe.webp" alt="Adobe" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900">Work with <span className="font-bold">Adobe Creative Cloud</span> files inside live projects</p>
-          </div>
-          <div className="text-center">
-            <img src="/HowItWorks/inside/drive.png" alt="Google Drive" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900">Pull videos directly from <span className="font-bold">Google Drive</span> without duplication</p>
-          </div>
-          <div className="text-center">
-            <img src="/HowItWorks/inside/zoom.png" alt="Zoom" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900">Run <span className="font-bold">Zoom</span> feedback sessions with notes tied to assets</p>
-          </div>
-          <div className="text-center">
-            <img src="/HowItWorks/inside/record.png" alt="Record" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900"><span className="font-bold">Record screen</span> walkthroughs for clearer direction</p>
-          </div>
-          <div className="text-center">
-            <img src="/HowItWorks/inside/facebook.png" alt="Facebook" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900">Publish approved content through <span className="font-bold">Facebook APIs</span></p>
-          </div>
-          <div className="text-center">
-            <img src="/HowItWorks/inside/analytics.png" alt="Track Ads" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900"><span className="font-bold">Track live ads</span> and creative references centrally</p>
-          </div>
-          <div className="text-center">
-            <img src="/HowItWorks/inside/portal.png" alt="Client Portal" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900">Share <span className="font-bold">branded client portals</span> under your business name</p>
-          </div>
-          <div className="text-center">
-            <img src="/HowItWorks/inside/capture.png" alt="Capture" className="w-12 h-12 mx-auto mb-3" />
-            <p className="text-sm text-gray-900"><span className="font-bold">Capture ads</span> and inspiration using the Chrome extension</p>
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center mt-20">
-          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-400 text-white font-semibold rounded-full shadow-md hover:scale-105 transition-all duration-300">
+        {/* CTA */}
+        <div className="text-center mt-4">
+          <button className="px-10 py-3.5 bg-gradient-to-r from-orange-500 to-orange-300 text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-all cursor-pointer">
             Build Your Workflow Your Way
           </button>
         </div>
-
       </div>
     </section>
   );
