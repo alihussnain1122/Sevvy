@@ -36,8 +36,8 @@ const Vision = () => {
                 
                 {/* Text Content */}
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Clarity</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
+                  <h3 className="text-xl font-semibold text-black mb-2">Clarity</h3>
+                  <p className="text-black leading-relaxed text-sm">
                     Creative teams deserve systems that make work visible, structured, and easy to manage at scale.
                   </p>
                 </div>
@@ -58,8 +58,8 @@ const Vision = () => {
                 
                 {/* Text Content */}
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Simplicity</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
+                  <h3 className="text-xl font-semibold text-black mb-2">Simplicity</h3>
+                  <p className="text-black leading-relaxed text-sm">
                     Powerful tools shouldn't feel heavy. We believe creative operations should be intuitive, not technical.
                   </p>
                 </div>
@@ -80,8 +80,8 @@ const Vision = () => {
                 
                 {/* Text Content */}
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuity</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
+                  <h3 className="text-xl font-semibold text-black mb-2">Continuity</h3>
+                  <p className="text-black leading-relaxed text-sm">
                     Work shouldn't end at approval. Every project should compound into long-term assets, insights, and growth.
                   </p>
                 </div>

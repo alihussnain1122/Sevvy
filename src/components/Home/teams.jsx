@@ -42,9 +42,10 @@ const Teams = () => {
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
-                   rounded-full 
-                   cursor-pointer
-                   transition-all duration-3000">
+                   rounded-full
+                   shadow transition-transform duration-200
+                   hover:scale-105 
+                   cursor-pointer">
 
               <span className="font-medium">
                 View unified system
@@ -94,8 +95,9 @@ const Teams = () => {
                    text-white 
                    pl-8 pr-3 py-1 
                    rounded-full 
-                   cursor-pointer
-                   transition-all duration-300">
+                   shadow transition-transform duration-200
+                   hover:scale-105 
+                   cursor-pointer">
 
               <span className="font-medium">
                 Extend content lifecycle
@@ -144,9 +146,10 @@ const Teams = () => {
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
-                   rounded-full 
-                   cursor-pointer
-                   transition-all duration-300">
+                   rounded-full
+                   shadow transition-transform duration-200
+                   hover:scale-105 
+                   cursor-pointer">
 
               <span className="font-medium">
                 Fix review flow
@@ -195,9 +198,10 @@ const Teams = () => {
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
-                   rounded-full 
-                   cursor-pointer
-                   transition-all duration-300">
+                   rounded-full
+                   shadow transition-transform duration-200
+                   hover:scale-105
+                   cursor-pointer">
 
               <span className="font-medium">
                 Reduce tool Costs

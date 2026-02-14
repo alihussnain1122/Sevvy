@@ -88,8 +88,9 @@ const Choose = () => {
                    text-white 
                    pl-10 pr-6 py-2 
                    rounded-full 
-                   cursor-pointer
-                   transition-all duration-300">
+                   shadow transition-transform duration-200
+                   hover:scale-105 
+                   cursor-pointer">
             Explore More <span className="arrow">→</span>
           </button>
         </div>

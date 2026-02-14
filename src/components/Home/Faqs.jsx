@@ -147,7 +147,7 @@ const FAQ = () => {
             >
               <div className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 mt-1">
+                  <div className="flex-shrink-0 -mt-1">
                     <span className="text-orange-500 text-2xl font-bold">
                       {openIndex === index ? '−' : '+'}
                     </span>

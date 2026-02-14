@@ -217,7 +217,7 @@ const Hero = () => {
         {/* Center Character (Bot) */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full shadow-xl flex items-center justify-center border border-gray-100 z-20 animate-icon-glow-centered" style={{animationDelay: '0.2s'}}>
              {/* Center Bot */}
-             <img src="/Home/hero/vframe.webp" alt="Sevy Bot" className="w-16 h-16 object-contain" />
+             <img src="/Home/hero/vframe.webp" alt="Sevy Bot" className="w-30 h-30 object-contain" />
         </div>
 
         {/* Database Icon (Above) */}

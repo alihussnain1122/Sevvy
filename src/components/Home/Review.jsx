@@ -114,7 +114,7 @@ const Review = () => {
         </div>
 
         <div className="text-center mt-12 md:mt-16">
-          <button className="bg-gradient-to-r from-orange-500 to-orange-400 text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 text-sm md:text-base">
+          <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 text-sm md:text-base">
             View All →
           </button>
         </div>

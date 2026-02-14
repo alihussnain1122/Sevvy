@@ -95,7 +95,7 @@ const Pricing = () => {
           {pricingPlans.map((plan, index) => (
             <div 
               key={index} 
-              className="bg-white border border-[#E8E8E8] rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:bg-[#FF8C42] hover:border-[#FFB380] hover:shadow-lg group"
+              className="bg-white border border-[#E8E8E8] rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:bg-gradient-to-r from-orange-500 to-orange-200 hover:border-[#FFB380] hover:shadow-lg group"
             >
               {/* Card Header */}
               <div className="mb-6">
@@ -162,7 +162,7 @@ const Pricing = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <button className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg font-bold py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105">
+          <button className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105">
             Pricing Detail
             <span className="text-xl font-bold">→</span>
           </button>
