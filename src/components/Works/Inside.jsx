@@ -76,6 +76,7 @@ const Inside = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 
