@@ -1,3 +1,4 @@
+import PricingDifference from "../components/Pricing/Different";
 import FAQ from "../components/Pricing/Faqs";
 import PricingHero from "../components/Pricing/Hero";
 import PlansComparison from "../components/Pricing/Plans";
@@ -11,6 +12,7 @@ export default function Pricing() {
     <TeamsSection />
     <PlansComparison />
     <TrialCTA />
+    <PricingDifference />
     <FAQ />
     </>
   );
