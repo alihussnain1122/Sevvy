@@ -83,7 +83,7 @@ const Pricing = () => {
         {/* Header */}
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
-            Start Where Your <span className="text-[#FF8C42] font-Instrument italic">Workflow</span> is
+            Start Where Your <span className="text-orange-400 font-Instrument italic">Workflow</span> is
           </h2>
           <p className="text-base md:text-lg text-[#6B6B6B]">
             Scale when the work scales, not before.

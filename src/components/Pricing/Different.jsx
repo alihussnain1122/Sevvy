@@ -35,7 +35,7 @@ const PricingDifference = () => {
         {/* Top Center Heading */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl text-gray-900">
-            Why Sevvy <span className="text-orange-500 italic font-Instrument">Pricing</span> Is Different
+            Why Sevvy <span className="text-orange-400 italic font-Instrument">Pricing</span> Is Different
           </h2>
         </div>
 
@@ -58,7 +58,7 @@ const PricingDifference = () => {
               {bulletPoints.map((point, index) => (
                 <li key={index} className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-orange-500 flex-shrink-0"></span>
-                  <span className="text-orange-500 font-bold text-base lg:text-lg">
+                  <span className="text-orange-400 font-bold text-base lg:text-lg">
                     {point}
                   </span>
                 </li>

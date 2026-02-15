@@ -50,7 +50,7 @@ const PlansComparison = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Basic Card */}
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 max-w-md mx-auto">
-              <h3 className="text-2xl font-semibold text-orange-500 mb-2">Basic</h3>
+              <h3 className="text-2xl font-semibold text-orange-400 mb-2">Basic</h3>
               <div className="mb-1">
                 <span className="text-4xl font-bold text-gray-900">$19</span>
                 <span className="text-gray-600 text-lg"> / month</span>
@@ -74,14 +74,14 @@ const PlansComparison = () => {
                 ))}
               </ul>
               
-              <button className="w-full border-2 border-orange-500 text-orange-500 font-medium py-3 px-6 rounded-xl  transition-colors cursor-pointer">
+              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-xl  transition-colors cursor-pointer">
                 Try for Free
               </button>
             </div>
 
             {/* Right - Content */}
             <div className="space-y-6 -mt-20" >
-              <h3 className="text-3xl lg:text-4xl font-bold text-orange-500">Best for:</h3>
+              <h3 className="text-3xl lg:text-4xl font-bold text-orange-400">Best for:</h3>
               <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
                 Creators validating ideas, early-stage teams, and anyone tired of messy Google Docs.
               </p>
@@ -108,7 +108,7 @@ const PlansComparison = () => {
             {/* Left - Content */}
             <div className="space-y-6 -mt-18">
               <h3 className="text-3xl lg:text-4xl font-bold leading-tight">
-                <span className="text-orange-500">Why teams choose this</span>
+                <span className="text-orange-400">Why teams choose this</span>
               </h3>
               <p className="text-gray-800 text-lg leading-relaxed">
                 Most agencies upgrade here once content volume increases, and coordination becomes critical.
@@ -159,7 +159,7 @@ const PlansComparison = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Gold Card */}
             <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100 max-w-md mx-auto">
-              <h3 className="text-2xl font-semibold text-orange-500 mb-2">Gold</h3>
+              <h3 className="text-2xl font-semibold text-orange-400 mb-2">Gold</h3>
               <div className="mb-1">
                 <span className="text-4xl font-bold text-gray-900">$99</span>
                 <span className="text-gray-600 text-lg"> / month</span>

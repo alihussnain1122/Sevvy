@@ -33,13 +33,13 @@ const Operation = () => {
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }}
       />
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full z-20">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-[42px] font-semibold text-black mb-3 leading-tight">
+          <h2 className="text-3xl md:text-[42px] text-black mb-3 leading-tight">
             Creative Operations, <span className="text-[#FF8C42] font-Instrument italic">Explained</span>
           </h2>
-          <p className="text-base md:text-lg text-black font-bold">
+          <p className="text-base md:text-lg text-black">
             Articles on building structure without killing creativity.
           </p>
         </div>

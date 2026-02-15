@@ -23,7 +23,7 @@ const TeamsSection = () => {
                         {/* Left Side Content */}
                         <div className="space-y-6 mt-4">
                             <h2 className="text-2xl lg:text-4xl font-bold leading-tight">
-                                <span className="text-orange-500">Built for Teams That Publish at Scale</span>
+                                <span className="text-orange-400">Built for Teams That Publish at Scale</span>
                             </h2>
 
                             <p className="text-gray-600 text-base lg:text-lg max-w-xl">
@@ -34,16 +34,16 @@ const TeamsSection = () => {
                             <ul className="space-y-4 mt-8">
                                 {point => (
                                     <li key={point} className="flex items-start gap-3">
-                                        <span className="flex-shrink-0 w-2 h-2 rounded-full bg-orange-500 mt-2.5"></span>
-                                        <span className="text-orange-500 font-medium text-lg">
+                                        <span className="flex-shrink-0 w-2 h-2 rounded-full bg-orange-400 mt-2.5"></span>
+                                        <span className="text-orange-400 font-medium text-lg">
                                             {point}
                                         </span>
                                     </li>
                                 )}
                                 {bulletPoints.map((point, index) => (
                                     <li key={index} className="flex items-start gap-3">
-                                        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-orange-500 mt-2.5"></span>
-                                        <span className="text-orange-500 font-medium text-base lg:text-lg">
+                                        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-orange-400 mt-2.5"></span>
+                                        <span className="text-orange-400 font-medium text-base lg:text-lg">
                                             {point}
                                         </span>
                                     </li>

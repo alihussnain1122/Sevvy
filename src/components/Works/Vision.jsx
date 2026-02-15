@@ -14,7 +14,7 @@ const Vision = () => {
           
           {/* Heading */}
           <div className="text-center mb-10 md:mb-16 z-10  relative">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl text-black font-semibold">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl text-black">
               Our <span className="italic font-Instrument text-orange-400">Vision</span>
             </h2>
           </div>

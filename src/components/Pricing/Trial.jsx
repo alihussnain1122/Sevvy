@@ -76,7 +76,7 @@ const TrialCTA = () => {
               </ul>
 
               {/* Card Button */}
-              <button className="w-full border-2 border-orange-500 text-orange-500 font-medium py-3 px-6 rounded-lg cursor-pointer">
+              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-lg cursor-pointer">
                 Start My 14-Day Free Trial
               </button>
             </div>
