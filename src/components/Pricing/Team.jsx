@@ -8,7 +8,7 @@ const TeamsSection = () => {
     ];
 
     return (
-        <section className="w-full py-16 lg:py-24">
+        <section className="w-full py-16 lg:py-24 -mt-28">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Background color layer is only on this rounded div */}
                 <div className="bg-[#fffbf8] rounded-3xl p-12 relative overflow-hidden">

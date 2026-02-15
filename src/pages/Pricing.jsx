@@ -1,4 +1,5 @@
 import PricingHero from "../components/Pricing/Hero";
+import PlansComparison from "../components/Pricing/Plans";
 import TeamsSection from "../components/Pricing/Team";
 
 export default function Pricing() {
@@ -6,6 +7,7 @@ export default function Pricing() {
     <>
     <PricingHero />
     <TeamsSection />
+    <PlansComparison />
     </>
   );
 }
