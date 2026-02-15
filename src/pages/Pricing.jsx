@@ -2,6 +2,7 @@ import FAQ from "../components/Pricing/Faqs";
 import PricingHero from "../components/Pricing/Hero";
 import PlansComparison from "../components/Pricing/Plans";
 import TeamsSection from "../components/Pricing/Team";
+import TrialCTA from "../components/Pricing/Trial";
 
 export default function Pricing() {
   return(
@@ -9,6 +10,7 @@ export default function Pricing() {
     <PricingHero />
     <TeamsSection />
     <PlansComparison />
+    <TrialCTA />
     <FAQ />
     </>
   );
