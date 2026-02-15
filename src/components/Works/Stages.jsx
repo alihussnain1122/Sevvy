@@ -55,9 +55,9 @@ const Stages = () => {
 
         {/* Stage 2: Workflow & Visibility */}
         <div className="mb-16">
-          <div className="bg-[#fffbf8] rounded-3xl p-12 relative overflow-hidden">
+          <div className="bg-[#fffbf8] rounded-3xl md:p-12 p-0 relative overflow-hidden">
             {/* Top gradient overlay */}
-            <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{
+            <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none z-0" style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
           maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
@@ -68,7 +68,7 @@ const Stages = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
-              <div>
+              <div className="text-left p-1 md:p-6">
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Track progress clearly</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Flexible views and real-time dashboards help <br /> teams save 3–5 hours weekly by reducing <br /> coordination and manual status tracking.
@@ -158,20 +158,20 @@ const Stages = () => {
 
         {/* Stage 4: Approval & Version Control */}
         <div className="mb-16">
-          <div className="bg-[#fffbf8] rounded-3xl p-12 relative overflow-hidden">
+          <div className="bg-[#fffbf8] rounded-3xl md:p-12 p-0 relative overflow-hidden">
             {/* Top gradient overlay */}
-            <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{
+            <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none z-0" style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
           maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }} />
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 relative z-10">
               <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 4</p>
               <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Approval & Publishing</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
-              <div>
+              <div className="text-left p-1 md:p-6">
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Ship without delays</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Undefined approval states can extend timelines by <br /> 50%. Clear status controls and live notifications <br />prevent delivery bottlenecks.
@@ -198,7 +198,6 @@ const Stages = () => {
                   Accelerate Delivery
                 </button>
               </div>
-              
               {/* Image Right */}
               <div className="flex justify-center">
                 <img 

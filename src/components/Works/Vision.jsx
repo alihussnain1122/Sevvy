@@ -2,7 +2,7 @@ import React from "react";
 
 const Vision = () => {
   return (
-    <section className="relative w-full py-8 md:py-16">
+    <section className="relative w-full py-8 md:py-16 -mt-28">
       <div className="mx-auto px-2 md:px-6">
         <div className="bg-[#fffbf8] rounded-3xl p-4 md:p-12 relative overflow-hidden">
             {/* Top gradient overlay */}

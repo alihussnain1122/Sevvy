@@ -26,35 +26,34 @@ const Inside = () => {
 
 
         {/* Responsive Oval Layout (Always visible, scales for mobile) */}
-        <div className="-mt-26 relative w-full h-[420px] md:h-[650px]">
+        {/* Desktop oval layout */}
+        <div className="hidden md:block -mt-26 relative w-full h-[650px]">
           {/* Mascot Center */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <img 
               src="/HowItWorks/Inside/mascot.webp" 
               alt="Mascot" 
-              className="w-[140px] h-auto md:w-[280px]"
+              className="w-[280px] h-auto"
             />
           </div>
           {items.map((item, index) => {
-            // Responsive oval radii
-            const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-            const rX = isMobile ? 180 : radiusX;
-            const rY = isMobile ? 110 : radiusY;
+            const rX = radiusX;
+            const rY = radiusY;
             const radian = (item.angle * Math.PI) / 180;
             const x = rX * Math.cos(radian);
             const y = rY * Math.sin(radian);
             return (
               <div
                 key={index}
-                className="absolute flex flex-col items-center text-center w-[140px] md:w-[220px]"
+                className="absolute flex flex-col items-center text-center w-[220px]"
                 style={{
                   left: `calc(50% + ${x}px)`,
                   top: `calc(50% + ${y}px)`,
                   transform: "translate(-50%, -50%)",
                 }}
               >
-                <img src={item.img} alt="" className="w-8 h-8 md:w-12 md:h-12 object-contain mb-2 md:mb-3" />
-                <p className="text-xs md:text-[13px] text-gray-800 leading-tight">
+                <img src={item.img} alt="" className="w-12 h-12 object-contain mb-3" />
+                <p className="text-[13px] text-gray-800 leading-tight">
                   {item.label.split("\n").map((line, idx) => (
                     <span key={idx} className="block">
                       {line.split("**").map((part, i) =>
@@ -66,6 +65,26 @@ const Inside = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Mobile horizontal scrollable row */}
+        <div className="md:hidden w-full overflow-x-auto py-6">
+          <div className="flex flex-nowrap gap-4 px-2">
+            {items.map((item, index) => (
+              <div key={index} className="flex-shrink-0 flex flex-col items-center text-center">
+                <img src={item.img} alt="" className="w-8 h-8 object-contain mb-2" />
+                <p className="text-xs text-gray-800 leading-tight">
+                  {item.label.split("\n").map((line, idx) => (
+                    <span key={idx} className="block">
+                      {line.split("**").map((part, i) =>
+                        i % 2 === 1 ? <b key={i} className="font-bold text-black">{part}</b> : part
+                      )}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}

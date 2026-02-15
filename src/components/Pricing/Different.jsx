@@ -33,7 +33,7 @@ const PricingDifference = () => {
     <section className="w-full py-20 bg-white -mt-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Top Center Heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-4">
           <h2 className="text-3xl lg:text-4xl text-gray-900">
             Why Sevvy <span className="text-orange-400 italic font-Instrument">Pricing</span> Is Different
           </h2>
@@ -42,9 +42,9 @@ const PricingDifference = () => {
         {/* Two Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
-          <div className="space-y-6 pl-12">
+          <div className="space-y-6 pl-0 md:pl-12">
             {/* Main Bold Statement */}
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
               With Sevvy, you're not paying for features but for flow
             </h3>
 

@@ -22,10 +22,10 @@ const PricingHero = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading Section */}
         <div className="text-center mb-12 lg:mb-16">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-2">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2">
             <span className="text-gray-900">Plans That Match How</span>
           </h1>
-          <h2 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold mb-2">
             <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
               Creative Teams{' '}
             </span>
@@ -49,127 +49,12 @@ const PricingHero = () => {
         </div>
 
         {/* Two Column Layout - Mascot and Cards */}
-        <div className="flex flex-col lg:flex-row items-end lg:items-center justify-center gap-8 lg:gap-12">
-          {/* Mascot Image - Left Side */}
-          <div className="flex justify-center lg:justify-start lg:flex-shrink-0 z-10 lg:-mr-82 xl:-mr-86">
-            <img
-              src="/Pricing/hero/mascot.webp"
-              alt="Sevvy Mascot"
-              className="w-full max-w-[350px] lg:max-w-[550px] xl:max-w-[750px] h-auto mt-16"
-            />
-          </div>
-
-          {/* Pricing Cards - Right Side */}
-          <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 w-full lg:w-auto items-stretch sm:items-end">
-            {/* Basic Card */}
-            <div className="bg-[#fcf8f9] rounded-2xl shadow-lg p-6 lg:p-8 w-full sm:w-60 lg:w-64 min-h-[400px] flex flex-col">
-              <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">Basic</h3>
-              
-              <div className="mb-8">
-                <div className="flex items-baseline">
-                  <span className="text-gray-900 text-4xl lg:text-5xl font-bold">$19</span>
-                  <span className="text-gray-600 text-lg ml-1">/month</span>
-                </div>
-              </div>
-
-              {/* Features */}
-              <div className="space-y-4 flex-grow">
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Premium Card - Most Popular */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 border-1 border-orange-300 rounded-2xl shadow-xl p-6 lg:p-8 w-full sm:w-60 lg:w-64 min-h-[400px] flex flex-col relative">
-              {/* Most Popular Badge */}
-              <div className="absolute -top-1 left-0 right-0 flex justify-center -translate-y-1/2">
-                <span className="bg-[#ff8950] text-white text-center text-xs font-semibold w-[220px] px-4 py-1.5 rounded-xl shadow-md">
-                  Most Popular
-                </span>
-              </div>
-
-              <h3 className="text-2xl font-bold text-center text-gray-900 mb-6 mt-2">Premium</h3>
-              
-              <div className="mb-8">
-                <div className="flex items-baseline">
-                  <span className="text-gray-900 text-4xl lg:text-5xl font-bold">$49</span>
-                  <span className="text-gray-600 text-lg ml-1">/month</span>
-                </div>
-              </div>
-
-              {/* Features */}
-              <div className="space-y-4 flex-grow">
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Gold Card */}
-            <div className="bg-[#fcf8f9] border-1 border-orange-300 rounded-2xl shadow-lg p-6 lg:p-8 w-full sm:w-60 lg:w-64 min-h-[400px] flex flex-col">
-              <h3 className="text-2xl font-bold text-center text-orange-400 mb-6">Gold</h3>
-              
-              <div className="mb-8">
-                <div className="flex items-baseline">
-                  <span className="text-gray-900 text-4xl lg:text-5xl font-bold">$99</span>
-                  <span className="text-gray-600 text-lg ml-1">/month</span>
-                </div>
-              </div>
-
-              {/* Features */}
-              <div className="space-y-4 flex-grow">
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <CheckIcon />
-                  </div>
-                  <div className="flex-grow h-2 bg-gray-200 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="flex justify-center items-center w-full">
+          <img
+            src="/Pricing/hero/sevy.webp"
+            alt="Pricing Mascot and Cards"
+            className="w-full max-w-4xl h-auto"
+          />
         </div>
       </div>
     </section>

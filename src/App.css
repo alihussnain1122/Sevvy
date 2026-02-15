@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+.mask-gradient-center {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+@media (min-width: 768px) {
+  .mask-gradient-center {
+    mask-image: linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%);
+  }
+}
+
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 20s linear infinite;
+}
