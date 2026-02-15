@@ -8,7 +8,7 @@ const Stages = () => {
         {/* Stage 1: Intake & Alignment */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 1</p>
+            <p className="text-orange-400 font-bold text-xl  tracking-wide mb-2">Stage 1</p>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Intake & Alignment</h2>
           </div>
           
@@ -63,7 +63,7 @@ const Stages = () => {
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }} />
             <div className="text-center mb-8 relative z-10">
-              <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 2</p>
+              <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 2</p>
               <h2 className="text-2xl md:text-4xl font-semibold  text-gray-900">Workflow & Visibility</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -111,7 +111,7 @@ const Stages = () => {
         {/* Stage 3: Review & Feedback */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 3</p>
+            <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 3</p>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Feedback & Collaboration</h2>
           </div>
           
@@ -166,8 +166,8 @@ const Stages = () => {
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }} />
             <div className="text-center mb-8">
-              <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 4</p>
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Approval & Publishing</h2>
+              <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 4</p>
+              <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Approval & Publishing</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
@@ -214,7 +214,7 @@ const Stages = () => {
         {/* Stage 5: Publishing & Asset Library */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <p className="text-orange-500 font-bold text-xl uppercase tracking-wide mb-2">Stage 5</p>
+            <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 5</p>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Showcase, Reuse & Scale</h2>
           </div>
           

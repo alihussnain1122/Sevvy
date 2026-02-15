@@ -3,11 +3,10 @@ import React from "react";
 const CreativeJourneySection = () => {
   return (
     <section>
-      {/* Max-width reduced from 7xl to 5xl for a more compact look */}
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         
-        {/* Rounded Card */}
-        <div className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden">
+        {/*Card */}
+        <div className="relative overflow-hidden">
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-contain bg-no-repeat w-full h-full bg-center"
@@ -35,10 +34,10 @@ const CreativeJourneySection = () => {
             <button className="inline-flex items-center gap-3 px-6 md:px-8 py-2 md:py-2.5 bg-orange-500 text-white font-semibold border-white border-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm md:text-base mb-4 cursor-pointer">
   <span>Let's craft together</span>
   
-  {/* Circle size increased to w-9 h-9, and margin-right adjusted for perfect fit */}
+  
   <div className="flex items-center justify-center w-9 h-9 bg-white rounded-full -mr-4 md:-mr-6">
     <svg
-      width="18" // SVG size also slightly increased
+      width="18" 
       height="18"
       viewBox="0 0 24 24"
       fill="none"

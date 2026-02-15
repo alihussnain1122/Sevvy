@@ -39,11 +39,11 @@ const TrialCTA = () => {
         {/* Two Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
           {/* Left - Mascot Image */}
-          <div className="flex justify-center md:justify-end items-end">
+          <div className="flex justify-center md:justify-end items-end z-10 lg:-mr-35 xl:-mr-40">
             <img
-              src="/Pricing/hero/mascot.webp"
+              src="/Pricing/hero/sa.webp"
               alt="Sevvy Mascot"
-              className="w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-contain drop-shadow-xl"
+              className="w-full max-w-[350px] lg:max-w-[550px] xl:max-w-[750px] h-auto mt-18"
             />
           </div>
 

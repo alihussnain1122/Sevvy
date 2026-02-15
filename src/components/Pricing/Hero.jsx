@@ -51,11 +51,11 @@ const PricingHero = () => {
         {/* Two Column Layout - Mascot and Cards */}
         <div className="flex flex-col lg:flex-row items-end lg:items-center justify-center gap-8 lg:gap-12">
           {/* Mascot Image - Left Side */}
-          <div className="flex justify-center lg:justify-start lg:flex-shrink-0">
+          <div className="flex justify-center lg:justify-start lg:flex-shrink-0 z-10 lg:-mr-82 xl:-mr-86">
             <img
               src="/Pricing/hero/mascot.webp"
               alt="Sevvy Mascot"
-              className="w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-contain drop-shadow-xl"
+              className="w-full max-w-[350px] lg:max-w-[550px] xl:max-w-[750px] h-auto mt-16"
             />
           </div>
 
