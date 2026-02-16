@@ -5,6 +5,7 @@ const navLinks = [
   { name: 'Sevvy', to: '/' },
   { name: 'How it works', to: '/how-it-works' },
   { name: 'Pricing', to: '/pricing' },
+  { name: 'About Us', to: '/about-us' },
   { name: 'Blogs', to: '/blog' },
 ];
 

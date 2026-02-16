@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import Blog from '../pages/Blog';
 import Pricing from '../pages/Pricing';
 import HowItWorks from '../pages/HowItWorks';
+import WhoIsSevvy from '../pages/WhoIsSevvy';
 
 const AppRoutes = () => (
 	<Routes>
@@ -11,6 +12,7 @@ const AppRoutes = () => (
 		<Route path="/how-it-works" element={<HowItWorks />} />
 		<Route path="/pricing" element={<Pricing />} />
 		<Route path="/blog" element={<Blog />} />
+		<Route path="/about-us" element={<WhoIsSevvy />} />
 	</Routes>
 );
 
