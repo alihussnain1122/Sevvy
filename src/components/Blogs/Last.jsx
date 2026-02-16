@@ -49,7 +49,7 @@ const LastSection = () => {
                 </svg>
               </div>
             </button>
-            <p className="text-lg sm:text-lg font-bold text-white mt-2 sm:mt-4">No Setup. No Contracts. <br /> Cancel anytime</p>
+            <p className="text-lg sm:text-lg font-bold text-white mt-2 mb-2  sm:mt-4">No Setup. No Contracts. <br /> Cancel anytime</p>
           </div>
         </div>
       </div>
