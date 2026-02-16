@@ -49,7 +49,7 @@ const PlansComparison = () => {
         <div className="bg-white rounded-3xl p-8 lg:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Basic Card */}
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 max-w-md mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 max-w-md mx-auto order-2 md:order-none">
               <h3 className="text-2xl font-semibold text-orange-400 mb-2">Basic</h3>
               <div className="mb-1">
                 <span className="text-4xl font-bold text-gray-900">$19</span>
@@ -80,7 +80,7 @@ const PlansComparison = () => {
             </div>
 
             {/* Right - Content */}
-            <div className="space-y-6 -mt-20" >
+            <div className="space-y-6  order-1 md:order-none" >
               <h3 className="text-3xl lg:text-4xl font-bold text-orange-400">Best for:</h3>
               <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
                 Creators validating ideas, early-stage teams, and anyone tired of messy Google Docs.
@@ -106,7 +106,7 @@ const PlansComparison = () => {
           ></div>
           <div className="relative z-10  grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Content */}
-            <div className="space-y-6 -mt-18">
+            <div className="space-y-6 ">
               <h3 className="text-3xl lg:text-4xl font-bold leading-tight">
                 <span className="text-orange-400">Why teams choose this</span>
               </h3>
@@ -158,7 +158,7 @@ const PlansComparison = () => {
         <div className="bg-white rounded-3xl p-8 lg:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Gold Card */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100 max-w-md mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 max-w-md mx-auto order-2 md:order-none">
               <h3 className="text-2xl font-semibold text-orange-400 mb-2">Gold</h3>
               <div className="mb-1">
                 <span className="text-4xl font-bold text-gray-900">$99</span>
@@ -189,7 +189,7 @@ const PlansComparison = () => {
             </div>
 
             {/* Right - Content */}
-            <div className="space-y-6 -mt-20">
+            <div className="space-y-6 order-1 md:order-none">
               <h3 className="text-3xl lg:text-4xl font-bold text-orange-400">Built for:</h3>
               <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
                 Agencies, in-house content teams, and media brands managing complex pipelines.
