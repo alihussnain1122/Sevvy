@@ -24,7 +24,7 @@ const TrialCTA = () => {
   ];
 
   return (
-    <section className="relative rounded-2xl p-8 max-w-6xl mx-auto lg:p-12 overflow-hidden bg-[rgb(255,251,248)]">
+    <section className="relative rounded-2xl p-4 xs:p-6 sm:p-8 max-w-6xl mx-auto lg:p-12 overflow-hidden bg-[rgb(255,251,248)]">
       {/* Top background with faded corners */}
       <div
         className="absolute top-0 left-0 right-0 h-28 z-0"
@@ -35,21 +35,30 @@ const TrialCTA = () => {
         }}
       ></div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Two Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
-          {/* Left - Mascot Image */}
-          <div className="flex justify-center md:justify-end items-end z-10 lg:-mr-35 xl:-mr-40">
+      <div className="max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Mobile: mascot as background, desktop: side-by-side */}
+        <div className="relative flex flex-col md:grid md:grid-cols-2 gap-6 lg:gap-16 items-center mb-12">
+          {/* Mascot as background for mobile */}
+          <img
+            src="/Pricing/hero/sa.webp"
+            alt="Sevvy Mascot"
+            className="block md:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-[320px] opacity-60 pointer-events-none select-none z-0"
+            aria-hidden="true"
+          />
+
+          {/* Mascot in front for desktop */}
+          <div className="hidden md:block absolute md:static left-0 top-1/2 md:top-auto md:left-auto md:transform-none -translate-y-1/2 md:translate-y-0 z-30 md:z-20" style={{pointerEvents: 'none'}}>
             <img
               src="/Pricing/hero/sa.webp"
               alt="Sevvy Mascot"
-              className="w-full max-w-[350px] lg:max-w-[550px] xl:max-w-[750px] h-auto mt-18"
+              className="w-full max-w-[350px] lg:max-w-[550px] xl:max-w-[750px] h-auto mt-18 drop-shadow-xl"
+              style={{pointerEvents: 'auto'}}
             />
           </div>
 
-          {/* Right - White Card */}
-          <div className="flex justify-center md:justify-start max-w-md mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-10 max-w-md w-full">
+          {/* Card always on top for mobile, right for desktop */}
+          <div className="flex justify-center md:justify-start max-w-md mx-auto z-10">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10 max-w-md w-full relative">
               {/* Heading */}
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3 leading-tight">
                 Experience Sevvy for 14<br />Days, On Us
