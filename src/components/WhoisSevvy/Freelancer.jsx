@@ -62,7 +62,7 @@ const Freelance = () => {
     return (
       <div
         key={index}
-        className={`bg-white/50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 
+        className={`bg-white/50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300
           ${isFullWidth ? "col-span-2" : "col-span-1"}`}
       >
         <p
@@ -82,7 +82,7 @@ const Freelance = () => {
 </div>
 
           {/* Paragraph - Right Side */}
-          <div className="flex items-center justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start md:mt-12">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
               Freelancers spend up to <span className="text-orange-400 font-semibold">40% of time </span> 
 on non billable coordination. Sevvy provides a professional system that speeds approvals and builds client confidence.

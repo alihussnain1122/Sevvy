@@ -60,7 +60,7 @@ const NontechCreativeTeams = () => {
         {/* Bottom Content: Paragraph left, Cards right */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-16">
           {/* Paragraph - Left Side */}
-          <div className="flex items-center justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start md:mt-18 md:px-12">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
               Many creative teams abandon traditional PM tools because they feel rigid or overly technical. Sevy is designed for visual, iterative workflows, not checklist-heavy systems that slow adoption.
             </p>

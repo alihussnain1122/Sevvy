@@ -81,7 +81,7 @@ const SocialMedia = () => {
 </div>
 
           {/* Paragraph - Right Side */}
-          <div className="flex items-center justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start md:mt-12">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
               Marketing teams often juggle 4–6 tools just to ship content. Coordination slows production. Sevvy keeps planning, review, and publishing aligned in one unified workspace.
             </p>

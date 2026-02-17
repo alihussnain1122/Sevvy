@@ -89,7 +89,7 @@ const ContentCreator = () => {
 </div>
 
           {/* Paragraph - Right Side */}
-          <div className="flex items-center justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start md:mt-12">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
               Creators lose 25–40% of production time to revisions and scattered files. Sevvy manages the full lifecycle in one structured environment.
             </p>
