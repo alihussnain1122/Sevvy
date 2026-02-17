@@ -3,24 +3,24 @@ import React from 'react';
 const Freelance = () => {
   const features = [
     {
-      text: 'Visual calarity reduce reworks by ',
-      highlight: '30-40%',
-      suffix: ''
-    },
-    {
-      text: 'In-context feedback cuts review cycles by ',
+      text: 'Revision tracking cuts back-and-forth by ',
       highlight: '50%',
       suffix: ''
     },
     {
-      text: 'Fewer handoffs save ',
-      highlight: '3–5 hours',
-      suffix: 'weekly'
+      text: '',
+      highlight: 'Clean workflows ',
+      suffix: 'elevate professionalism'
     },
     {
       text: '',
-      highlight: 'One system ',
-      suffix: 'scales high-volume output'
+      highlight: 'Faster approvals ',
+      suffix: 'shorten payment cycles'
+    },
+    {
+      text: '',
+      highlight: 'Auto-portfolios ',
+      suffix: 'showcase wins effortlessly'
     }
   ];
 
@@ -33,8 +33,9 @@ const Freelance = () => {
         {/* Top Heading */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight">
-            <span className="text-gray-800">Social Media & </span>
-            <span className="text-orange-400 italic font-Instrument">Content Teams</span>
+            <span className="text-orange-400 italic font-Instrument">Freelancer </span>
+            <span className="text-black">& Solo Teams</span>
+            
           </h2>
         </div>
 
@@ -42,7 +43,7 @@ const Freelance = () => {
         <div className="flex justify-center mb-12">
           <div className="w-full max-w-[600px]">
             <img
-              src="/WhoIsSevvy/socialmedia.webp"
+              src="/WhoIsSevvy/freelancer.webp"
               alt="Creative & Video Agencies Workflow"
               className="w-full h-auto object-contain rounded-2xl shadow-lg"
             />
@@ -83,7 +84,8 @@ const Freelance = () => {
           {/* Paragraph - Right Side */}
           <div className="flex items-center justify-center md:justify-start">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
-              Marketing teams often juggle 4–6 tools just to ship content. Coordination slows production. Sevvy keeps planning, review, and publishing aligned in one unified workspace.
+              Freelancers spend up to <span className="text-orange-400 font-semibold">40% of time </span> 
+on non billable coordination. Sevvy provides a professional system that speeds approvals and builds client confidence.
             </p>
           </div>
         </div>
