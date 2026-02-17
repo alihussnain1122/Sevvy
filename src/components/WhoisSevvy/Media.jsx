@@ -50,10 +50,10 @@ const SocialMedia = () => {
         </div>
 
         {/* Bottom Content: Cards left, Paragraph right */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-16">
+        <div className="flex flex-col md:grid-cols-2 gap-10 items-start mb-16">
           {/* Feature Cards Grid - Left Side */}
           {/* Feature Cards Grid - Left Side */}
-<div className="grid grid-cols-2 gap-4">
+<div className="grid grid-cols-2 gap-4 order-2 md:order-1">
   {features.map((feature, index) => {
     // Pehla (0) aur Aakhri (3) card full width lega
     const isFullWidth = index === 0 || index === features.length - 1;
@@ -81,7 +81,7 @@ const SocialMedia = () => {
 </div>
 
           {/* Paragraph - Right Side */}
-          <div className="flex items-center justify-center md:justify-start md:mt-12">
+          <div className="flex items-center justify-center md:justify-start md:mt-12 order-1 md:order-2">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
               Marketing teams often juggle 4–6 tools just to ship content. Coordination slows production. Sevvy keeps planning, review, and publishing aligned in one unified workspace.
             </p>

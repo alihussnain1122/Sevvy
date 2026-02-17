@@ -75,7 +75,7 @@ const NeedSevvy = () => {
                 </div>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
                     {cards.map((card, index) => (
                         <div
                             key={index}
@@ -92,7 +92,7 @@ const NeedSevvy = () => {
                             </p>
 
                             {/* Main Number */}
-                            <p className="text-4xl font-bold text-orange-500">
+                            <p className="text-2xl md:text-4xl font-bold text-orange-500">
                                 {card.main}
                             </p>
 
