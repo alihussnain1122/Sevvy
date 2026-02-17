@@ -57,42 +57,39 @@ const Agency = () => {
           </div>
         </div>
 
-        {/* Bottom Content: Cards left, Paragraph right */}
+        {/* Bottom Content: Paragraph left, Cards right */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-16">
-          {/* Feature Cards Grid - Left Side */}
-          {/* Feature Cards Grid - Left Side */}
-<div className="grid grid-cols-2 gap-4">
-  {features.map((feature, index) => {
-    // Pehla (0) aur Aakhri (3) card full width lega
-    const isFullWidth = index === 0 || index === features.length - 1;
-
-    return (
-      <div
-        key={index}
-        className={`bg-white/50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 
-          ${isFullWidth ? "col-span-2" : "col-span-1"}`}
-      >
-        <p
-          className={
-            (index === 0 || index === 3)
-              ? "text-sm md:text-base text-gray-800 font-medium tracking-tight"
-              : "text-base md:text-lg text-gray-800 font-medium"
-          }
-        >
-          {feature.text}
-          <span className="text-orange-500 font-semibold"> {feature.highlight}</span>
-          {feature.suffix}
-        </p>
-      </div>
-    );
-  })}
-</div>
-
-          {/* Paragraph - Right Side */}
+          {/* Paragraph - Left Side */}
           <div className="flex items-center justify-center md:justify-start">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
               Agencies manage multiple clients, tight timelines, and layered feedback. Delays often happen because information lives across different tools. Sevvy centralizes projects, assets, and approvals in branded client-ready workspaces.
             </p>
+          </div>
+
+          {/* Feature Cards Grid - Right Side */}
+          <div className="grid grid-cols-2 gap-4">
+            {features.map((feature, index) => {
+              // First (0) and last (3) card full width
+              const isFullWidth = index === 0 || index === features.length - 1;
+              return (
+                <div
+                  key={index}
+                  className={`bg-white/50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${isFullWidth ? "col-span-2" : "col-span-1"}`}
+                >
+                  <p
+                    className={
+                      (index === 0 || index === 3)
+                        ? "text-sm md:text-base text-gray-800 font-medium tracking-tight"
+                        : "text-base md:text-lg text-gray-800 font-medium"
+                    }
+                  >
+                    {feature.text}
+                    <span className="text-orange-500 font-semibold"> {feature.highlight}</span>
+                    {feature.suffix}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
 

@@ -1,26 +1,26 @@
 import React from 'react';
 
-const Agency = () => {
+const ContentCreator = () => {
   const features = [
     {
-      text: 'Centralized files eliminate ',
-      highlight: 'Slack/email',
-      suffix: ' confusion'
-    },
-    {
-      text: 'Approvals reduce revisions by up to ',
-      highlight: '50%',
+      text: 'Structured intake reduces rework by ',
+      highlight: '30%',
       suffix: ''
     },
     {
-      text: '',
-      highlight: 'Branded',
-      suffix: ' portals strengthen trust'
+      text: 'Draft and ',
+      highlight: 'feedback ',
+      suffix: 'stay centralized'
     },
     {
-      text: 'Structured workflows improve retention by ',
-      highlight: '20–30%',
-      suffix: ''
+      text: 'Seamless move from ',
+      highlight: 'approval ',
+      suffix: 'to publish'
+    },
+    {
+      text: 'Reclaim weekly ',
+      highlight: '5-8 hours ',
+      suffix: 'from admin'
     }
   ];
 
@@ -41,8 +41,8 @@ const Agency = () => {
         {/* Top Heading */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight">
-            <span className="text-gray-800">Creative & </span>
-            <span className="text-orange-400 italic font-Instrument">Video Agencies</span>
+            <span className="text-gray-800">Content Creators & </span>
+            <span className="text-orange-400 italic font-Instrument">Visionaries</span>
           </h2>
         </div>
 
@@ -50,7 +50,7 @@ const Agency = () => {
         <div className="flex justify-center mb-12">
           <div className="w-full max-w-[600px]">
             <img
-              src="/WhoIsSevvy/agency.webp"
+              src="/WhoIsSevvy/contentcreator.webp"
               alt="Creative & Video Agencies Workflow"
               className="w-full h-auto object-contain rounded-2xl shadow-lg"
             />
@@ -80,7 +80,7 @@ const Agency = () => {
           }
         >
           {feature.text}
-          <span className="text-orange-500 font-semibold"> {feature.highlight}</span>
+          <span className="text-orange-400 font-semibold"> {feature.highlight}</span>
           {feature.suffix}
         </p>
       </div>
@@ -91,7 +91,7 @@ const Agency = () => {
           {/* Paragraph - Right Side */}
           <div className="flex items-center justify-center md:justify-start">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
-              Agencies manage multiple clients, tight timelines, and layered feedback. Delays often happen because information lives across different tools. Sevvy centralizes projects, assets, and approvals in branded client-ready workspaces.
+              Creators lose 25–40% of production time to revisions and scattered files. Sevvy manages the full lifecycle in one structured environment.
             </p>
           </div>
         </div>
@@ -109,4 +109,4 @@ const Agency = () => {
   );
 };
 
-export default Agency;
+export default ContentCreator;
