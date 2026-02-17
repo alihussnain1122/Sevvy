@@ -60,7 +60,7 @@ const Agency = () => {
         {/* Bottom Content: Paragraph left, Cards right */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-16">
           {/* Paragraph - Left Side */}
-          <div className="flex items-center justify-center md:justify-start md:mt-18">
+          <div className="flex items-center justify-center md:justify-start md:mt-12">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
               Agencies manage multiple clients, tight timelines, and layered feedback. Delays often happen because information lives across different tools. Sevvy centralizes projects, assets, and approvals in branded client-ready workspaces.
             </p>

@@ -15,7 +15,7 @@ const SocialMedia = () => {
     {
       text: 'Fewer handoffs save ',
       highlight: '3–5 hours',
-      suffix: 'weekly'
+      suffix: ' weekly'
     },
     {
       text: '',
@@ -26,15 +26,15 @@ const SocialMedia = () => {
 
   return (
     <section className="relative py-12 overflow-hidden">
-      
-
-      {/* Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Top Heading */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight">
             <span className="text-gray-800">Social Media & </span>
-            <span className="text-orange-400 italic font-Instrument">Content Teams</span>
+            <span className="text-orange-400 italic font-Instrument">
+              Content Teams
+            </span>
           </h2>
         </div>
 
@@ -49,50 +49,52 @@ const SocialMedia = () => {
           </div>
         </div>
 
-        {/* Bottom Content: Cards left, Paragraph right */}
-        <div className="flex flex-col md:grid-cols-2 gap-10 items-start mb-16">
-          {/* Feature Cards Grid - Left Side */}
-          {/* Feature Cards Grid - Left Side */}
-<div className="grid grid-cols-2 gap-4 order-2 md:order-1">
-  {features.map((feature, index) => {
-    // Pehla (0) aur Aakhri (3) card full width lega
-    const isFullWidth = index === 0 || index === features.length - 1;
+        {/* Bottom Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-16">
+          
+          {/* Feature Cards - Left Side */}
+          <div className="grid grid-cols-2 gap-4 order-2 md:order-1">
+            {features.map((feature, index) => {
+              const isFullWidth =
+                index === 0 || index === features.length - 1;
 
-    return (
-      <div
-        key={index}
-        className={`bg-white/50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 
-          ${isFullWidth ? "col-span-2" : "col-span-1"}`}
-      >
-        <p
-          className={
-            (index === 0 || index === 3)
-              ? "text-sm md:text-base text-gray-800 font-medium tracking-tight"
-              : "text-base md:text-lg text-gray-800 font-medium"
-          }
-        >
-          {feature.text}
-          <span className="text-orange-400 font-semibold"> {feature.highlight}</span>
-          {feature.suffix}
-        </p>
-      </div>
-    );
-  })}
-</div>
+              return (
+                <div
+                  key={index}
+                  className={`bg-white/50 rounded-xl shadow-md p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 
+                  ${isFullWidth ? 'col-span-2' : 'col-span-1'}`}
+                >
+                  <p
+                    className={
+                      index === 0 || index === 3
+                        ? 'text-sm md:text-base text-gray-800 font-medium tracking-tight'
+                        : 'text-base md:text-lg text-gray-800 font-medium'
+                    }
+                  >
+                    {feature.text}
+                    <span className="text-orange-400 font-semibold">
+                      {feature.highlight}
+                    </span>
+                    {feature.suffix}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
 
           {/* Paragraph - Right Side */}
           <div className="flex items-center justify-center md:justify-start md:mt-12 order-1 md:order-2">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
-              Marketing teams often juggle 4–6 tools just to ship content. Coordination slows production. Sevvy keeps planning, review, and publishing aligned in one unified workspace.
+              Marketing teams often juggle 4–6 tools just to ship content.
+              Coordination slows production. Sevvy keeps planning, review,
+              and publishing aligned in one unified workspace.
             </p>
           </div>
         </div>
 
-        {/* Bottom CTA Button */}
+        {/* CTA */}
         <div className="flex justify-center">
-          <button
-            className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer"
-          >
+          <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
             Get Free Trial
           </button>
         </div>
