@@ -7,8 +7,8 @@ return (
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-            <span className="text-orange-500">Who Is </span>
-            <span className="text-orange-200">Sevvy For</span>
+            <span className="bg-gradient-to-r from-orange-500 to-orange-200 bg-clip-text text-transparent">Who Is Sevvy For </span>
+            
           </h2>
 
           <p className="mx-auto mt-6 max-w-[65ch] text-base sm:text-lg leading-relaxed text-gray-600">
