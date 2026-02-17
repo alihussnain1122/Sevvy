@@ -84,7 +84,7 @@ const Agency = () => {
                     }
                   >
                     {feature.text}
-                    <span className="text-orange-500 font-semibold"> {feature.highlight}</span>
+                    <span className="text-orange-400 font-semibold"> {feature.highlight}</span>
                     {feature.suffix}
                   </p>
                 </div>
