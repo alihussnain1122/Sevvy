@@ -1,7 +1,7 @@
 import React from "react";
 
 const Hero = () => {
-  return (
+ return (
     <section className="relative w-full bg-[#f8f9fa] pt-20 pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center z-10 relative">
         {/* Top Badge */}
@@ -135,10 +135,10 @@ const Hero = () => {
 
           {/* Lines */}
           <line
-            x1="600"
-            y1="220"
-            x2="600"
-            y2="80"
+            x1="595"
+            y1="340"
+            x2="596"
+            y2="410"
             stroke="#f97316"
             strokeWidth="2"
             strokeLinecap="round"
@@ -146,12 +146,23 @@ const Hero = () => {
             className="beam"
             style={{ animationDelay: "0.5s" }}
           />
-
           <line
-            x1="600"
-            y1="380"
-            x2="600"
-            y2="440"
+            x1="605"
+            y1="340"
+            x2="606"
+            y2="410"
+            stroke="#f97316"
+            strokeWidth="2"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "0.5s" }}
+          />
+          <line
+            x1="605"
+            y1="180"
+            x2="606"
+            y2="260"
             stroke="#f97316"
             strokeWidth="2"
             strokeLinecap="round"
@@ -159,7 +170,18 @@ const Hero = () => {
             className="beam"
             style={{ animationDelay: "0.7s" }}
           />
-
+          <line
+            x1="595"
+            y1="180"
+            x2="596"
+            y2="260"
+            stroke="#f97316"
+            strokeWidth="2"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "0.7s" }}
+          />
           {/* Left Lines */}
           <path
             d="M215 -100 V295 H550"
@@ -193,7 +215,7 @@ const Hero = () => {
           />
 
           <path
-            d="M300 480 V320 H590"
+            d="M300 400 V320 H590"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -227,7 +249,7 @@ const Hero = () => {
           />
 
           <path
-            d="M940 480 V320 H640"
+            d="M940 400 V320 H640"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -253,7 +275,7 @@ const Hero = () => {
 
         {/* Database Icon */}
         <div
-          className="absolute top-[12%] left-[50%] -translate-x-1/2 
+          className="absolute top-[31%] md:top-[22%] left-[50%] -translate-x-1/2 
           w-10 h-10 md:w-12 md:h-12 
           bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center z-10"
         >
@@ -266,7 +288,7 @@ const Hero = () => {
 
         {/* Robot Head Icon */}
         <div
-          className="absolute top-[78%] left-[50%] -translate-x-1/2 
+          className="absolute top-[58%] md:top-[68%] left-[50%] -translate-x-1/2 
           w-10 h-10 md:w-12 md:h-12 
           bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center z-10"
         >
@@ -368,7 +390,7 @@ const Hero = () => {
           className="absolute top-[33%] left-[32%] md:top-[30%] md:left-[27%]
           bg-[#efefef] border border-orange-400 rounded-lg 
           px-2 py-1 md:px-4 md:py-2 
-          shadow-md max-w-[110px] md:max-w-[150px] z-10"
+          shadow-md max-w-[110px] md:max-w-[150px] z-10 hidden md:flex"
         >
           <p className="text-[8px] md:text-[10px] text-gray-600 font-medium leading-tight">
             Who seems most unknowledgeable on this topic?
@@ -379,7 +401,7 @@ const Hero = () => {
           className="absolute top-[23%] right-[25%] md:top-[35%] md:right-[30%]
           bg-[#efefef] border border-orange-400 rounded-lg 
           px-2 py-1 md:px-4 md:py-2 
-          shadow-md max-w-[120px] md:max-w-[150px] z-10"
+          shadow-md max-w-[120px] md:max-w-[150px] z-10 hidden md:flex" 
         >
           <p className="text-[8px] md:text-[10px] text-gray-700 font-medium leading-tight">
             What was the user's past few orders?
@@ -391,7 +413,7 @@ const Hero = () => {
   bg-[#efefef] border border-orange-400 rounded-lg 
   px-3 py-2 md:px-4 md:py-5
   shadow-md w-[140px] md:w-[180px]
-  z-10 flex items-center justify-center text-center"
+  z-10 flex items-center justify-center text-center hidden md:flex"
         >
           <p className="text-[10px] md:text-[12px] text-gray-600 font-medium leading-snug break-words">
             How does the team fix this problem?

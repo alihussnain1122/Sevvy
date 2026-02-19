@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Sevvy', to: '/' },
-  { name: 'How it works', to: '/how-it-works' },
   { name: 'Pricing', to: '/pricing' },
-  { name: 'About Us', to: '/about-us' },
+  { name: 'How Sevy works', to: '/how-it-works' },
+  { name: 'Who is Sevy for', to: '/about-us' },
   { name: 'Blogs', to: '/blog' },
 ];
 
