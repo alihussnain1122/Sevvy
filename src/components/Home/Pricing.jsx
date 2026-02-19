@@ -11,7 +11,7 @@ const Pricing = () => {
         'Live support to get your team running fast',
         'Upgrade, downgrade, or cancel anytime with zero risk'
       ],
-      buttonText: 'Start My 14-Day Free Trial',
+      buttonText: 'Start 14-Day Free Trial',
       buttonStyle: 'outline'
     },
     {
@@ -92,23 +92,25 @@ const Pricing = () => {
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-start">
-          {pricingPlans.map((plan, index) => (
+          {pricingPlans.map((plan, index) => {
+            const isPremium = plan.type === 'premium';
+            return (
             <div 
               key={index} 
-              className="bg-white border border-[#E8E8E8] rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:bg-gradient-to-r from-orange-500 to-orange-200 hover:border-[#FFB380] hover:shadow-lg group"
+              className={`${isPremium ? 'bg-gradient-to-r from-orange-500 to-orange-200 border-[#FFB380]' : 'bg-white border-[#E8E8E8] hover:border-orange-400'} border-2 rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:shadow-lg`}
             >
               {/* Card Header */}
               <div className="mb-6">
-                <h3 className="text-xl font-bold text-[#2D2D2D] mb-3 leading-snug group-hover:text-white">
+                <h3 className={`text-xl font-bold mb-3 leading-snug ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>
                   {plan.title}
                 </h3>
                 {plan.price && (
                   <div className="my-4">
-                    <span className="text-4xl font-bold text-[#2D2D2D] group-hover:text-white">{plan.price}</span>
-                    <span className="text-base text-[#6B6B6B] ml-1 group-hover:text-white">{plan.period}</span>
+                    <span className={`text-4xl font-bold ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>{plan.price}</span>
+                    <span className={`text-base ml-1 ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>{plan.period}</span>
                   </div>
                 )}
-                <p className="text-sm text-[#6B6B6B] font-bold leading-relaxed group-hover:text-white">
+                <p className={`text-sm font-bold leading-relaxed ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>
                   {plan.subtitle}
                 </p>
               </div>
@@ -116,23 +118,23 @@ const Pricing = () => {
               {/* Card Body */}
               <div className="mb-6">
                 {plan.description && (
-                  <p className="text-[13px] text-[#6B6B6B] leading-relaxed mb-5 group-hover:text-white">
+                  <p className={`text-[13px] leading-relaxed mb-5 ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>
                     {plan.description}
                   </p>
                 )}
                 
                 {plan.highlightText && (
-                  <p className="text-sm font-semibold text-[#2D2D2D] mb-4 group-hover:text-white">
+                  <p className={`text-sm font-semibold mb-4 ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>
                     {plan.highlightText}
                   </p>
                 )}
 
-                <hr className="border-t border-[#E8E8E8] mb-4 group-hover:border-white" />
+                <hr className={`border-t mb-4 ${isPremium ? 'border-white' : 'border-[#E8E8E8]'}`} />
                 <ul className="space-y-3">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-[13px]">
-                      <span className="text-[#FF8C42] font-bold text-base flex-shrink-0 mt-0.5 group-hover:text-white">✓</span>
-                      <span className="text-[#4A4A4A] leading-relaxed group-hover:text-white">{feature}</span>
+                      <span className={`font-bold text-base flex-shrink-0 mt-0.5 ${isPremium ? 'text-white' : 'text-[#FF8C42]'}`}>✓</span>
+                      <span className={`leading-relaxed ${isPremium ? 'text-white' : 'text-[#4A4A4A]'}`}>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -141,13 +143,14 @@ const Pricing = () => {
               {/* Card Footer */}
               <div>
                 <button 
-                  className="w-full py-3.5 px-6 rounded-lg text-sm font-semibold transition-all duration-300 bg-white text-black border-[#FF8C42] border-2 cursor-pointer"
+                  className={`w-full py-3.5 px-6 rounded-lg text-sm font-semibold transition-all duration-300 border-2 cursor-pointer ${isPremium ? 'bg-white text-orange-500 border-white' : 'bg-white text-black border-[#FF8C42]'}`}
                 >
                   {plan.buttonText}
                 </button>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Benefits */}
@@ -164,7 +167,11 @@ const Pricing = () => {
         <div className="flex justify-center">
           <button className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105">
             Pricing Detail
-            <span className="text-xl font-bold">→</span>
+            <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
           </button>
         </div>
       </div>

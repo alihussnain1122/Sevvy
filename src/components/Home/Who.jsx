@@ -58,7 +58,7 @@ const Who = () => {
           </div>
 
           {/* Animated Arrows - Vertical (Mobile) */}
-          <div className="flex lg:hidden justify-center items-center py-4">
+          <div className="flex lg:hidden justify-center items-center -mt-8">
             <svg width="120" height="180" viewBox="0 0 120 180" fill="none">
               {/* Single tail from top */}
               <g>
@@ -127,9 +127,11 @@ const Who = () => {
           </h2>
           <button className="inline-flex items-center gap-2 md:gap-3 text-white px-8 md:px-12 py-2 md:py-2.5 rounded-full font-medium transition-all text-base md:text-lg hover:scale-105 bg-gradient-to-r from-orange-500 to-orange-200">
             Learn More
-            <svg className="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
           </button>
         </div>
 

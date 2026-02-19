@@ -54,7 +54,7 @@ const Choose = () => {
       <div className="choose-container">
         <div className="choose-header">
           <h2 className="choose-title">
-            Why Agencies Choose <span className="highlight font-Instrument">Sevy</span> Workflow
+            Why Agencies Choose <span className="highlight font-Instrument">Sevvy</span> Workflow
           </h2>
           <p className="choose-subtitle">
             Not another tool, a system built for<br />real creative operations.
@@ -96,7 +96,11 @@ const Choose = () => {
                    shadow transition-transform duration-200
                    hover:scale-105 
                    cursor-pointer">
-            Explore More <span className="arrow">→</span>
+            Explore More <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
+<path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
           </button>
         </div>
       </div>

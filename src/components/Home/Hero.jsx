@@ -19,7 +19,7 @@ const Hero = () => {
           Streamline Your Content
         </h1>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent tracking-tight text-center mb-6">
-          Workflow With Sevy
+          Workflow With Sevvy
         </h1>
 
         {/* Subtitle & Description */}
