@@ -20,7 +20,7 @@ const Inside = () => {
   return (
     <section className="w-full py-4 bg-white overflow-hidden font-sans">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-2xl md:text-4xl text-gray-900 text-center mb-24">
+        <h2 className="text-2xl md:text-4xl text-gray-900 text-center mb-16">
           What You Can Do <span className="italic text-orange-300 font-Instrument">Inside Sevvy</span>
         </h2>
 
@@ -67,23 +67,41 @@ const Inside = () => {
           })}
         </div>
 
-        {/* Mobile horizontal scrollable row */}
-        <div className="md:hidden w-full overflow-x-auto py-6">
-          <div className="flex flex-nowrap gap-4 px-2">
-            {items.map((item, index) => (
-              <div key={index} className="flex-shrink-0 flex flex-col items-center text-center">
-                <img src={item.img} alt="" className="w-8 h-8 object-contain mb-2" />
-                <p className="text-xs text-gray-800 leading-tight">
-                  {item.label.split("\n").map((line, idx) => (
-                    <span key={idx} className="block">
-                      {line.split("**").map((part, i) =>
-                        i % 2 === 1 ? <b key={i} className="font-bold text-black">{part}</b> : part
-                      )}
-                    </span>
-                  ))}
-                </p>
-              </div>
-            ))}
+        {/* Mobile mascot on top, animation below */}
+        <div className="md:hidden w-full flex flex-col items-center">
+          <img src="/HowItWorks/Inside/mascot.webp" alt="Mascot" className="w-24 h-auto mb-2" />
+          <div className="w-full overflow-x-auto relative">
+            <div
+              className="flex flex-nowrap gap-4 px-2 animate-horizontal-scroll"
+              style={{
+                animation: 'scroll-x 18s linear infinite alternate',
+              }}
+            >
+              {items.map((item, index) => (
+                <div key={index} className="flex-shrink-0 flex flex-col items-center text-center min-w-[140px]">
+                  <img src={item.img} alt="" className="w-8 h-8 object-contain mb-2" />
+                  <p className="text-xs text-gray-800 leading-tight">
+                    {item.label.split("\n").map((line, idx) => (
+                      <span key={idx} className="block">
+                        {line.split("**").map((part, i) =>
+                          i % 2 === 1 ? <b key={i} className="font-bold text-black">{part}</b> : part
+                        )}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              ))}
+            </div>
+            {/* Horizontal scroll animation keyframes */}
+            <style>{`
+              @keyframes scroll-x {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .animate-horizontal-scroll {
+                will-change: transform;
+              }
+            `}</style>
           </div>
         </div>
 
