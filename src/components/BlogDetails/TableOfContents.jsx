@@ -4,7 +4,6 @@ const TableOfContents = ({ content }) => {
   const [activeId, setActiveId] = useState('');
   const observerRef = useRef(null);
 
-  // Derive headings from content with useMemo to avoid setState-in-effect
   const headings = useMemo(() => {
     if (!content) return [];
     const parser = new DOMParser();
@@ -26,7 +25,6 @@ const TableOfContents = ({ content }) => {
     });
   }, [content]);
 
-  // Inject IDs into rendered DOM headings & set up Intersection Observer
   useEffect(() => {
     if (!headings.length) return;
 
@@ -72,41 +70,87 @@ const TableOfContents = ({ content }) => {
   if (!headings.length) return null;
 
   return (
-    <div className="sticky top-28 bg-white rounded-2xl shadow-sm p-6 max-h-[calc(100vh-8rem)] overflow-y-auto">
-      <h3 className="text-xl font-extrabold text-gray-900 mb-6">Table of Contents</h3>
-      <ul className="divide-y divide-gray-200">
-        {headings.map((heading, idx) => {
-          const isActive = activeId === heading.id;
-          return (
-            <li
-              key={heading.id}
-              className={
-                [
-                  'py-3',
-                  heading.level === 'h3' ? 'pl-6' : '',
-                  idx === 0 ? '' : '',
-                ].join(' ')
-              }
-            >
-              <a
-                href={`#${heading.id}`}
-                onClick={(e) => handleClick(e, heading.id)}
-                className={
-                  [
-                    'block transition-all duration-200',
-                    'text-base',
-                    isActive
-                      ? 'text-orange-500 font-bold border-l-4 border-orange-500 bg-orange-50 pl-4 -ml-6 rounded-r-lg'
-                      : 'text-gray-700 hover:text-orange-500 border-l-4 border-transparent pl-4 -ml-6',
-                  ].join(' ')
-                }
-              >
-                {heading.text}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="sticky top-28">
+      {/* Card */}
+      <div className="relative bg-white/80 backdrop-blur-xl border border-gray-100 rounded-2xl shadow-lg p-6">
+        
+        {/* Left Accent Line */}
+        <div className="absolute left-0 top-6 bottom-6 w-[3px] bg-gradient-to-b from-orange-400 via-orange-200 to-transparent rounded-full" />
+
+        <h3 className="text-xl font-extrabold text-gray-900 mb-6 tracking-tight">
+          Table of Contents
+        </h3>
+
+        {/* Scroll Container */}
+        <div className="relative max-h-[calc(100vh-10rem)] overflow-y-auto pr-2 custom-scroll">
+          
+          {/* Top Fade */}
+          <div className="pointer-events-none absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-white to-transparent z-10" />
+          
+          <ul className="space-y-1">
+            {headings.map((heading) => {
+              const isActive = activeId === heading.id;
+              return (
+                <li
+                  key={heading.id}
+                  className={`transition-all duration-300 ${
+                    heading.level === 'h3' ? 'ml-5' : ''
+                  }`}
+                >
+                  <a
+                    href={`#${heading.id}`}
+                    onClick={(e) => handleClick(e, heading.id)}
+                    className={`
+                      group relative block rounded-lg px-4 py-2 text-sm leading-relaxed transition-all duration-300
+                      ${
+                        isActive
+                          ? 'bg-orange-50 text-orange-600 font-semibold shadow-sm'
+                          : 'text-gray-600 hover:text-orange-500 hover:bg-orange-50/60'
+                      }
+                    `}
+                  >
+                    {/* Active Indicator Dot */}
+                    <span
+                      className={`
+                        absolute left-0 top-1/2 -translate-y-1/2 h-2 w-2 rounded-full transition-all duration-300
+                        ${
+                          isActive
+                            ? 'bg-orange-500 scale-100'
+                            : 'bg-gray-300 group-hover:bg-orange-400 scale-75'
+                        }
+                      `}
+                    />
+                    
+                    <span className="ml-4 line-clamp-2">
+                      {heading.text}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* Bottom Fade */}
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-white to-transparent" />
+        </div>
+      </div>
+
+      {/* Custom Scrollbar */}
+      <style jsx>{`
+        .custom-scroll::-webkit-scrollbar {
+          width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+          background: rgba(251, 146, 60, 0.4);
+          border-radius: 20px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+          background: rgba(251, 146, 60, 0.7);
+        }
+      `}</style>
     </div>
   );
 };
