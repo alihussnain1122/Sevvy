@@ -43,7 +43,7 @@ const Choose = () => {
 
   return (
     <section className="choose-section">
-      <div 
+      <div
         className="gradient-overlay"
         style={{
           background: 'linear-gradient(180deg, #fffaf7 0%, rgba(254, 154, 75, 0.3) 60%, transparent 100%)',
@@ -75,11 +75,16 @@ const Choose = () => {
 
         <div className="benefits-section font-extrabold">
           {benefits.map((benefit, index) => (
-            <div key={index} className="benefit-item">
-              <span className="checkmark font-extrabold">✓</span>
-              <span className="benefit-text font-extrabold">{benefit}</span>
-            </div>
-          ))}
+            <div key={index} className="flex items-start gap-3 mb-4 w-full max-w-sm mx-auto">
+
+              <span className="text-orange-500 font-extrabold shrink-0">
+                ✓
+              </span>
+
+              <span className="text-left font-extrabold text-gray-900 leading-tight italic md:text-lg">
+                {benefit}
+              </span>
+            </div>))}
         </div>
 
         <div className="cta-section">

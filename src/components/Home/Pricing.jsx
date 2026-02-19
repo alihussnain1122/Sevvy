@@ -151,9 +151,9 @@ const Pricing = () => {
         </div>
 
         {/* Benefits */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3 justify-center items-center mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3  mb-10 text-left">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center gap-2 justify-center">
+            <div key={index} className="flex items-center gap-2 items-start md:items-center md:justify-center">
               <span className="text-[#FF8C42] text-xl font-bold">✓</span>
               <span className="text-lg font-bold italic text-[#2D2D2D]">{benefit}</span>
             </div>

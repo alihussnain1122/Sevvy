@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Blog from '../pages/Blog';
+import BlogDetails from '../pages/BlogDetails';
 import Pricing from '../pages/Pricing';
 import HowItWorks from '../pages/HowItWorks';
 import WhoIsSevvy from '../pages/WhoIsSevvy';
@@ -12,6 +13,7 @@ const AppRoutes = () => (
 		<Route path="/how-it-works" element={<HowItWorks />} />
 		<Route path="/pricing" element={<Pricing />} />
 		<Route path="/blog" element={<Blog />} />
+		<Route path="/blog/:slug" element={<BlogDetails />} />
 		<Route path="/about-us" element={<WhoIsSevvy />} />
 	</Routes>
 );

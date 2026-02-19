@@ -6,7 +6,7 @@ const RecentBlogs = () => {
     const [loading, setLoading] = useState(true);
     const [visibleRows, setVisibleRows] = useState(1); 
 
-    const API_URL = "https://public-api.wordpress.com/wp/v2/sites/sevvvy4.wordpress.com/posts?_embed&per_page=20";
+    const API_URL = "https://whitesmoke-rabbit-770677.hostingersite.com/wp-json/wp/v2/posts?_embed";
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -36,7 +36,7 @@ const RecentBlogs = () => {
     // Reusable Card Component to keep code clean
     const BlogCard = ({ post, isLarge }) => (
         <Link
-            to={`/blogs/${post.slug}`}
+            to={`/blog/${post.slug}`}
             className="group bg-[#fffbf8] rounded-[25px] border border-gray-300 p-4 shadow-sm hover:shadow-md transition-all flex flex-col"
         >
             {/* Image Section */}

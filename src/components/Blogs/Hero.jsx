@@ -5,7 +5,7 @@ const Hero = () => {
   const [featuredPost, setFeaturedPost] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "https://public-api.wordpress.com/wp/v2/sites/sevvvy4.wordpress.com/posts?_embed";
+  const API_URL = "https://whitesmoke-rabbit-770677.hostingersite.com/wp-json/wp/v2/posts?_embed";
 
   useEffect(() => {
     const fetchFeaturedPost = async () => {
@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
 
         {featuredPost && (
-          <Link to={`/blogs/${featuredPost.slug}`}>
+          <Link to={`/blog/${featuredPost.slug}`}>
             <div className="relative overflow-hidden group cursor-pointer">
               <div
                 className="w-full max-w-[1187px] h-[300px] md:h-[450px] bg-cover bg-center rounded-xl mx-auto overflow-hidden relative"

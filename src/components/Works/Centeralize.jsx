@@ -84,7 +84,7 @@ const Centralization = () => {
           <div className="flex flex-col md:flex-row justify-center items-center -mt-6 md:-mt-12">
 
             {/* Approve */}
-            <div className="relative z-40 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 -mb-6 md:mb-0 bg-[#fffaf7] rounded-full border-8 border-yellow-200 flex flex-col items-center justify-center text-center px-6 shadow-md" style={{ background: 'transparent' }}>
+            <div className="relative z-40 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 mt-[22px] md:mt-0 -mb-6 md:mb-0 bg-[#fffaf7] rounded-full border-8 border-yellow-200 flex flex-col items-center justify-center text-center px-6 shadow-md" style={{ background: 'transparent' }}>
               <div className="flex flex-col items-center max-w-[160px]">
                 <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="26.5" cy="26.5" r="26.5" fill="#F7E898" fill-opacity="0.2" />
