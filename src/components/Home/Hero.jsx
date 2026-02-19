@@ -70,7 +70,7 @@ const Hero = () => {
               .beam {
                 stroke-dasharray: 1200;
                 stroke-dashoffset: 1200;
-                animation: beamAnim 4s ease-out infinite;
+                animation: beamAnim 8s ease-out infinite;
               }
               @keyframes beamAnim {
                 0% { stroke-dashoffset: 1200; opacity: 0; }
