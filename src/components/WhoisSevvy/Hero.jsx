@@ -19,22 +19,65 @@ return (
         </div>
 
         {/* Main Layout */}
-        <div className="relative mt-14 md:-mt-10 flex flex-col items-center justify-center lg:flex-row lg:items-center lg:justify-center">
-          
-          {/* Left Side (Mobile = stacked, Desktop = absolute) */}
-          <div className="flex flex-col items-center gap-8 lg:absolute lg:left-40 lg:top-14 lg:items-start">
-            
-            {/* Pie Chart */}
-            <div className="w-[220px] sm:w-[240px]">
+        {/* Mobile view custom layout */}
+        <div className="block lg:hidden mt-14 flex flex-col items-center justify-center">
+          {/* Mascot on top */}
+          <img
+            src="/WhoIsSevvy/Hero/avatar.webp"
+            alt="Mascot"
+            className="h-[140px] w-[140px] xs:h-[180px] xs:w-[180px] sm:h-[220px] sm:w-[220px] object-contain drop-shadow-2xl mb-2"
+          />
+          {/* Overview image below mascot */}
+          <div className="w-[220px] xs:w-[260px] sm:w-[320px] mb-2">
+            <img
+              src="/WhoIsSevvy/Hero/overview.webp"
+              alt="Overview graph"
+              className="w-full object-contain"
+            />
+          </div>
+          {/* Card and Piechart in same row below overview */}
+          <div className="flex flex-row w-full justify-center gap-2 mb-2">
+            <div className="w-[120px] xs:w-[140px] sm:w-[160px]">
+              <img
+                src="/WhoIsSevvy/Hero/Card.webp"
+                alt="Customers card"
+                className="w-full object-contain drop-shadow-xl"
+              />
+            </div>
+            <div className="w-[100px] xs:w-[120px] sm:w-[140px]">
               <img
                 src="/WhoIsSevvy/Hero/piechart.webp"
                 alt="Pie chart"
                 className="w-full object-contain"
               />
             </div>
+          </div>
+          {/* Team image at last */}
+          <div className="w-[220px] xs:w-[260px] sm:w-[320px] mt-2">
+            <img
+              src="/WhoIsSevvy/Hero/team.webp"
+              alt="Team list"
+              className="w-full object-contain"
+            />
+          </div>
+          {/* CTA Button */}
+          <button className="mt-8 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-300 px-8 py-3 text-sm font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400 w-full max-w-xs mx-auto">
+            Get 14 Days Free Trial
+          </button>
+        </div>
 
-            {/* Overview */}
-            <div className="w-[280px] sm:w-[340px] lg:relative lg:left-2 lg:bottom-12">
+        {/* Desktop view original layout (unchanged) */}
+        <div className="hidden lg:flex relative mt-14 flex-row items-center justify-center">
+          {/* Left Side */}
+          <div className="flex flex-col items-center gap-8 absolute left-40 top-14">
+            <div className="w-[240px]">
+              <img
+                src="/WhoIsSevvy/Hero/piechart.webp"
+                alt="Pie chart"
+                className="w-full object-contain"
+              />
+            </div>
+            <div className="w-[340px] relative left-2 bottom-12">
               <img
                 src="/WhoIsSevvy/Hero/overview.webp"
                 alt="Overview graph"
@@ -42,32 +85,26 @@ return (
               />
             </div>
           </div>
-
           {/* Center Character */}
-          <div className="relative z-10 flex flex-col items-center">
+          <div className="relative z-10 flex flex-col items-center mx-auto">
             <img
               src="/WhoIsSevvy/Hero/avatar.webp"
               alt="Mascot"
-              className="h-[240px] w-[240px] sm:h-[280px] sm:w-[280px] lg:h-[300px] lg:w-[300px] object-contain drop-shadow-2xl"
+              className="h-[300px] w-[300px] object-contain drop-shadow-2xl"
             />
-
-            {/* Customers Card */}
-            <div className="relative mt-6 md:mt-2 w-[220px] sm:w-[260px] lg:left-10">
+            <div className="relative mt-2 w-[260px] left-10">
               <img
                 src="/WhoIsSevvy/Hero/Card.webp"
                 alt="Customers card"
                 className="w-full object-contain drop-shadow-xl"
               />
             </div>
-
-            {/* CTA Button */}
-            <button className="mt-12 sm:mt-14 lg:mt-16 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-300 px-10 sm:px-16 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400">
+            <button className="mt-16 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-300 px-16 py-4 text-base font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400 hover:scale-105">
               Get 14 Days Free Trial
             </button>
           </div>
-
           {/* Right Side Team Card */}
-          <div className="mt-10 w-[280px] sm:w-[330px] lg:absolute lg:right-[130px] lg:top-24 lg:w-[360px]">
+          <div className="flex flex-col items-center mt-10 absolute right-[130px] top-24 w-[360px]">
             <img
               src="/WhoIsSevvy/Hero/team.webp"
               alt="Team list"

@@ -3,13 +3,15 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="relative w-full bg-[#f8f9fa] pt-20 pb-20 overflow-hidden">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center z-10 relative">
-        
         {/* Top Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-black rounded-full shadow-sm mb-8">
-            <span className="flex items-center justify-center w-5 h-5  text-white">✨</span>
-            <span className="text-sm font-medium text-gray-700">A Unified Creative Management Engine</span>
+          <span className="flex items-center justify-center w-5 h-5 text-white">
+            ✨
+          </span>
+          <span className="text-sm font-medium text-gray-700">
+            A Unified Creative Management Engine
+          </span>
         </div>
 
         {/* Headings */}
@@ -22,31 +24,40 @@ const Hero = () => {
 
         {/* Subtitle & Description */}
         <p className="text-lg md:text-xl font-semibold text-gray-800 text-center mb-2">
-            Designed by Creators for Creators
+          Designed by Creators for Creators
         </p>
         <p className="text-sm md:text-base text-gray-500 text-center mb-8 max-w-xl px-4">
-            Replace fragmented tools with a unified AI-powered platform
+          Replace fragmented tools with a unified AI-powered platform
         </p>
 
         {/* CTA Button */}
         <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 text-sm md:text-base">
-            Start 14 Days Free Trial
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          Start 14 Days Free Trial
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path>
+          </svg>
         </button>
-
       </div>
 
-      {/* Diagram Section - Desktop only */}
-      <div className="relative w-full max-w-[1200px] mx-auto md:h-[600px] h-[300px] hidden sm:block">
-        
+      {/* Diagram Section */}
+      <div className="relative w-full max-w-[1200px] mx-auto h-[420px] md:h-[600px]">
         {/* SVG Connections Background */}
         <svg
           viewBox="0 0 1200 600"
-          className="absolute inset-0 w-full h-full pointer-events-none"
+          className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            {/* Glow Filter */}
             <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
               <feGaussianBlur stdDeviation="6" result="blur" />
               <feMerge>
@@ -54,7 +65,7 @@ const Hero = () => {
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
-            {/* Beam Animation */}
+
             <style>{`
               .beam {
                 stroke-dasharray: 1200;
@@ -79,47 +90,50 @@ const Hero = () => {
           </defs>
 
           {/* Base Rings */}
-          {[80, 140, 200, 260].map((r, i) => (
-            <circle
-              key={i}
-              cx="600"
-              cy="300"
-              r={r}
-              stroke="#e5e7eb"
-              strokeWidth="1.5"
-              fill="none"
-            />
-          ))}
+          <g className="hidden md:block">
+            {[80, 140, 200, 260].map((r, i) => (
+              <circle
+                key={i}
+                cx="600"
+                cy="300"
+                r={r}
+                stroke="#e5e7eb"
+                strokeWidth="1.5"
+                fill="none"
+              />
+            ))}
+          </g>
 
           {/* Animated Rings */}
-          {[80, 140, 200, 260].map((r, i) => (
+          <g className="hidden md:block">
+            {[80, 140, 200, 260].map((r, i) => (
+              <circle
+                key={`a-${i}`}
+                cx="600"
+                cy="300"
+                r={r}
+                stroke="#f97316"
+                strokeWidth="2"
+                fill="none"
+                filter="url(#glow)"
+                className="beam"
+                style={{ animationDelay: `${i * 0.3}s` }}
+              />
+            ))}
+
             <circle
-              key={`a-${i}`}
               cx="600"
               cy="300"
-              r={r}
+              r="60"
               stroke="#f97316"
               strokeWidth="2"
               fill="none"
               filter="url(#glow)"
-              className="beam"
-              style={{ animationDelay: `${i * 0.3}s` }}
+              className="ringPulse"
             />
-          ))}
+          </g>
 
-          {/* Center Pulse */}
-          <circle
-            cx="600"
-            cy="300"
-            r="60"
-            stroke="#f97316"
-            strokeWidth="2"
-            fill="none"
-            filter="url(#glow)"
-            className="ringPulse"
-          />
-
-          {/* Top Center Line */}
+          {/* Lines */}
           <line
             x1="600"
             y1="220"
@@ -133,7 +147,6 @@ const Hero = () => {
             style={{ animationDelay: "0.5s" }}
           />
 
-          {/* Bottom Center Line */}
           <line
             x1="600"
             y1="380"
@@ -149,7 +162,7 @@ const Hero = () => {
 
           {/* Left Lines */}
           <path
-            d="M220 80 V300 H340"
+            d="M215 -100 V295 H550"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -159,7 +172,17 @@ const Hero = () => {
             style={{ animationDelay: "1.2s" }}
           />
           <path
-            d="M160 250 H340"
+            d="M125 70 V308 H550"
+            stroke="#f97316"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#glow)"
+            className="beam"
+            style={{ animationDelay: "1.2s" }}
+          />
+          <path
+            d="M290 130 V280 H560"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -168,8 +191,9 @@ const Hero = () => {
             className="beam"
             style={{ animationDelay: "1.4s" }}
           />
+
           <path
-            d="M180 480 V350 H340"
+            d="M300 480 V320 H590"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -181,7 +205,7 @@ const Hero = () => {
 
           {/* Right Lines */}
           <path
-            d="M980 80 V300 H860"
+            d="M985 -100 V300 H650"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -190,8 +214,9 @@ const Hero = () => {
             className="beam"
             style={{ animationDelay: "1.3s" }}
           />
+
           <path
-            d="M820 280 H1040"
+            d="M870 140 V280 H640"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -200,8 +225,9 @@ const Hero = () => {
             className="beam"
             style={{ animationDelay: "1.5s" }}
           />
+
           <path
-            d="M960 480 V350 H740"
+            d="M940 480 V320 H640"
             stroke="#f97316"
             strokeWidth="2"
             fill="none"
@@ -212,98 +238,165 @@ const Hero = () => {
           />
         </svg>
 
-        {/* --- Center Elements --- */}
-        
-        {/* Center Character (Bot) */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full shadow-xl flex items-center justify-center border border-gray-100 z-20 animate-icon-glow-centered" style={{animationDelay: '0.2s'}}>
-             {/* Center Bot */}
-             <img src="/Home/hero/vframe.webp" alt="Sevy Bot" className="w-30 h-30 object-contain" />
+        {/* Center Bot */}
+        <div
+          className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 
+          w-14 h-14 md:w-24 md:h-24 
+          bg-white rounded-full shadow-xl flex items-center justify-center border border-gray-100 z-20"
+        >
+          <img
+            src="/Home/hero/vframe.webp"
+            alt="Sevy Bot"
+            className="w-10 h-10 md:w-20 md:h-20 object-contain"
+          />
         </div>
 
-        {/* Database Icon (Above) */}
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.5s'}}>
-             {/* Database */}
-             <img src="/Home/hero/db.webp" alt="Database" className="w-8 h-8 object-contain" />
+        {/* Database Icon */}
+        <div
+          className="absolute top-[12%] left-[50%] -translate-x-1/2 
+          w-10 h-10 md:w-12 md:h-12 
+          bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/db.webp"
+            alt="Database"
+            className="w-5 h-5 md:w-8 md:h-8 object-contain"
+          />
         </div>
 
-        {/* Robot Head Icon (Below) */}
-        <div className="absolute bottom-[22%] left-1/2 -translate-x-1/2 z-10 w-12 h-12 bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center animate-icon-glow-centered" style={{animationDelay: '0.7s'}}>
-             {/* Robot Head */}
-             <img src="/Home/hero/bot.webp" alt="Robot" className="w-8 h-8 object-contain" />
+        {/* Robot Head Icon */}
+        <div
+          className="absolute top-[78%] left-[50%] -translate-x-1/2 
+          w-10 h-10 md:w-12 md:h-12 
+          bg-white rounded-xl shadow-md border border-gray-100 flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/bot.webp"
+            alt="Robot"
+            className="w-5 h-5 md:w-8 md:h-8 object-contain"
+          />
         </div>
 
-
-        {/* --- Floating Icons (Left) --- */}
-
-        {/* Google Drive (Top Left) */}
-        <div className="absolute top-[5%] left-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.2s'}}>
-            {/* Google Drive */}
-            <img src="/Home/hero/drive.webp" alt="Drive" className="w-10 h-10 object-contain" />
+        {/* LEFT ICONS */}
+        <div
+          className="absolute top-[10%] left-[12%] md:-top-[25%] md:left-[15%]
+          w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-lg border border-gray-100 
+          flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/drive.webp"
+            alt="Drive"
+            className="w-7 h-7 md:w-10 md:h-10 object-contain"
+          />
         </div>
 
-        {/* Stack/Monday (Mid Left) */}
-        <div className="absolute top-[38%] left-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.4s'}}>
-             {/* Clickup */}
-             <img src="/Home/hero/clickup.webp" alt="Clickup" className="w-8 h-8 object-contain" />
+        <div
+          className="absolute top-[23%] left-[5%] md:top-[3%] md:left-[8%]
+          w-10 h-10 md:w-14 md:h-14 bg-white rounded-2xl shadow-lg border border-gray-100 
+          flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/clickup.webp"
+            alt="Clickup"
+            className="w-6 h-6 md:w-8 md:h-8 object-contain"
+          />
         </div>
 
-        {/* Asana/Dots (Inner Left) */}
-        <div className="absolute top-[42%] left-[22%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.0s'}}>
-             {/* Asana */}
-             <img src="/Home/hero/dots.webp" alt="Asana" className="w-8 h-8 object-contain" />
+        <div
+          className="absolute top-[28%] left-[19%] md:top-[15%] md:left-[22%]
+          w-10 h-10 md:w-14 md:h-14 bg-white rounded-2xl shadow-lg border border-gray-100 
+          flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/dots.webp"
+            alt="Dots"
+            className="w-6 h-6 md:w-8 md:h-8 object-contain"
+          />
         </div>
 
-        {/* Trello (Bottom Left) */}
-        <div className="absolute bottom-[15%] left-[13%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.6s'}}>
-             {/* Trello */}
-             <img src="/Home/hero/trello.webp" alt="Trello" className="w-8 h-8 object-contain" />
+        <div
+          className="absolute top-[63%] left-[20%] md:bottom-[15%] md:left-[23%]
+          w-10 h-10 md:w-14 md:h-14 bg-white rounded-2xl shadow-lg border border-gray-100 
+          flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/trello.webp"
+            alt="Trello"
+            className="w-6 h-6 md:w-8 md:h-8 object-contain"
+          />
         </div>
 
-
-        {/* --- Floating Icons (Right) --- */}
-
-        {/* Audio (Top Right) */}
-        <div className="absolute top-[5%] right-[15%] w-16 h-16 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.3s'}}>
-             {/* Audio */}
-             <img src="/Home/hero/audio.webp" alt="Audio" className="w-10 h-10 object-contain" />
+        {/* RIGHT ICONS */}
+        <div
+          className="absolute top-[10%] right-[12%] md:-top-[25%] md:right-[15%]
+          w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-lg border border-gray-100 
+          flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/audio.webp"
+            alt="Audio"
+            className="w-7 h-7 md:w-10 md:h-10 object-contain"
+          />
         </div>
 
-        {/* Diamond (Mid Right) */}
-        <div className="absolute top-[42%] right-[10%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.5s'}}>
-             {/* Diamond */}
-             <img src="/Home/hero/clickup.webp" alt="Diamond" className="w-8 h-8 object-contain" />
+        <div
+          className="absolute top-[30%] right-[22%] md:top-[15%] md:right-[25%]
+          w-10 h-10 md:w-14 md:h-14 bg-white rounded-2xl shadow-lg border border-gray-100 
+          flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/clickup.webp"
+            alt="Diamond"
+            className="w-6 h-6 md:w-8 md:h-8 object-contain"
+          />
         </div>
 
-        {/* Slack (Bottom Right) */}
-        <div className="absolute bottom-[20%] right-[19%] w-14 h-14 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center cursor-pointer z-10 animate-icon-glow" style={{animationDelay: '1.7s'}}>
-             {/*  Slack */}
-             <img src="/Home/hero/slack.webp" alt="Slack" className="w-8 h-8 object-contain" />
+        <div
+          className="absolute top-[62%] right-[16%] md:bottom-[20%] md:right-[19%]
+          w-10 h-10 md:w-14 md:h-14 bg-white rounded-2xl shadow-lg border border-gray-100 
+          flex items-center justify-center z-10"
+        >
+          <img
+            src="/Home/hero/slack.webp"
+            alt="Slack"
+            className="w-6 h-6 md:w-8 md:h-8 object-contain"
+          />
         </div>
 
-
-        {/* --- Speech Bubbles --- */}
-        
-        {/* Left Bubble */}
-        <div className="absolute top-[45%] left-[28%] bg-[#efefef]  border border-orange-400 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
-            <p className="text-[10px] text-gray-600 font-medium leading-tight">
-                Who seems most unknowledgeable on this topic?
-            </p>
+        {/* SPEECH BUBBLES */}
+        <div
+          className="absolute top-[33%] left-[32%] md:top-[30%] md:left-[27%]
+          bg-[#efefef] border border-orange-400 rounded-lg 
+          px-2 py-1 md:px-4 md:py-2 
+          shadow-md max-w-[110px] md:max-w-[150px] z-10"
+        >
+          <p className="text-[8px] md:text-[10px] text-gray-600 font-medium leading-tight">
+            Who seems most unknowledgeable on this topic?
+          </p>
         </div>
 
-        {/* Right Top Bubble */}
-        <div className="absolute top-[35%] right-[20%] bg-[#efefef] border border-orange-400 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
-            <p className="text-[10px] text-gray-700 font-medium leading-tight">
-                What was the user's past few orders?
-            </p>
+        <div
+          className="absolute top-[23%] right-[25%] md:top-[35%] md:right-[30%]
+          bg-[#efefef] border border-orange-400 rounded-lg 
+          px-2 py-1 md:px-4 md:py-2 
+          shadow-md max-w-[120px] md:max-w-[150px] z-10"
+        >
+          <p className="text-[8px] md:text-[10px] text-gray-700 font-medium leading-tight">
+            What was the user's past few orders?
+          </p>
         </div>
 
-        {/* Right Bottom Bubble */}
-        <div className="absolute bottom-[37%] right-[27%] bg-[#efefef] border border-orange-400 rounded-lg px-4 py-2 shadow-md max-w-[150px] z-10">
-            <p className="text-[10px] text-gray-600 font-medium leading-tight">
-                How does the team fix this problem?
-            </p>
+        <div
+          className="absolute top-[65%] right-[30%] md:bottom-[37%] md:right-[27%]
+  bg-[#efefef] border border-orange-400 rounded-lg 
+  px-3 py-2 md:px-4 md:py-5
+  shadow-md w-[140px] md:w-[180px]
+  z-10 flex items-center justify-center text-center"
+        >
+          <p className="text-[10px] md:text-[12px] text-gray-600 font-medium leading-snug break-words">
+            How does the team fix this problem?
+          </p>
         </div>
-
       </div>
     </section>
   );
