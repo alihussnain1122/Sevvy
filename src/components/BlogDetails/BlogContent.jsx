@@ -52,7 +52,7 @@ const BlogContent = ({ post }) => {
   const processedContent = injectHeadingIds(post.content.rendered);
 
   return (
-    <article className="min-w-0">
+    <article className="min-w-0 max-w-4xl mx-auto">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-4">
         <Link to="/" className="text-orange-500 hover:underline font-medium">
