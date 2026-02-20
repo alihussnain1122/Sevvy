@@ -10,11 +10,11 @@ import WhoIsSevvy from '../pages/WhoIsSevvy';
 const AppRoutes = () => (
 	<Routes>
 		<Route path="/" element={<Home />} />
-		<Route path="/how-it-works" element={<HowItWorks />} />
+		<Route path="/how-sevvy-works" element={<HowItWorks />} />
 		<Route path="/pricing" element={<Pricing />} />
 		<Route path="/blog" element={<Blog />} />
 		<Route path="/blog/:slug" element={<BlogDetails />} />
-		<Route path="/about-us" element={<WhoIsSevvy />} />
+		<Route path="/who-is-sevvy" element={<WhoIsSevvy />} />
 	</Routes>
 );
 
