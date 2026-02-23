@@ -6,6 +6,7 @@ import BlogDetails from '../pages/BlogDetails';
 import Pricing from '../pages/Pricing';
 import HowItWorks from '../pages/HowItWorks';
 import WhoIsSevvy from '../pages/WhoIsSevvy';
+import Privacy from '../pages/Privacy';
 
 const AppRoutes = () => (
 	<Routes>
@@ -15,6 +16,7 @@ const AppRoutes = () => (
 		<Route path="/blog" element={<Blog />} />
 		<Route path="/blog/:slug" element={<BlogDetails />} />
 		<Route path="/who-is-sevvy" element={<WhoIsSevvy />} />
+		<Route path="/privacy" element={<Privacy />} />
 	</Routes>
 );
 
