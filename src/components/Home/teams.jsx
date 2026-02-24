@@ -45,7 +45,7 @@ const Teams = () => {
                    rounded-full
                    shadow transition-transform duration-200
                    hover:scale-105 
-                   cursor-pointer">
+                   cursor-pointer hover:shadow-xl hover:shadow-orange-200">
 
               <span className="font-medium">
                 View unified system
@@ -97,7 +97,7 @@ const Teams = () => {
                    rounded-full 
                    shadow transition-transform duration-200
                    hover:scale-105 
-                   cursor-pointer">
+                   cursor-pointer hover:shadow-xl hover:shadow-orange-200">
 
               <span className="font-medium">
                 Extend content lifecycle
@@ -149,7 +149,7 @@ const Teams = () => {
                    rounded-full
                    shadow transition-transform duration-200
                    hover:scale-105 
-                   cursor-pointer">
+                   cursor-pointer hover:shadow-xl hover:shadow-orange-200">
 
               <span className="font-medium">
                 Fix review flow
@@ -201,7 +201,7 @@ const Teams = () => {
                    rounded-full
                    shadow transition-transform duration-200
                    hover:scale-105
-                   cursor-pointer">
+                   cursor-pointer hover:shadow-xl hover:shadow-orange-200">
 
               <span className="font-medium">
                 Reduce tool Costs

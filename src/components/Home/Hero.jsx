@@ -31,7 +31,7 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 text-sm md:text-base">
+        <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 hover:shadow-orange-200 flex items-center gap-2 text-sm md:text-base cursor-pointer">
           Start 14 Days Free Trial
           <svg
             className="w-4 h-4"

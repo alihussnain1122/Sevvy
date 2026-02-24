@@ -121,50 +121,59 @@ const Testimonials = () => {
 
         {/* Tabs */}
         <div className="flex justify-center mb-16">
-          <div className="inline-flex items-center bg-white rounded-full shadow-sm border border-gray-200 p-1">
-            <button
-              onClick={() => setActiveTab('plan')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${activeTab === 'plan'
-                  ? 'text-orange-500'
-                  : 'text-gray-600 hover:text-gray-900'
-                }`}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 9.52637H12.6842M15.8421 9.52637H19" stroke="#FF710B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M9.52637 19.0001V9.52637" stroke="#FF710B" stroke-width="1.5" />
-                <path d="M9.52632 7.15789V4M15.4474 15.4474C13.8684 15.4474 12.2895 16.7279 12.2895 19H10.3158C7.33868 19 5.84974 19 4.92526 18.0747C4.00079 17.1495 4 15.6613 4 12.6842V10.3158C4 7.33868 4 5.84974 4.92526 4.92526C5.85053 4.00079 7.33868 4 10.3158 4H12.6842C15.6613 4 17.1503 4 18.0747 4.92526C18.9992 5.85053 19 7.33868 19 10.3158V16.1129C19 16.8786 18.6958 17.613 18.1544 18.1544C17.613 18.6958 16.8786 19 16.1129 19" stroke="#FF710B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+          
+          <div className="relative inline-flex items-center bg-white rounded-full p-[1.5px] overflow-hidden shadow-sm">
+  
+  {/* 1. Moving Light (Always Active) */}
+  <div 
+    className="absolute inset-[-1000%] animate-border-spin"
+    style={{
+      background: 'conic-gradient(from 90deg at 50% 50%, transparent 0%, transparent 25%, #fb923c 50%, transparent 75%, transparent 100%)'
+    }}
+  />
 
-              Plan
-            </button>
-            <button
-              onClick={() => setActiveTab('execute')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${activeTab === 'execute'
-                  ? 'text-orange-500'
-                  : 'text-gray-600 hover:text-gray-900'
-                }`}
-            >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5 15.8335C7.5 14.4528 8.61929 13.3335 10 13.3335C11.3807 13.3335 12.5 14.4528 12.5 15.8335C12.5 17.2142 11.3807 18.3335 10 18.3335C8.61929 18.3335 7.5 17.2142 7.5 15.8335Z" stroke="black" stroke-width="1.5" />
-                <path d="M9.99967 1.66675V10.0001M9.99967 1.66675C9.53217 1.66675 9.17551 2.03175 8.46384 2.76175L7.08301 4.14175M9.99967 1.66675C10.4688 1.66675 10.8247 2.03175 11.5363 2.76175L12.9172 4.14175" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+  {/* 2. Main Content Container (White background to hide the center of the gradient) */}
+  <div className="relative flex items-center bg-white rounded-full p-1 z-10">
+    <button
+      onClick={() => setActiveTab('plan')}
+      className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+        activeTab === 'plan' ? 'text-orange-500 bg-orange-50' : 'text-gray-600 hover:text-gray-900'
+      }`}
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5">
+        <path d="M4 9.52637H12.6842M15.8421 9.52637H19" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9.52637 19.0001V9.52637" strokeWidth="1.5" />
+        <path d="M9.52632 7.15789V4M15.4474 15.4474C13.8684 15.4474 12.2895 16.7279 12.2895 19H10.3158C7.33868 19 5.84974 19 4.92526 18.0747C4.00079 17.1495 4 15.6613 4 12.6842V10.3158C4 7.33868 4 5.84974 4.92526 4.92526C5.85053 4.00079 7.33868 4 10.3158 4H12.6842C15.6613 4 17.1503 4 18.0747 4.92526C18.9992 5.85053 19 7.33868 19 10.3158V16.1129C19 16.8786 18.6958 17.613 18.1544 18.1544C17.613 18.6958 16.8786 19 16.1129 19" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      Plan
+    </button>
 
-              Execute
-            </button>
-            <button
-              onClick={() => setActiveTab('publish')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${activeTab === 'publish'
-                  ? 'text-orange-500'
-                  : 'text-gray-600 hover:text-gray-900'
-                }`}
-            >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.16634 9.87492L7.60384 11.4374C7.43717 11.6041 7.2394 11.6841 7.01051 11.6774C6.78162 11.6708 6.58356 11.5838 6.41634 11.4166C6.26356 11.2499 6.18356 11.0555 6.17634 10.8333C6.16912 10.611 6.24912 10.4166 6.41634 10.2499L9.41634 7.24992C9.49967 7.16659 9.58995 7.1077 9.68717 7.07325C9.7844 7.03881 9.88856 7.02131 9.99967 7.02075C10.1108 7.0202 10.215 7.0377 10.3122 7.07325C10.4094 7.10881 10.4997 7.1677 10.583 7.24992L13.583 10.2499C13.7497 10.4166 13.8297 10.611 13.823 10.8333C13.8163 11.0555 13.7363 11.2499 13.583 11.4166C13.4163 11.5833 13.2186 11.6702 12.9897 11.6774C12.7608 11.6846 12.5627 11.6046 12.3955 11.4374L10.833 9.87492V15.8333C10.833 16.0694 10.753 16.2674 10.593 16.4274C10.433 16.5874 10.2352 16.6671 9.99967 16.6666C9.76412 16.666 9.56634 16.586 9.40634 16.4266C9.24634 16.2671 9.16634 16.0694 9.16634 15.8333V9.87492ZM3.33301 6.66659V4.99992C3.33301 4.54159 3.49634 4.14936 3.82301 3.82325C4.14967 3.49714 4.5419 3.33381 4.99967 3.33325H14.9997C15.458 3.33325 15.8505 3.49659 16.1772 3.82325C16.5038 4.14992 16.6669 4.54214 16.6663 4.99992V6.66659C16.6663 6.9027 16.5863 7.10075 16.4263 7.26075C16.2663 7.42075 16.0686 7.50047 15.833 7.49992C15.5975 7.49936 15.3997 7.41936 15.2397 7.25992C15.0797 7.10047 14.9997 6.9027 14.9997 6.66659V4.99992H4.99967V6.66659C4.99967 6.9027 4.91967 7.10075 4.75967 7.26075C4.59967 7.42075 4.4019 7.50047 4.16634 7.49992C3.93079 7.49936 3.73301 7.41936 3.57301 7.25992C3.41301 7.10047 3.33301 6.9027 3.33301 6.66659Z" fill="black" />
-              </svg>
+    <button
+      onClick={() => setActiveTab('execute')}
+      className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+        activeTab === 'execute' ? 'text-orange-500 bg-orange-50' : 'text-gray-600 hover:text-gray-900'
+      }`}
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" className="w-5 h-5">
+        <path d="M7.5 15.8335C7.5 14.4528 8.61929 13.3335 10 13.3335C11.3807 13.3335 12.5 14.4528 12.5 15.8335C12.5 17.2142 11.3807 18.3335 10 18.3335C8.61929 18.3335 7.5 17.2142 7.5 15.8335Z" strokeWidth="1.5" />
+        <path d="M9.99967 1.66675V10.0001M9.99967 1.66675C9.53217 1.66675 9.17551 2.03175 8.46384 2.76175L7.08301 4.14175M9.99967 1.66675C10.4688 1.66675 10.8247 2.03175 11.5363 2.76175L12.9172 4.14175" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      Execute
+    </button>
 
-              Publish
-            </button>
-          </div>
+    <button
+      onClick={() => setActiveTab('publish')}
+      className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+        activeTab === 'publish' ? 'text-orange-500 bg-orange-50' : 'text-gray-600 hover:text-gray-900'
+      }`}
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.16634 9.87492L7.60384 11.4374C7.43717 11.6041 7.2394 11.6841 7.01051 11.6774C6.78162 11.6708 6.58356 11.5838 6.41634 11.4166C6.26356 11.2499 6.18356 11.0555 6.17634 10.8333C6.16912 10.611 6.24912 10.4166 6.41634 10.2499L9.41634 7.24992C9.49967 7.16659 9.58995 7.1077 9.68717 7.07325C9.7844 7.03881 9.88856 7.02131 9.99967 7.02075C10.1108 7.0202 10.215 7.0377 10.3122 7.07325C10.4094 7.10881 10.4997 7.1677 10.583 7.24992L13.583 10.2499C13.7497 10.4166 13.8297 10.611 13.823 10.8333C13.8163 11.0555 13.7363 11.2499 13.583 11.4166C13.4163 11.5833 13.2186 11.6702 12.9897 11.6774C12.7608 11.6846 12.5627 11.6046 12.3955 11.4374L10.833 9.87492V15.8333C10.833 16.0694 10.753 16.2674 10.593 16.4274C10.433 16.5874 10.2352 16.6671 9.99967 16.6666C9.76412 16.666 9.56634 16.586 9.40634 16.4266C9.24634 16.2671 9.16634 16.0694 9.16634 15.8333V9.87492ZM3.33301 6.66659V4.99992C3.33301 4.54159 3.49634 4.14936 3.82301 3.82325C4.14967 3.49714 4.5419 3.33381 4.99967 3.33325H14.9997C15.458 3.33325 15.8505 3.49659 16.1772 3.82325C16.5038 4.14992 16.6669 4.54214 16.6663 4.99992V6.66659C16.6663 6.9027 16.5863 7.10075 16.4263 7.26075C16.2663 7.42075 16.0686 7.50047 15.833 7.49992C15.5975 7.49936 15.3997 7.41936 15.2397 7.25992C15.0797 7.10047 14.9997 6.9027 14.9997 6.66659V4.99992H4.99967V6.66659C4.99967 6.9027 4.91967 7.10075 4.75967 7.26075C4.59967 7.42075 4.4019 7.50047 4.16634 7.49992C3.93079 7.49936 3.73301 7.41936 3.57301 7.25992C3.41301 7.10047 3.33301 6.9027 3.33301 6.66659Z" fill="currentcolor" />
+              </svg>
+      Publish
+    </button>
+  </div>
+</div>
         </div>
 
         {/* Content Section */}
