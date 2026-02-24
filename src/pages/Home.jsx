@@ -7,12 +7,15 @@ import Pricing from '../components/Home/Pricing.jsx';
 import Operation from '../components/Home/Operation.jsx';
 import Review from '../components/Home/Review.jsx';
 import FAQ from '../components/Home/Faqs.jsx';
+import FadeInSection from '../components/FadeInSection.jsx';
 
 export default function Home() {
     return (
-        <> 
-            <Hero /> 
-            <Testimonials />
+        <>
+            <Hero />
+            <FadeInSection>
+                <Testimonials />
+            </FadeInSection>
             <Teams />
             <Who />
             <Choose />
@@ -20,6 +23,7 @@ export default function Home() {
             <Operation />
             <Review />
             <FAQ />
+
         </>
     );
 }

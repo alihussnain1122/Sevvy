@@ -1,4 +1,6 @@
+
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 const Who = () => {
   return (
@@ -6,17 +8,20 @@ const Who = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
-        <div className="text-center mb-12 md:mb-16">
+        <FadeInSection>
+          <div className="text-center mb-12 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 mb-3 md:mb-4 px-2">
             Who Is <span className="text-orange-300 italic font-Instrument">Sevvy</span> for
           </h1>
           <p className="text-black text-sm md:text-base max-w-3xl mx-auto px-4">
             Creative teams & individuals who are tired of juggling and paying multiple <br /> project management tools and never ending content chaos.
           </p>
-        </div>
+          </div>
+        </FadeInSection>
 
         {/* Main Content Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-8 mb-12 md:mb-20">
+        <FadeInSection delay={0.1}>
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-8 mb-12 md:mb-20">
           
           {/* Left Character */}
           <div className="lg:w-1/3 flex justify-center w-full px-4">
@@ -118,14 +123,16 @@ const Who = () => {
             </div>
           </div>
 
-        </div>
+          </div>
+        </FadeInSection>
 
         {/* CTA Section */}
-        <div className="text-center px-4">
+        <FadeInSection delay={0.2}>
+          <div className="text-center px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl futuristic-text underline decoration-2 underline-offset-8 font-bold text-orange-500 mb-6 md:mb-8 capitalize">
             Get 14 Days Free Trial<br />Before You Pay
           </h2>
-          <button className="inline-flex items-center gap-2 md:gap-3 text-white px-8 md:px-12 py-2 md:py-2.5 rounded-full font-medium transition-all text-base md:text-lg hover:scale-105 bg-gradient-to-r from-orange-500 to-orange-200">
+          <button className="inline-flex items-center gap-2 md:gap-3 text-white px-8 md:px-12 py-2 md:py-2.5 rounded-full font-medium transition-all text-base md:text-lg hover:scale-105 bg-gradient-to-r from-orange-500 to-orange-200 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
             Learn More
             <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -133,7 +140,8 @@ const Who = () => {
 </svg>
 
           </button>
-        </div>
+          </div>
+        </FadeInSection>
 
       </div>
     </section>

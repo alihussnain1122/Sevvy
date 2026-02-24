@@ -1,4 +1,6 @@
+
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 const Teams = () => {
   return (
@@ -26,7 +28,8 @@ const Teams = () => {
         </div>
 
         {/* Section 1: Fragmented Tools */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-32">
+        <FadeInSection>
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-32">
           {/* Left Content */}
           <div className="lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -75,10 +78,12 @@ const Teams = () => {
               className="w-full h-auto rounded-3xl  transition-shadow"
             />
           </div>
-        </div>
+          </div>
+        </FadeInSection>
 
         {/* Section 2: No System for Publishing */}
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 mb-32">
+        <FadeInSection delay={0.1}>
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 mb-32">
           {/* Right Content */}
           <div className="lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -127,10 +132,12 @@ const Teams = () => {
               className="w-full h-auto rounded-3xl transition-shadow"
             />
           </div>
-        </div>
+          </div>
+        </FadeInSection>
 
         {/* Section 3: Unstructured Feedback */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-32">
+        <FadeInSection delay={0.2}>
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-32">
           {/* Left Content */}
           <div className="lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -179,10 +186,12 @@ const Teams = () => {
               className="w-full h-auto rounded-3xl transition-shadow"
             />
           </div>
-        </div>
+          </div>
+        </FadeInSection>
 
         {/* Section 4: Rising Costs */}
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
+        <FadeInSection delay={0.3}>
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
           {/* Right Content */}
           <div className="lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -231,7 +240,8 @@ const Teams = () => {
               className="w-full h-auto rounded-3xl transition-shadow"
             />
           </div>
-        </div>
+          </div>
+        </FadeInSection>
 
       </div>
     </section>

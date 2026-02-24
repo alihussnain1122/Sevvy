@@ -60,7 +60,7 @@ const Review = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl  text-gray-800">
-            Don’t <span className="italic text-orange-500 font-Instrument italic">Believe</span> Us?
+            Don’t <span className="italic text-orange-400 font-Instrument italic">Believe</span> Us?
           </h2>
           <p className="text-lg text-gray-500 mt-4">
             See Real Results from Real Teams
@@ -114,7 +114,7 @@ const Review = () => {
         </div>
 
         <div className="text-center mt-12 md:mt-16 ">
-          <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-200 font-semibold text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 md:text-base">
+          <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-200 font-semibold text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 md:text-base cursor-pointer hover:shadow-xl hover:shadow-orange-200">
             View All <svg width="12" height="12" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
