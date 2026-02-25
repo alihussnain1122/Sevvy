@@ -107,7 +107,7 @@ const Inside = () => {
 
         {/* CTA */}
         <div className="text-center mt-4">
-          <button className="px-10 py-3.5 bg-gradient-to-r from-orange-500 to-orange-300 text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-all cursor-pointer">
+          <button className="px-10 py-3.5 bg-gradient-to-r from-orange-500 to-orange-300 text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-all  hover:shadow-orange-200 cursor-pointer">
             Build Your Workflow Your Way
           </button>
         </div>

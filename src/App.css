@@ -29,3 +29,16 @@
 .animate-border-spin {
   animation: border-spin 4s linear infinite;
 }
+
+@keyframes rotateRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotateRing {
+  animation: rotateRing 4s linear infinite;
+}

@@ -55,11 +55,11 @@ export default function Hero() {
 
         {/* --- Bottom Buttons --- */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-5 -mt-52 relative z-40">
-          <button className="bg-gradient-to-r from-orange-500 to-orange-200 hover:bg-[#FF7A2D] text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-base md:text-lg cursor-pointer">
+          <button className="bg-gradient-to-r from-orange-500 to-orange-200 hover:bg-[#FF7A2D] text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-base md:text-lg cursor-pointer hover:shadow-orange-200 hover:scale-105">
             Start Your Creative Workflow
           </button>
 
-          <button className="border-2 border-[#FF8A3D] text-[#FF8A3D] bg-white  font-semibold px-8 py-4 rounded-2xl flex items-center gap-3 text-base md:text-lg transition-all duration-300 cursor-pointer">
+          <button className="border-2 border-[#FF8A3D] text-[#FF8A3D] bg-white  font-semibold px-8 py-4 rounded-2xl flex items-center gap-3 text-base md:text-lg transition-all duration-300 cursor-pointer hover:shadow-xl hover:scale-105">
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="12.565" cy="12.565" r="12.565" fill="#FF710B" />
               <path d="M16.6069 11.7877C17.2052 12.1331 17.2052 12.9967 16.6069 13.3422L11.2219 16.4512C10.6235 16.7967 9.87563 16.3649 9.87563 15.674L9.87563 9.4559C9.87563 8.76501 10.6235 8.33319 11.2219 8.67864L16.6069 11.7877Z" fill="white" />

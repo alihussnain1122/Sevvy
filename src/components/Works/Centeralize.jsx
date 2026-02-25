@@ -1,9 +1,12 @@
+
 import React from "react";
+import FadeInSection from '../FadeInSection';
 
 const Centralization = () => {
   return (
     <section className="relative w-full bg-[#fffaf7] overflow-hidden py-10">
-      <div className="max-w-6xl mx-auto px-6">
+      
+        <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading Area */}
         <div className="text-center mb-6 bg-[linear-gradient(180deg,_#fffaf7_0%,_rgba(254,154,75,0.3)_60%,_transparent_100%)] mask-gradient-center">
@@ -27,6 +30,7 @@ const Centralization = () => {
 
             {/* Intake */}
             <div className="relative z-10 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 -mb-6 md:mb-0 bg-[#fffaf7] rounded-full border-8 border-purple-200 flex flex-col items-center justify-center text-center px-6 shadow-sm" style={{ background: 'transparent' }}>
+              
               <div className="flex flex-col items-center max-w-[160px]">
                 <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="26.5" cy="26.5" r="26.5" fill="#EBA9FF" fill-opacity="0.2" />
@@ -113,13 +117,16 @@ const Centralization = () => {
         </div>
 
         {/* CTA Button */}
+        <FadeInSection>
         <div className="text-center mb-8">
-          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200  text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200  text-white rounded-2xl font-medium shadow-lg hover:shadow-xl  hover:shadow-orange-200 hover:scale-105 transition-all duration-300 cursor-pointer">
             Unify Your Creative Stack Today
           </button>
         </div>
+        </FadeInSection>
 
-      </div>
+        </div>
+      
     </section>
   );
 };
