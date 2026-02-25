@@ -1,4 +1,6 @@
+
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 // Check icon component
 const CheckIcon = () => (
@@ -37,7 +39,8 @@ const TrialCTA = () => {
 
       <div className="max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Mobile: mascot as background, desktop: side-by-side */}
-        <div className="relative flex flex-col md:grid md:grid-cols-2 gap-6 lg:gap-16 items-center mb-12">
+        <FadeInSection>
+          <div className="relative flex flex-col md:grid md:grid-cols-2 gap-6 lg:gap-16 items-center mb-12">
           {/* Mascot as background for mobile */}
           <img
             src="/Pricing/hero/sa.webp"
@@ -51,7 +54,7 @@ const TrialCTA = () => {
             <img
               src="/Pricing/hero/sa.webp"
               alt="Sevvy Mascot"
-              className="w-full max-w-[350px] lg:max-w-[550px] xl:max-w-[750px] h-auto mt-18 drop-shadow-xl"
+              className="w-full max-w-87.5 lg:max-w-137.5 xl:max-w-187.5 h-auto mt-18 drop-shadow-xl"
               style={{pointerEvents: 'auto'}}
             />
           </div>
@@ -76,7 +79,7 @@ const TrialCTA = () => {
               <ul className="space-y-4 mb-8">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-200 flex items-center justify-center mt-0.5">
+                    <div className="shrink-0 w-5 h-5 rounded-full bg-orange-200 flex items-center justify-center mt-0.5">
                       <CheckIcon />
                     </div>
                     <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
@@ -90,11 +93,12 @@ const TrialCTA = () => {
               </button>
             </div>
           </div>
-        </div>
+          </div>
+        </FadeInSection>
 
         {/* Bottom Center CTA Button */}
         <div className="flex justify-center">
-          <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-2xl inline-flex items-center gap-2 cursor-pointer">
+          <button className="bg-linear-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-2xl inline-flex items-center gap-2 cursor-pointer">
             Start my 14 Day Trial
             <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>

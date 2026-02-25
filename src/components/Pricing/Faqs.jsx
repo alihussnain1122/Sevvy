@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import FadeInSection from '../FadeInSection';
 
 const faqData = [
   {
@@ -48,37 +50,39 @@ const FAQ = () => {
 
 
         {/* FAQ Content - Two Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start relative z-10">
-          {faqData.map((faq, index) => (
-            <div
-              key={index}
-              className={`bg-white rounded-xl shadow-md transition-all duration-300 cursor-pointer ${
-                openIndex === index ? 'shadow-lg' : 'hover:shadow-lg'
-              }`}
-              onClick={() => toggleFAQ(index)}
-            >
-              <div className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 -mt-1">
-                    <span className="text-orange-500 text-2xl font-bold">
-                      {openIndex === index ? '−' : '+'}
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-gray-800 text-lg mb-2">
-                      {faq.question}
-                    </h4>
-                    {openIndex === index && (
-                      <p className="text-gray-600 text-sm leading-relaxed mt-3">
-                        {faq.answer}
-                      </p>
-                    )}
+        <FadeInSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start relative z-10">
+            {faqData.map((faq, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-xl shadow-md transition-all duration-300 cursor-pointer ${
+                  openIndex === index ? 'shadow-lg' : 'hover:shadow-lg'
+                }`}
+                onClick={() => toggleFAQ(index)}
+              >
+                <div className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 -mt-1">
+                      <span className="text-orange-500 text-2xl font-bold">
+                        {openIndex === index ? '−' : '+'}
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-gray-800 text-lg mb-2">
+                        {faq.question}
+                      </h4>
+                      {openIndex === index && (
+                        <p className="text-gray-600 text-sm leading-relaxed mt-3">
+                          {faq.answer}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </FadeInSection>
       </div>
     </section>
   );

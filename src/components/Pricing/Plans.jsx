@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeInSection from '../../components/FadeInSection';
 
 // Check icon component
 const CheckIcon = () => (
@@ -46,6 +47,7 @@ const PlansComparison = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-4 lg:space-y-8">
         
         {/* SECTION 1 - BASIC PLAN */}
+        <FadeInSection>
         <div className="bg-white rounded-3xl p-8 lg:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Basic Card */}
@@ -74,7 +76,7 @@ const PlansComparison = () => {
                 ))}
               </ul>
               
-              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-xl  transition-colors cursor-pointer">
+              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-xl  transition-colors cursor-pointer hover:shadow-x">
                 Try for Free
               </button>
             </div>
@@ -85,7 +87,7 @@ const PlansComparison = () => {
               <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
                 Creators validating ideas, early-stage teams, and anyone tired of messy Google Docs.
               </p>
-              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer">
+              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200">
                 Upgrade anytime as your workflow grows
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -95,8 +97,10 @@ const PlansComparison = () => {
             </div>
           </div>
         </div>
+        </FadeInSection>
 
         {/* SECTION 2 - PREMIUM PLAN */}
+        <FadeInSection delay={0.1}>
         <div className="relative rounded-2xl p-8 lg:p-12 overflow-hidden bg-[rgb(255,251,248)]">
           {/* Top background with faded corners */}
           <div
@@ -116,7 +120,7 @@ const PlansComparison = () => {
               <p className="text-gray-800 text-lg leading-relaxed">
                 Most agencies upgrade here once content volume increases, and coordination becomes critical.
               </p>
-              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer">
+              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200">
                 Choose this Plan
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -153,14 +157,16 @@ const PlansComparison = () => {
                 ))}
               </ul>
               
-              <button className="w-full bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-6 rounded-xl transition-colors cursor-pointer">
-                Subscribe Now
+              <button className="w-full bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-6 rounded-xl transition-colors cursor-pointer hover:shadow-xl hover:scale-105 transition-shadow hover:shadow-orange-200">
+                Subscribe Now  
               </button>
             </div>
           </div>
         </div>
+        </FadeInSection>
 
         {/* SECTION 3 - GOLD PLAN */}
+        <FadeInSection delay={0.2}>
         <div className="bg-white rounded-3xl p-8 lg:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Gold Card */}
@@ -210,7 +216,7 @@ const PlansComparison = () => {
             </div>
           </div>
         </div>
-
+        </FadeInSection>
       </div>
     </section>
   );

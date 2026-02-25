@@ -1,4 +1,6 @@
+
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 const ContentCreator = () => {
   const features = [
@@ -39,7 +41,8 @@ const ContentCreator = () => {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <FadeInSection>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight">
@@ -52,7 +55,7 @@ const ContentCreator = () => {
 
         {/* Image */}
         <div className="flex justify-center mb-12">
-          <div className="w-full max-w-[600px]">
+          <div className="w-full max-w-150">
             <img
               src="/WhoIsSevvy/contentcreator.webp"
               alt="Creative & Video Agencies Workflow"
@@ -106,11 +109,12 @@ const ContentCreator = () => {
 
         {/* CTA */}
         <div className="flex justify-center">
-          <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
+          <button className="bg-linear-to-r from-orange-500 to-orange-200 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
             Get Free Trial
           </button>
         </div>
-      </div>
+        </div>
+      </FadeInSection>
     </section>
   );
 };

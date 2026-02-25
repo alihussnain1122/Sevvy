@@ -1,4 +1,6 @@
+
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 const SocialMedia = () => {
   const features = [
@@ -26,7 +28,8 @@ const SocialMedia = () => {
 
   return (
     <section className="relative py-12 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <FadeInSection>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Heading */}
         <div className="text-center mb-12">
@@ -40,7 +43,7 @@ const SocialMedia = () => {
 
         {/* Top Center Image */}
         <div className="flex justify-center mb-12">
-          <div className="w-full max-w-[600px]">
+          <div className="w-full max-w-150">
             <img
               src="/WhoIsSevvy/socialmedia.webp"
               alt="Creative & Video Agencies Workflow"
@@ -94,11 +97,12 @@ const SocialMedia = () => {
 
         {/* CTA */}
         <div className="flex justify-center">
-          <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
+          <button className="bg-linear-to-r from-orange-500 to-orange-200 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer">
             Get Free Trial
           </button>
         </div>
-      </div>
+        </div>
+      </FadeInSection>
     </section>
   );
 };

@@ -1,4 +1,6 @@
+
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 const NeedSevvy = () => {
     const cards = [
@@ -61,7 +63,8 @@ const NeedSevvy = () => {
 
     return (
         <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <FadeInSection>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Heading Area */}
                 <div className="text-center mb-12">
@@ -79,7 +82,7 @@ const NeedSevvy = () => {
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-4 hover:-translate-y-1 transition-all duration-300"
+                            className="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-4 hover:-translate-y-1 transition-all duration-300 hover:shadow-xl  hover:shadow-orange-200"
                         >
                             {/* Icon Container */}
                             <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-500">
@@ -103,7 +106,8 @@ const NeedSevvy = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+                </div>
+            </FadeInSection>
         </section>
     );
 };

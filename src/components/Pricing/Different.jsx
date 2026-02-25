@@ -1,4 +1,6 @@
+
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 // Check icon component
 const CheckIcon = () => (
@@ -40,7 +42,8 @@ const PricingDifference = () => {
         </div>
 
         {/* Two Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <FadeInSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
           <div className="space-y-6 pl-0 md:pl-12">
             {/* Main Bold Statement */}
@@ -57,7 +60,7 @@ const PricingDifference = () => {
             <ul className="space-y-3">
               {bulletPoints.map((point, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-orange-500 flex-shrink-0"></span>
+                  <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
                   <span className="text-orange-400 font-bold text-base lg:text-lg">
                     {point}
                   </span>
@@ -70,7 +73,7 @@ const PricingDifference = () => {
               <div className="space-y-2">
                 {highlights.map((highlight, index) => (
                   <div key={index} className="flex items-start gap-2">
-                    <div className="flex-shrink-0 mt-0.5" >
+                    <div className="shrink-0 mt-0.5" >
                       <CheckIcon />
                     </div>
                     <span className="text-gray-800 text-sm font-bold">
@@ -220,7 +223,8 @@ const PricingDifference = () => {
               `}</style>
             </div>
           </div>
-        </div>
+          </div>
+        </FadeInSection>
       </div>
     </section>
   );
