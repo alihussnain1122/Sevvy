@@ -1,6 +1,7 @@
 
 import React from 'react';
 import FadeInSection from '../FadeInSection';
+import WhoCards from './WhoCards';
 
 const Who = () => {
   return (
@@ -94,33 +95,7 @@ const Who = () => {
           
           {/* Right Card */}
           <div className="lg:w-1/3 flex justify-center w-full px-4">
-            <div className="bg-white rounded-2xl shadow-lg p-3 md:p-4 max-w-sm w-full relative overflow-visible">
-              {/* Double Top Borders */}
-              <div className="absolute -top-5 left-0 w-full h-2 z-20 flex flex-col items-center">
-                <div className="w-full py-4 border-t-4 border-gray-100 rounded-t-2xl"></div>
-                <div className="w-full py-4 border-t-4 border-gray-100 rounded-t-2xl mt-2"></div>
-              </div>
-              {/* Card Header */}
-              <h3 className="text-orange-500 text-lg sm:text-xl md:text-2xl font-bold text-center mt-3 mb-2 md:mb-3">
-                Creative &<br />
-                <span className="text-orange-500">Video Agencies</span>
-              </h3>
-              
-              {/* Description */}
-              <p className="text-gray-600 text-xs sm:text-sm text-center mb-4 md:mb-6 px-2">
-                Boost productivity: manage projects, collaborate, and deliver top‑notch results faster..
-              </p>
-              
-              {/* Divider Line */}
-              <div className="border-t border-gray-100 mb-4 md:mb-6"></div>
-              
-              {/* Workflow Image */}
-              <img 
-                src="/Home/who/agency.webp" 
-                alt="Creative & Video Agencies workflow" 
-                className="w-full h-auto"
-              />
-            </div>
+            <WhoCards />
           </div>
 
           </div>
