@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 const testimonials = [
   {
@@ -58,69 +59,75 @@ const Review = () => {
   return (
     <section className="py-12 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl  text-gray-800">
-            Don’t <span className="italic text-orange-400 font-Instrument italic">Believe</span> Us?
-          </h2>
-          <p className="text-lg text-gray-500 mt-4">
-            See Real Results from Real Teams
-          </p>
-        </div>
+        <FadeInSection>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-4xl md:text-5xl  text-gray-800">
+              Don’t <span className="italic text-orange-400 font-Instrument italic">Believe</span> Us?
+            </h2>
+            <p className="text-lg text-gray-500 mt-4">
+              See Real Results from Real Teams
+            </p>
+          </div>
+        </FadeInSection>
 
-        {/* Smooth Scrolling Testimonials */}
-        <div className="relative w-full overflow-x-hidden">
-          <div className="flex gap-8 animate-review-scroll will-change-transform min-w-[1800px]">
-            {testimonials.concat(testimonials).map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 relative mt-8 min-w-[320px] max-w-[340px] flex-shrink-0"
-              >
-                <div className="absolute -top-6 left-6 w-12 h-12 bg-black rounded-full flex items-center justify-center">
-                  <span className="text-white text-3xl font-serif">“</span>
-                </div>
-                <div className="flex text-orange-500 mt-8 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <StarIcon key={i} className="h-5 w-5" />
-                  ))}
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  {testimonial.quote}
-                </p>
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
-                    <div>
-                      <p className="font-semibold text-gray-800">{testimonial.name}</p>
-                      <p className="text-sm text-gray-500">{testimonial.role}</p>
+        <FadeInSection delay={0.1}>
+          {/* Smooth Scrolling Testimonials */}
+          <div className="relative w-full overflow-x-hidden">
+            <div className="flex gap-8 animate-review-scroll will-change-transform min-w-[1800px]">
+              {testimonials.concat(testimonials).map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 relative mt-8 min-w-[320px] max-w-[340px] flex-shrink-0"
+                >
+                  <div className="absolute -top-6 left-6 w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                    <span className="text-white text-3xl font-serif">“</span>
+                  </div>
+                  <div className="flex text-orange-500 mt-8 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <StarIcon key={i} className="h-5 w-5" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    {testimonial.quote}
+                  </p>
+                  <div className="border-t border-gray-200 pt-4">
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        className="w-10 h-10 rounded-full object-cover"
+                      />
+                      <div>
+                        <p className="font-semibold text-gray-800">{testimonial.name}</p>
+                        <p className="text-sm text-gray-500">{testimonial.role}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <style>{`
+              @keyframes review-scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .animate-review-scroll {
+                animation: review-scroll 32s linear infinite;
+              }
+            `}</style>
           </div>
-          <style>{`
-            @keyframes review-scroll {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-            .animate-review-scroll {
-              animation: review-scroll 32s linear infinite;
-            }
-          `}</style>
-        </div>
+        </FadeInSection>
 
-        <div className="text-center mt-12 md:mt-16 ">
-          <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-200 font-semibold text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 md:text-base cursor-pointer hover:shadow-xl hover:shadow-orange-200">
-            View All <svg width="12" height="12" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
-<path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-          </button>
-        </div>
+        <FadeInSection delay={0.2}>
+          <div className="text-center mt-12 md:mt-16 ">
+            <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-200 font-semibold text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 md:text-base cursor-pointer hover:shadow-xl hover:shadow-orange-200">
+              View All <svg width="12" height="12" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
+                <path d="M1.5 10.4971H20.5" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </FadeInSection>
       </div>
     </section>
   );

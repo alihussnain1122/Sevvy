@@ -57,7 +57,7 @@ const Navbar = () => {
           {/* Right Side Button */}
           <Link
             to="/waitlist"
-            className="ml-4 bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium px-6 py-2 rounded-2xl shadow transition-transform duration-200 hover:scale-105 hidden md:inline-block"
+            className="ml-4 bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium px-6 py-2 rounded-2xl shadow transition-transform duration-200 hover:scale-105 hidden md:inline-block hover:shadow-xl hover:shadow-orange-200"
           >
             Join Waitlist →
           </Link>

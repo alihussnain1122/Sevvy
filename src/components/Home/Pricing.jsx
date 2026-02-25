@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 
 const Pricing = () => {
   const pricingPlans = [
@@ -81,99 +82,106 @@ const Pricing = () => {
     <section className="py-12 md:py-20 px-4 md:px-5 flex justify-center items-center">
       <div className="max-w-7xl w-full">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl md:text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
-            Start Where Your <span className="text-orange-400 font-Instrument italic">Workflow</span> is
-          </h2>
-          <p className="text-base md:text-lg text-[#6B6B6B]">
-            Scale when the work scales, not before.
-          </p>
-        </div>
+        <FadeInSection>
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-3xl md:text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
+              Start Where Your <span className="text-orange-400 font-Instrument italic">Workflow</span> is
+            </h2>
+            <p className="text-base md:text-lg text-[#6B6B6B]">
+              Scale when the work scales, not before.
+            </p>
+          </div>
+        </FadeInSection>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-start">
-          {pricingPlans.map((plan, index) => {
-            const isPremium = plan.type === 'premium';
-            return (
-            <div 
-              key={index} 
-              className={`${isPremium ? 'bg-gradient-to-r from-orange-500 to-orange-200 border-[#FFB380]' : 'bg-white border-[#E8E8E8] hover:border-orange-400'} border-2 rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:shadow-lg`}
-            >
-              {/* Card Header */}
-              <div className="mb-6">
-                <h3 className={`text-xl font-bold mb-3 leading-snug ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>
-                  {plan.title}
-                </h3>
-                {plan.price && (
-                  <div className="my-4">
-                    <span className={`text-4xl font-bold ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>{plan.price}</span>
-                    <span className={`text-base ml-1 ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>{plan.period}</span>
-                  </div>
-                )}
-                <p className={`text-sm font-bold leading-relaxed ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>
-                  {plan.subtitle}
-                </p>
-              </div>
-
-              {/* Card Body */}
-              <div className="mb-6">
-                {plan.description && (
-                  <p className={`text-[13px] leading-relaxed mb-5 ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>
-                    {plan.description}
-                  </p>
-                )}
-                
-                {plan.highlightText && (
-                  <p className={`text-sm font-semibold mb-4 ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>
-                    {plan.highlightText}
-                  </p>
-                )}
-
-                <hr className={`border-t mb-4 ${isPremium ? 'border-white' : 'border-[#E8E8E8]'}`} />
-                <ul className="space-y-3">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-[13px]">
-                      <span className={`font-bold text-base flex-shrink-0 mt-0.5 ${isPremium ? 'text-white' : 'text-[#FF8C42]'}`}>✓</span>
-                      <span className={`leading-relaxed ${isPremium ? 'text-white' : 'text-[#4A4A4A]'}`}>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Card Footer */}
-              <div>
-                <button 
-                  className={`w-full py-3.5 px-6 rounded-lg text-sm font-semibold hover:shadow-xl hover:orange-200 transition-all duration-300 border-2 cursor-pointer ${isPremium ? 'bg-white text-orange-500 border-white' : 'bg-white text-black border-[#FF8C42]'}`}
+        <FadeInSection delay={0.1}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-start">
+            {pricingPlans.map((plan, index) => {
+              const isPremium = plan.type === 'premium';
+              return (
+                <div 
+                  key={index} 
+                  className={`${isPremium ? 'bg-gradient-to-r from-orange-500 to-orange-200 border-[#FFB380]' : 'bg-white border-[#E8E8E8] hover:border-orange-400'} border-2 rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:shadow-lg opacity-60 hover:opacity-100`}
                 >
-                  {plan.buttonText}
-                </button>
-              </div>
-            </div>
-            );
-          })}
-        </div>
+                  {/* Card Header */}
+                  <div className="mb-6">
+                    <h3 className={`text-xl font-bold mb-3 leading-snug ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>
+                      {plan.title}
+                    </h3>
+                    {plan.price && (
+                      <div className="my-4">
+                        <span className={`text-4xl font-bold ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>{plan.price}</span>
+                        <span className={`text-base ml-1 ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>{plan.period}</span>
+                      </div>
+                    )}
+                    <p className={`text-sm font-bold leading-relaxed ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>
+                      {plan.subtitle}
+                    </p>
+                  </div>
+
+                  {/* Card Body */}
+                  <div className="mb-6">
+                    {plan.description && (
+                      <p className={`text-[13px] leading-relaxed mb-5 ${isPremium ? 'text-white' : 'text-[#6B6B6B]'}`}>
+                        {plan.description}
+                      </p>
+                    )}
+                    
+                    {plan.highlightText && (
+                      <p className={`text-sm font-semibold mb-4 ${isPremium ? 'text-white' : 'text-[#2D2D2D]'}`}>
+                        {plan.highlightText}
+                      </p>
+                    )}
+
+                    <hr className={`border-t mb-4 ${isPremium ? 'border-white' : 'border-[#E8E8E8]'}`} />
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2.5 text-[13px]">
+                          <span className={`font-bold text-base flex-shrink-0 mt-0.5 ${isPremium ? 'text-white' : 'text-[#FF8C42]'}`}>✓</span>
+                          <span className={`leading-relaxed ${isPremium ? 'text-white' : 'text-[#4A4A4A]'}`}>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Card Footer */}
+                  <div>
+                    <button 
+                      className={`w-full py-3.5 px-6 rounded-lg text-sm font-semibold hover:shadow-xl hover:orange-200 transition-all duration-300 border-2 cursor-pointer ${isPremium ? 'bg-white text-orange-500 border-white' : 'bg-white text-black border-[#FF8C42]'}`}
+                    >
+                      {plan.buttonText}
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </FadeInSection>
 
         {/* Benefits */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3  mb-10 text-left">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center gap-2 items-start md:items-center md:justify-center">
-              <span className="text-[#FF8C42] text-xl font-bold">✓</span>
-              <span className="text-lg font-bold italic text-[#2D2D2D]">{benefit}</span>
-            </div>
-          ))}
-        </div>
+        <FadeInSection delay={0.2}>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3  mb-10 text-left">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center gap-2 items-start md:items-center md:justify-center">
+                <span className="text-[#FF8C42] text-xl font-bold">✓</span>
+                <span className="text-lg font-bold italic text-[#2D2D2D]">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </FadeInSection>
 
         {/* CTA Button */}
-        <div className="flex justify-center">
-          <button className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
-            Pricing Detail
-            <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-          </button>
-        </div>
+        <FadeInSection delay={0.3}>
+          <div className="flex justify-center">
+            <button className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
+              Pricing Detail
+              <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 10.4971H20.5" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </FadeInSection>
       </div>
     </section>
   );
