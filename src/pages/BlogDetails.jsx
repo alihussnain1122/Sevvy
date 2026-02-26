@@ -116,20 +116,22 @@ const BlogDetails = () => {
 
   return (
     <div className="min-h-screen bg-[#f5f5f5]">
-      <div className="max-w-7xl mx-auto px-6 pt-24 pb-20">
+      <div className="max-w-7xl mx-auto px-6 pt-24 pb-20 ">
         {/* Two-column grid: TOC left, content right */}
         <div className="lg:grid lg:grid-cols-[300px_1fr] gap-10 items-start">
           {/* Left: Table of Contents (sticky) */}
-          <aside className="hidden lg:block">
+          <aside className="hidden lg:block self-start sticky top-0">
             <TableOfContents content={post.content.rendered} />
           </aside>
 
-          {/* Right: Blog Content + More Posts */}
+          {/* Right: Blog Content */}
           <main>
             <BlogContent post={post} />
-            <MorePosts currentSlug={slug} />
           </main>
         </div>
+
+        {/* More Posts — full width below the grid */}
+        <MorePosts currentSlug={slug} />
       </div>
     </div>
   );

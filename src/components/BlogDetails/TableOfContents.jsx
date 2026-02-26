@@ -8,7 +8,7 @@ const TableOfContents = ({ content }) => {
     if (!content) return [];
     const parser = new DOMParser();
     const doc = parser.parseFromString(content, 'text/html');
-    const elements = doc.querySelectorAll('h2, h3');
+    const elements = doc.querySelectorAll('h2');
     return Array.from(elements).map((el, index) => {
       const id =
         el.id ||
@@ -31,7 +31,7 @@ const TableOfContents = ({ content }) => {
     const articleEl = document.querySelector('.blog-article-content');
     if (!articleEl) return;
 
-    const els = articleEl.querySelectorAll('h2, h3');
+    const els = articleEl.querySelectorAll('h2');
     els.forEach((el, index) => {
       if (!el.id) {
         el.id = headings[index]?.id || `heading-${index}`;
@@ -93,9 +93,7 @@ const TableOfContents = ({ content }) => {
               return (
                 <li
                   key={heading.id}
-                  className={`transition-all duration-300 ${
-                    heading.level === 'h3' ? 'ml-5' : ''
-                  }`}
+                  className="transition-all duration-300"
                 >
                   <a
                     href={`#${heading.id}`}
