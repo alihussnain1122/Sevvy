@@ -4,15 +4,15 @@ import FadeInSection from '../FadeInSection';
 const faqData = {
   About: [
     {
-      question: 'How is Sevy different from other task managers?',
-      answer: 'Most task managers are built around checklists and deadlines. Sevy is built around creative work. It connects project context, assets, feedback, approvals, and publishing in one continuous flow, so teams don\'t lose meaning, direction, or momentum while working visually and iteratively.',
+      question: 'How is sevvy different from other task managers?',
+      answer: 'Most task managers are built around checklists and deadlines. sevvy is built around creative work. It connects project context, assets, feedback, approvals, and publishing in one continuous flow, so teams don\'t lose meaning, direction, or momentum while working visually and iteratively.',
     },
     {
       question: 'How long until we deliver your first blog post?',
       answer: 'We typically deliver the first blog post within 5-7 business days after onboarding, depending on the complexity of your requirements and content approval process.',
     },
     {
-      question: 'What does a typical project flow look like in Sevy?',
+      question: 'What does a typical project flow look like in sevvy?',
       answer: 'A typical project starts with briefing, moves through creative development, incorporates feedback rounds, goes through approval stages, and culminates in publishing—all within one seamless workflow.',
     },
     {
@@ -31,7 +31,7 @@ const faqData = {
     },
     {
       question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial with full access to all features so you can experience Sevy before committing to a subscription.',
+      answer: 'Yes, we offer a 14-day free trial with full access to all features so you can experience sevvy before committing to a subscription.',
     },
     {
       question: 'What payment methods do you accept?',
@@ -40,8 +40,8 @@ const faqData = {
   ],
   Services: [
     {
-      question: 'What services does Sevy provide?',
-      answer: 'Sevy provides comprehensive project management, creative workflow automation, asset management, feedback collection, approval workflows, and publishing tools.',
+      question: 'What services does sevvy provide?',
+      answer: 'sevvy provides comprehensive project management, creative workflow automation, asset management, feedback collection, approval workflows, and publishing tools.',
     },
     {
       question: 'Do you offer onboarding support?',
@@ -49,17 +49,17 @@ const faqData = {
     },
     {
       question: 'Can you integrate with our existing tools?',
-      answer: 'Sevy integrates with popular tools like Slack, Google Drive, Dropbox, and more. Enterprise plans include custom integrations.',
+      answer: 'sevvy integrates with popular tools like Slack, Google Drive, Dropbox, and more. Enterprise plans include custom integrations.',
     },
     {
       question: 'Do you provide training for teams?',
-      answer: 'Yes, we offer comprehensive training sessions, documentation, and video tutorials to ensure your team masters Sevy.',
+      answer: 'Yes, we offer comprehensive training sessions, documentation, and video tutorials to ensure your team masters sevvy.',
     },
   ],
   'Process & Policies': [
     {
       question: 'What is your refund policy?',
-      answer: 'We offer a 30-day money-back guarantee if you\'re not satisfied with Sevy. No questions asked.',
+      answer: 'We offer a 30-day money-back guarantee if you\'re not satisfied with sevvy. No questions asked.',
     },
     {
       question: 'How do you handle data security?',
@@ -107,7 +107,7 @@ const FAQ = () => {
               We Got You !
             </h3>
             <p className="text-base md:text-lg text-gray-500 mt-4 px-4">
-              Here's everything You Need To Know About Sevy Workflow
+              Here's everything You Need To Know About Sevvy Workflow
             </p>
           </div>
         </FadeInSection>

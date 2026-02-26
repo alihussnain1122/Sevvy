@@ -1,7 +1,22 @@
 
 import React from 'react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const NeedSevvy = () => {
+    const ref = useRef(null);
+    const inView = useInView(ref, { once: true, margin: '-80px 0px' });
+
+    const fadeUp = (delay = 0) => ({
+        initial: { opacity: 0, y: 35 },
+        animate: inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 },
+        transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] },
+    });
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 30, scale: 0.97 },
+        visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
+    };
     const cards = [
         {
             label: 'Replace',
@@ -61,12 +76,12 @@ const NeedSevvy = () => {
     ];
 
     return (
-        <section className="py-20">
+        <section className="py-20" ref={ref}>
            
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Heading Area */}
-                <div className="text-center mb-12">
+                <motion.div className="text-center mb-12" {...fadeUp(0)}>
                     <h2 className="text-2xl md:text-4xl tracking-tight">
                         <span className="text-black">Why Do You Need </span>
                         <span className="text-orange-400 italic font-Instrument">Sevvy?</span>
@@ -74,13 +89,19 @@ const NeedSevvy = () => {
                     <p className="text-black text-lg mt-3 max-w-xl mx-auto">
                         Replace tool fragmentation with one<br /> connected system
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                <motion.div
+                    className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto"
+                    initial="hidden"
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } } }}
+                >
                     {cards.map((card, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            variants={cardVariants}
                             className="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-4 hover:-translate-y-1 transition-all duration-300 hover:shadow-xl  hover:shadow-orange-200"
                         >
                             {/* Icon Container */}
@@ -102,9 +123,9 @@ const NeedSevvy = () => {
                             <p className="text-black text-sm">
                                 {card.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
                 </div>
            
         </section>
