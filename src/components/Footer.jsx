@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#f5f5f5] text-gray-700 font-sans">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-10 md:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-10 md:px-12">
           {/* Brand Section */}
           <div className="flex flex-col gap-6">
             <div>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           {/* How It Works */}
-          <nav aria-label="How It Works" className="flex flex-col gap-4">
+          {/* <nav aria-label="How It Works" className="flex flex-col gap-4">
             <h3 className="font-bold text-gray-900 text-lg mb-1 tracking-tight ">How It Works</h3>
             <ul className="flex flex-col gap-2">
               <li><a href="#" className="hover:text-orange-500 transition-colors">Autocapture</a></li>
@@ -49,7 +49,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-orange-500 transition-colors">Behavioral Analytics</a></li>
               <li><a href="#" className="hover:text-orange-500 transition-colors">Connect</a></li>
             </ul>
-          </nav>
+          </nav> */}
 
           {/* Solutions */}
           <nav aria-label="Solutions" className="flex flex-col gap-4">
