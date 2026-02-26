@@ -1,27 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const RecentBlogs = () => {
-    const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [visibleRows, setVisibleRows] = useState(1); 
-
-    const API_URL = "https://whitesmoke-rabbit-770677.hostingersite.com/wp-json/wp/v2/posts?_embed";
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-            try {
-                const response = await fetch(API_URL);
-                const data = await response.json();
-                setPosts(data.slice(1)); 
-            } catch (error) {
-                console.error('Error fetching posts:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchPosts();
-    }, []);
+const RecentBlogs = ({ posts = [] }) => {
+    const [visibleRows, setVisibleRows] = useState(1);
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
@@ -89,16 +70,6 @@ const RecentBlogs = () => {
             </div>
         </Link>
     );
-
-    if (loading) {
-        return (
-            <section className="py-16 px-4 bg-[#fffbf8]">
-                <div className="max-w-7xl mx-auto flex justify-center items-center">
-                    <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
-                </div>
-            </section>
-        );
-    }
 
     return (
         <section className="relative py-16 px-4 bg-[#fffbf8]">

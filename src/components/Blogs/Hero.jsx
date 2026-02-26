@@ -1,44 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Hero = () => {
-  const [featuredPost, setFeaturedPost] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  const API_URL = "https://whitesmoke-rabbit-770677.hostingersite.com/wp-json/wp/v2/posts?_embed";
-
-  useEffect(() => {
-    const fetchFeaturedPost = async () => {
-      try {
-        const response = await fetch(API_URL);
-        const posts = await response.json();
-        if (posts && posts.length > 0) {
-          setFeaturedPost(posts[0]);
-        }
-      } catch (error) {
-        console.error('Error fetching featured post:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchFeaturedPost();
-  }, []);
+const Hero = ({ featuredPost }) => {
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return `${date.getDate()} Feb, ${date.getFullYear()}`;
   };
 
-  if (loading) {
-    return (
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto flex justify-center items-center">
-          <div className="w-12 h-12 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
-        </div>
-      </section>
-    );
-  }
+  if (!featuredPost) return null;
 
   return (
     <section className="py-12 sm:py-16 px-4">
