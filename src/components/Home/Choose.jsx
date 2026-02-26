@@ -67,12 +67,27 @@ const Choose = () => {
       
           <div className="features-grid">
             {features.map((feature, index) => (
-              <div key={index} className="feature-card">
-                <div className="feature-icon">
-                  <img src={feature.icon} alt={feature.title} />
+              <div key={index} className="flip-card">
+                <div className="flip-card-inner">
+                  {/* Front Face */}
+                  <div className="flip-card-front feature-card">
+                    <div className="feature-icon">
+                      <img src={feature.icon} alt={feature.title} />
+                    </div>
+                    <h3 className="text-orange-500 text-xl font-bold">{feature.title}</h3>
+                    <p className="feature-description">{feature.description}</p>
+                  </div>
+
+                  {/* Back Face */}
+                  <div className="flip-card-back">
+                    <div className="back-icon">
+                      <img src={feature.icon} alt={feature.title} />
+                    </div>
+                    <div className="back-divider" />
+                    <p className="back-title">{feature.title}</p>
+                    <p className="back-description">{feature.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-orange-500 text-xl font-bold">{feature.title}</h3>
-                <p className="feature-description">{feature.description}</p>
               </div>
             ))}
           </div>
