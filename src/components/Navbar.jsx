@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Sevvy', to: '/' },
@@ -18,16 +18,34 @@ const Navbar = () => {
         <div className="bg-white rounded-full shadow-sm flex items-center justify-between h-[70px] px-6">
           {/* Left: Logo + NavLinks */}
           <div className="flex items-center space-x-8">
-            <Link to="/" className="font-bold text-lg text-gray-800">sevvy<span className="text-orange-500">.</span></Link>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                `font-bold text-lg transition-colors duration-200 py-1 border-t-2 border-b-2 ${
+                  isActive
+                    ? 'text-orange-500 border-orange-400'
+                    : 'text-gray-800 border-transparent'
+                }`
+              }
+            >
+              sevvy<span className="text-orange-500">.</span>
+            </NavLink>
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.slice(1).map((link) => (
-                <Link
+                <NavLink
                   key={link.name}
                   to={link.to}
-                  className="text-base text-gray-500 hover:text-black font-medium transition-colors duration-200"
+                  className={({ isActive }) =>
+                    `text-base font-medium transition-colors duration-200 py-1 ${
+                      isActive
+                        ? 'text-orange-500 border-t-2 border-b-2 border-orange-400'
+                        : 'text-gray-500 hover:text-black border-t-2 border-b-2 border-transparent'
+                    }`
+                  }
                 >
                   {link.name}
-                </Link>
+                </NavLink>
               ))}
             </div>
           </div>
@@ -67,14 +85,18 @@ const Navbar = () => {
         {menuOpen && (
           <div className="md:hidden mt-4 bg-white rounded-2xl shadow-lg py-4 px-6 flex flex-col items-center space-y-4">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.name}
                 to={link.to}
-                className="text-base text-gray-700 hover:text-black font-medium transition-colors duration-200"
+                className={({ isActive }) =>
+                  `text-base font-medium transition-colors duration-200 ${
+                    isActive ? 'text-orange-500' : 'text-gray-700 hover:text-black'
+                  }`
+                }
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
-              </Link>
+              </NavLink>
             ))}
             <Link
               to="/waitlist"
