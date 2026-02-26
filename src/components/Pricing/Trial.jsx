@@ -111,7 +111,7 @@ const TrialCTA = () => {
               </motion.ul>
 
               {/* Card Button */}
-              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-lg cursor-pointer">
+              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-lg cursor-pointer hover:shadow-lg hover:scale-105 transition-transform">
                 Start My 14-Day Free Trial
               </button>
             </div>
@@ -120,7 +120,7 @@ const TrialCTA = () => {
 
         {/* Bottom Center CTA Button */}
         <motion.div className="flex justify-center" {...fadeUp(0.5)}>
-          <button className="bg-linear-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-2xl inline-flex items-center gap-2 cursor-pointer">
+          <button className="bg-linear-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-2xl inline-flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform hover:shadow-xl hover:shadow-orange-200">
             Start my 14 Day Trial
             <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>

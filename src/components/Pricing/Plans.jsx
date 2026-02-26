@@ -94,7 +94,7 @@ const PlansComparison = () => {
                 ))}
               </ul>
               
-              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-xl  transition-colors cursor-pointer hover:shadow-x">
+              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-xl  transition-colors cursor-pointer hover:shadow-xl hover:scale-105">
                 Try for Free
               </button>
             </motion.div>
@@ -105,7 +105,7 @@ const PlansComparison = () => {
               <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
                 Creators validating ideas, early-stage teams, and anyone tired of messy Google Docs.
               </p>
-              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200">
+              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200 hover:scale-105">
                 Upgrade anytime as your workflow grows
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -134,7 +134,7 @@ const PlansComparison = () => {
               <p className="text-gray-800 text-lg leading-relaxed">
                 Most agencies upgrade here once content volume increases, and coordination becomes critical.
               </p>
-              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200">
+              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200 hover:scale-105">
                 Choose this Plan
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -205,7 +205,7 @@ const PlansComparison = () => {
                 ))}
               </ul>
               
-              <button className="w-full border-2 border-orange-500 text-orange-500 font-medium py-3 px-6 rounded-xl transition-colors cursor-pointer">
+              <button className="w-full border-2 border-orange-500 text-orange-500 font-medium py-3 px-6 rounded-xl transition-colors cursor-pointer hover:scale-105">
                 Contact Sales
               </button>
             </motion.div>
@@ -216,7 +216,7 @@ const PlansComparison = () => {
               <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
                 Agencies, in-house content teams, and media brands managing complex pipelines.
               </p>
-              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl transition-shadow inline-flex items-center gap-2 cursor-pointer ">
+              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl inline-flex items-center gap-2 cursor-pointer hover:shadow-xl hover:scale-105 transition-shadow hover:shadow-orange-200">
                 Upgrade Now
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
