@@ -1,7 +1,14 @@
-import React from 'react';
-import FadeInSection from '../../components/FadeInSection';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const TeamsSection = () => {
+    const ref = useRef(null);
+    const inView = useInView(ref, { once: true, margin: '-80px 0px' });
+
+    const bulletVariants = {
+        hidden: { opacity: 0, x: -20 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+    };
     const bulletPoints = [
         "Structured work stages that don't fall apart under pressure",
         "Collaboration without endless threads and follow-ups",
@@ -9,8 +16,7 @@ const TeamsSection = () => {
     ];
 
     return (
-        <section className="w-full py-16 lg:py-24 -mt-28">
-            <FadeInSection>
+        <section className="w-full py-16 lg:py-24 -mt-28" ref={ref}>
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Background color layer is only on this rounded div */}
                 <div className="bg-[#fffbf8] rounded-3xl p-12 relative overflow-hidden">
@@ -23,7 +29,12 @@ const TeamsSection = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
                         {/* Left Side Content */}
-                        <div className="space-y-6 mt-4">
+                        <motion.div
+                            className="space-y-6 mt-4"
+                            initial={{ opacity: 0, x: -45 }}
+                            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -45 }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        >
                             <h2 className="text-2xl lg:text-4xl font-bold leading-tight">
                                 <span className="text-orange-400">Built for Teams That Publish at Scale</span>
                             </h2>
@@ -33,7 +44,12 @@ const TeamsSection = () => {
                                 even as teams and volume grow.
                             </p>
 
-                            <ul className="space-y-4 mt-8">
+                            <motion.ul
+                                className="space-y-4 mt-8"
+                                initial="hidden"
+                                animate={inView ? 'visible' : 'hidden'}
+                                variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12, delayChildren: 0.35 } } }}
+                            >
                                 {point => (
                                     <li key={point} className="flex items-start gap-3">
                                         <span className="flex-shrink-0 w-2 h-2 rounded-full bg-orange-400 mt-2.5"></span>
@@ -43,18 +59,23 @@ const TeamsSection = () => {
                                     </li>
                                 )}
                                 {bulletPoints.map((point, index) => (
-                                    <li key={index} className="flex items-start gap-3">
+                                    <motion.li key={index} variants={bulletVariants} className="flex items-start gap-3">
                                         <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-orange-400 mt-2.5"></span>
                                         <span className="text-orange-400 font-medium text-base lg:text-lg">
                                             {point}
                                         </span>
-                                    </li>
+                                    </motion.li>
                                 ))}
-                            </ul>
-                        </div>
+                            </motion.ul>
+                        </motion.div>
 
                         {/* Right Side - The Fixed Bend Effect */}
-                        <div className="relative flex justify-center lg:justify-end">
+                        <motion.div
+                            className="relative flex justify-center lg:justify-end"
+                            initial={{ opacity: 0, x: 45 }}
+                            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 45 }}
+                            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                        >
                             <div className="">
 
                                 {/* 1. Deepest Blur Layer (Bend / Tilt) */}
@@ -94,12 +115,11 @@ const TeamsSection = () => {
                                 </div>
 
                             </div>
-                        </div>
+                        </motion.div>
 
                     </div>
                 </div>
             </div>
-            </FadeInSection>
         </section>
     );
 };

@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';
-import FadeInSection from '../FadeInSection';
+import React, { useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const faqData = [
   {
@@ -23,6 +23,16 @@ const faqData = [
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(-1);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-80px 0px' });
+
+  const faqVariants = {
+    hidden: { opacity: 0, y: 25 },
+    visible: (i) => ({
+      opacity: 1, y: 0,
+      transition: { duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] },
+    }),
+  };
 
 
   const toggleFAQ = (index) => {
@@ -39,22 +49,30 @@ const FAQ = () => {
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }}
       />
-      <div className="max-w-6xl mx-auto px-6 -mt-12">
+      <div className="max-w-6xl mx-auto px-6 -mt-12" ref={ref}>
         {/* Heading Area */}
-        <div className="text-center mb-10 md:mb-12 relative z-10">
+        <motion.div
+          className="text-center mb-10 md:mb-12 relative z-10"
+          initial={{ opacity: 0, y: 28 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        >
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-gray-800 mb-2">
             Got <span className="italic text-orange-400 font-Instrument">Questions</span> Before You Start?
           </h2>
-        </div>
+        </motion.div>
 
 
 
         {/* FAQ Content - Two Column Grid */}
-        <FadeInSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start relative z-10">
             {faqData.map((faq, index) => (
-              <div
+              <motion.div
                 key={index}
+                custom={index}
+                variants={faqVariants}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
                 className={`bg-white rounded-xl shadow-md transition-all duration-300 cursor-pointer ${
                   openIndex === index ? 'shadow-lg' : 'hover:shadow-lg'
                 }`}
@@ -79,10 +97,9 @@ const FAQ = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </FadeInSection>
       </div>
     </section>
   );

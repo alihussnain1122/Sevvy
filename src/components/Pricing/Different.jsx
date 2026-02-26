@@ -1,6 +1,6 @@
 
-import React from 'react';
-import FadeInSection from '../FadeInSection';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 // Check icon component
 const CheckIcon = () => (
@@ -19,6 +19,19 @@ const CheckIcon = () => (
 );
 
 const PricingDifference = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-80px 0px' });
+
+  const fadeUp = (delay = 0) => ({
+    initial: { opacity: 0, y: 32 },
+    animate: inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 },
+    transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] },
+  });
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 18 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+  };
   const bulletPoints = [
     "Team collaboration",
     "Workflow clarity",
@@ -32,20 +45,24 @@ const PricingDifference = () => {
   ];
 
   return (
-    <section className="w-full py-20 bg-white -mt-12">
+    <section className="w-full py-20 bg-white -mt-12" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Top Center Heading */}
-        <div className="text-center mb-4">
+        <motion.div className="text-center mb-4" {...fadeUp(0)}>
           <h2 className="text-3xl lg:text-4xl text-gray-900">
             Why Sevvy <span className="text-orange-400 italic font-Instrument">Pricing</span> Is Different
           </h2>
-        </div>
+        </motion.div>
 
         {/* Two Column Grid */}
-        <FadeInSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
-          <div className="space-y-6 pl-0 md:pl-12">
+          <motion.div
+            className="space-y-6 pl-0 md:pl-12"
+            initial={{ opacity: 0, x: -40 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          >
             {/* Main Bold Statement */}
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
               With Sevvy, you're not paying for features but for flow
@@ -57,19 +74,29 @@ const PricingDifference = () => {
             </p>
 
             {/* Bullet Points */}
-            <ul className="space-y-3">
+            <motion.ul
+              className="space-y-3"
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+              variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.4 } } }}
+            >
               {bulletPoints.map((point, index) => (
-                <li key={index} className="flex items-center gap-3">
+                <motion.li key={index} variants={itemVariants} className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span>
                   <span className="text-orange-400 font-bold text-base lg:text-lg">
                     {point}
                   </span>
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
 
             {/* Bottom Highlight Box */}
-            <div className="border-2 border-orange-400 rounded-xl p-5 mt-8">
+            <motion.div
+              className="border-2 border-orange-400 rounded-xl p-5 mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            >
               <div className="space-y-2">
                 {highlights.map((highlight, index) => (
                   <div key={index} className="flex items-start gap-2">
@@ -82,11 +109,16 @@ const PricingDifference = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Column - Image with Animation */}
-          <div className="flex justify-center items-center">
+          <motion.div
+            className="flex justify-center items-center"
+            initial={{ opacity: 0, x: 40 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
+            transition={{ duration: 0.85, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div className="relative w-full max-w-lg">
               <img
                 src="/Pricing/Diff/diff.webp"
@@ -222,9 +254,8 @@ const PricingDifference = () => {
                 }
               `}</style>
             </div>
+          </motion.div>
           </div>
-          </div>
-        </FadeInSection>
       </div>
     </section>
   );
