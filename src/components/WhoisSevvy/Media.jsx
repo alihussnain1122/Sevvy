@@ -1,6 +1,4 @@
-
 import React from 'react';
-import FadeInSection from '../FadeInSection';
 
 const SocialMedia = () => {
   const features = [
@@ -28,7 +26,7 @@ const SocialMedia = () => {
 
   return (
     <section className="relative py-12 overflow-hidden">
-      <FadeInSection>
+    
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Heading */}
@@ -102,7 +100,7 @@ const SocialMedia = () => {
           </button>
         </div>
         </div>
-      </FadeInSection>
+    
     </section>
   );
 };

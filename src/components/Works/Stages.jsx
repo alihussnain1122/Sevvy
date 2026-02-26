@@ -1,4 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const slideIn = (from = 'left', delay = 0) => ({
+  initial: { opacity: 0, x: from === 'left' ? -60 : 60 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.75, delay, ease: [0.16, 1, 0.3, 1] },
+});
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 36 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] },
+});
 
 const Stages = () => {
   return (
@@ -7,23 +22,23 @@ const Stages = () => {
 
         {/* Stage 1: Intake & Alignment */}
         <div className="mb-16">
-          <div className="text-center mb-8">
+          <motion.div {...fadeUp(0)} className="text-center mb-8">
             <p className="text-orange-400 font-bold text-xl  tracking-wide mb-2">Stage 1</p>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Intake & Alignment</h2>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Left */}
-            <div className="flex justify-center">
+            <motion.div {...slideIn('left', 0.1)} className="flex justify-center">
               <img 
                 src="/HowItWorks/stages/1.webp" 
                 alt="Intake & Alignment" 
                 className="max-w-md w-full h-auto object-contain"
               />
-            </div>
+            </motion.div>
             
             {/* Content Right */}
-            <div>
+            <motion.div {...slideIn('right', 0.2)}>
               <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Start with clarity</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Defined goals, formats, deadlines, and references reduce  <br /> early rework by up to 30% and align teams before <br /> execution begins.
@@ -49,7 +64,7 @@ const Stages = () => {
               <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Create Your First Project
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -62,13 +77,13 @@ const Stages = () => {
           maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }} />
-            <div className="text-center mb-8 relative z-10">
+            <motion.div {...fadeUp(0)} className="text-center mb-8 relative z-10">
               <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 2</p>
               <h2 className="text-2xl md:text-4xl font-semibold  text-gray-900">Workflow & Visibility</h2>
-            </div>
+            </motion.div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
-              <div className="text-left p-1 md:p-6">
+              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6">
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Track progress clearly</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Flexible views and real-time dashboards help <br /> teams save 3–5 hours weekly by reducing <br /> coordination and manual status tracking.
@@ -94,39 +109,39 @@ const Stages = () => {
                 <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300  hover:shadow-orange-200 cursor-pointer">
                   Control Your Workflow
                 </button>
-              </div>
+              </motion.div>
               
               {/* Image Right */}
-              <div className="flex justify-center">
+              <motion.div {...slideIn('right', 0.2)} className="flex justify-center">
                 <img 
                   src="/HowItWorks/stages/2.webp" 
                   alt="Workflow & Visibility" 
                   className="max-w-md w-full h-auto object-contain"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         {/* Stage 3: Review & Feedback */}
         <div className="mb-16">
-          <div className="text-center mb-8">
+          <motion.div {...fadeUp(0)} className="text-center mb-8">
             <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 3</p>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Feedback & Collaboration</h2>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Left */}
-            <div className="flex justify-center">
+            <motion.div {...slideIn('left', 0.1)} className="flex justify-center">
               <img 
                 src="/HowItWorks/stages/3.webp" 
                 alt="Review & Feedback" 
                 className="max-w-md w-full h-auto object-contain"
               />
-            </div>
+            </motion.div>
             
             {/* Content Right */}
-            <div>
+            <motion.div {...slideIn('right', 0.2)}>
               <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Centralize feedback</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Disconnected reviews can double turnaround time.<br /> Timestamped, in-context feedback keeps revisions <br /> structured and predictable.
@@ -152,7 +167,7 @@ const Stages = () => {
               <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Streamline Reviews
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -165,13 +180,13 @@ const Stages = () => {
           maskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%, black 60%, transparent 100%)'
         }} />
-            <div className="text-center mb-8 relative z-10">
+            <motion.div {...fadeUp(0)} className="text-center mb-8 relative z-10">
               <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 4</p>
               <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Approval & Publishing</h2>
-            </div>
+            </motion.div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
-              <div className="text-left p-1 md:p-6">
+              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6">
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Ship without delays</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Undefined approval states can extend timelines by <br /> 50%. Clear status controls and live notifications <br />prevent delivery bottlenecks.
@@ -197,38 +212,38 @@ const Stages = () => {
                 <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                   Accelerate Delivery
                 </button>
-              </div>
+              </motion.div>
               {/* Image Right */}
-              <div className="flex justify-center">
+              <motion.div {...slideIn('right', 0.2)} className="flex justify-center">
                 <img 
                   src="/HowItWorks/stages/4.webp" 
                   alt="Approval & Version Control" 
                   className="max-w-md w-full h-auto object-contain"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         {/* Stage 5: Publishing & Asset Library */}
         <div className="mb-16">
-          <div className="text-center mb-8">
+          <motion.div {...fadeUp(0)} className="text-center mb-8">
             <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 5</p>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Showcase, Reuse & Scale</h2>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Left */}
-            <div className="flex justify-center">
+            <motion.div {...slideIn('left', 0.1)} className="flex justify-center">
               <img 
                 src="/HowItWorks/stages/5.webp" 
                 alt="Publishing & Asset Library" 
                 className="max-w-md w-full h-auto object-contain"
               />
-            </div>
+            </motion.div>
             
             {/* Content Right */}
-            <div>
+            <motion.div {...slideIn('right', 0.2)}>
               <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Turn work into assets</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Over 70% of content is never reused. Structured libraries <br /> convert finished work into searchable, reusable <br /> campaign-ready assets.
@@ -254,7 +269,7 @@ const Stages = () => {
               <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Make Work Reusable
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
 

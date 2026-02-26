@@ -1,12 +1,11 @@
 
 import React from "react";
-import FadeInSection from '../FadeInSection';
 
 const Hero = () => {
   return (
     <section className="w-full bg-white py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <FadeInSection>
+        
           {/* Heading */}
           <div className="text-center">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
@@ -113,7 +112,7 @@ const Hero = () => {
             />
           </div>
         </div>
-        </FadeInSection>
+        
       </div>
     </section>
   );

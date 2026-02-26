@@ -1,6 +1,5 @@
 
 import React from 'react';
-import FadeInSection from '../FadeInSection';
 
 const Freelance = () => {
   const features = [
@@ -28,7 +27,7 @@ const Freelance = () => {
 
   return (
     <section className="relative py-12 overflow-hidden">
-      <FadeInSection>
+     
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}
@@ -105,7 +104,7 @@ const Freelance = () => {
           </button>
         </div>
         </div>
-      </FadeInSection>
+     
     </section>
   );
 };

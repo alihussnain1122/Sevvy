@@ -1,5 +1,5 @@
 import React from 'react';
-import FadeInSection from '../FadeInSection';
+
 
 const testimonials = [
   {
@@ -59,7 +59,6 @@ const Review = () => {
   return (
     <section className="py-12 md:py-24">
       <div className="container mx-auto px-4">
-        <FadeInSection>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl  text-gray-800">
               Don’t <span className="italic text-orange-400 font-Instrument italic">Believe</span> Us?
@@ -68,9 +67,7 @@ const Review = () => {
               See Real Results from Real Teams
             </p>
           </div>
-        </FadeInSection>
 
-        <FadeInSection delay={0.1}>
           {/* Smooth Scrolling Testimonials */}
           <div className="relative w-full overflow-x-hidden">
             <div className="flex gap-8 animate-review-scroll will-change-transform min-w-[1800px]">
@@ -116,9 +113,7 @@ const Review = () => {
               }
             `}</style>
           </div>
-        </FadeInSection>
 
-        <FadeInSection delay={0.2}>
           <div className="text-center mt-12 md:mt-16 ">
             <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-200 font-semibold text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 md:text-base cursor-pointer hover:shadow-xl hover:shadow-orange-200">
               View All <svg width="12" height="12" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
@@ -127,7 +122,7 @@ const Review = () => {
               </svg>
             </button>
           </div>
-        </FadeInSection>
+     
       </div>
     </section>
   );

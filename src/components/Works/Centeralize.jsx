@@ -1,6 +1,20 @@
 
 import React from "react";
-import FadeInSection from '../FadeInSection';
+import { motion } from "framer-motion";
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 36 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] },
+});
+
+const popIn = (delay = 0) => ({
+  initial: { opacity: 0, scale: 0.75 },
+  whileInView: { opacity: 1, scale: 1 },
+  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
+});
 
 const Centralization = () => {
   return (
@@ -9,7 +23,7 @@ const Centralization = () => {
         <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading Area */}
-        <div className="text-center mb-6 bg-[linear-gradient(180deg,_#fffaf7_0%,_rgba(254,154,75,0.3)_60%,_transparent_100%)] mask-gradient-center">
+        <motion.div {...fadeUp(0)} className="text-center mb-6 bg-[linear-gradient(180deg,_#fffaf7_0%,_rgba(254,154,75,0.3)_60%,_transparent_100%)] mask-gradient-center">
           <h2 className="text-2xl mt-4 md:text-4xl text-gray-900 mb-4 font-poppins">
             One <span className="italic text-[#ffb47b] font-Instrument">Centralized Workspace</span> that
             <br />
@@ -20,7 +34,7 @@ const Centralization = () => {
             <br />
             designed for creative operations.
           </p>
-        </div>
+        </motion.div>
 
         {/* Circles Container */}
         <div className="relative w-full mt-10 mb-20">
@@ -29,7 +43,7 @@ const Centralization = () => {
           <div className="flex flex-col md:flex-row justify-center items-center -mb-6 md:gap-0">
 
             {/* Intake */}
-            <div className="relative z-10 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 -mb-6 md:mb-0 bg-[#fffaf7] rounded-full border-8 border-purple-200 flex flex-col items-center justify-center text-center px-6 shadow-sm" style={{ background: 'transparent' }}>
+            <motion.div {...popIn(0.1)} className="relative z-10 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 -mb-6 md:mb-0 bg-[#fffaf7] rounded-full border-8 border-purple-200 flex flex-col items-center justify-center text-center px-6 shadow-sm" style={{ background: 'transparent' }}>
               
               <div className="flex flex-col items-center max-w-[160px]">
                 <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,10 +61,10 @@ const Centralization = () => {
                 <h3 className="font-bold text-gray-800 text-base md:text-base">Intake</h3>
                 <p className="text-xs md:text-xs text-gray-600 leading-tight">Structured briefs, goals, assets, and deadlines captured upfront.</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Execute */}
-            <div className="relative z-20 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 -mb-6 md:mb-0 md:-ml-12 bg-[#fffaf7] rounded-full border-8 border-orange-200 flex flex-col items-center justify-center text-center px-6 shadow-md" style={{ background: 'transparent' }}>
+            <motion.div {...popIn(0.22)} className="relative z-20 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 -mb-6 md:mb-0 md:-ml-12 bg-[#fffaf7] rounded-full border-8 border-orange-200 flex flex-col items-center justify-center text-center px-6 shadow-md" style={{ background: 'transparent' }}>
               <div className="flex flex-col items-center max-w-[160px]">
                 <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="26.5" cy="26.5" r="26.5" fill="#FFB899" fill-opacity="0.2" />
@@ -60,10 +74,10 @@ const Centralization = () => {
                 <h3 className="font-bold text-gray-800 text-base md:text-base">Execute</h3>
                 <p className="text-xs md:text-xs text-gray-600 leading-tight">Tasks, files, and timelines in one workspace.</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Review */}
-            <div className="relative z-30 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 -mb-6 md:mb-0 md:-ml-12 bg-[#fffaf7] rounded-full border-8 border-green-200 flex flex-col items-center justify-center text-center px-6 shadow-md" style={{ background: 'transparent' }}>
+            <motion.div {...popIn(0.34)} className="relative z-30 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 -mb-6 md:mb-0 md:-ml-12 bg-[#fffaf7] rounded-full border-8 border-green-200 flex flex-col items-center justify-center text-center px-6 shadow-md" style={{ background: 'transparent' }}>
               <div className="flex flex-col items-center max-w-[160px]">
                 <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="26.5" cy="26.5" r="26.5" fill="#D3FFC0" fill-opacity="0.2" />
@@ -81,14 +95,14 @@ const Centralization = () => {
                 <h3 className="font-bold text-gray-800 text-base md:text-base">Review</h3>
                 <p className="text-xs md:text-xs text-gray-600 leading-tight">Timestamped feedback with one clear conversation.</p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* BOTTOM ROW */}
           <div className="flex flex-col md:flex-row justify-center items-center -mt-6 md:-mt-12">
 
             {/* Approve */}
-            <div className="relative z-40 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 mt-[22px] md:mt-0 -mb-6 md:mb-0 bg-[#fffaf7] rounded-full border-8 border-yellow-200 flex flex-col items-center justify-center text-center px-6 shadow-md" style={{ background: 'transparent' }}>
+            <motion.div {...popIn(0.46)} className="relative z-40 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 mt-[22px] md:mt-0 -mb-6 md:mb-0 bg-[#fffaf7] rounded-full border-8 border-yellow-200 flex flex-col items-center justify-center text-center px-6 shadow-md" style={{ background: 'transparent' }}>
               <div className="flex flex-col items-center max-w-[160px]">
                 <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="26.5" cy="26.5" r="26.5" fill="#F7E898" fill-opacity="0.2" />
@@ -98,10 +112,10 @@ const Centralization = () => {
                 <h3 className="font-bold text-gray-800 text-base md:text-base">Approve</h3>
                 <p className="text-xs md:text-xs text-gray-600 leading-tight">Defined stages with status and version control.</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Publish */}
-            <div className="relative z-50 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-[#fffaf7] rounded-full border-8 border-sky-200 flex flex-col items-center justify-center text-center px-6 shadow-md md:-ml-12" style={{ background: 'transparent' }} >
+            <motion.div {...popIn(0.58)} className="relative z-50 w-56 h-56 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-[#fffaf7] rounded-full border-8 border-sky-200 flex flex-col items-center justify-center text-center px-6 shadow-md md:-ml-12" style={{ background: 'transparent' }}>
               <div className="flex flex-col items-center max-w-[160px]">
                 <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="26.5" cy="26.5" r="26.5" fill="#BCE9FC" fill-opacity="0.2" />
@@ -111,19 +125,17 @@ const Centralization = () => {
                 <h3 className="font-bold text-gray-800 text-base md:text-base">Publish</h3>
                 <p className="text-xs md:text-xs text-gray-600 leading-tight">Approved work moves live and stays reusable.</p>
               </div>
-            </div>
+            </motion.div>
 
           </div>
         </div>
 
         {/* CTA Button */}
-        <FadeInSection>
-        <div className="text-center mb-8">
-          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200  text-white rounded-2xl font-medium shadow-lg hover:shadow-xl  hover:shadow-orange-200 hover:scale-105 transition-all duration-300 cursor-pointer">
+        <motion.div {...fadeUp(0.1)} className="text-center mb-8">
+          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:shadow-orange-200 hover:scale-105 transition-all duration-300 cursor-pointer">
             Unify Your Creative Stack Today
           </button>
-        </div>
-        </FadeInSection>
+        </motion.div>
 
         </div>
       

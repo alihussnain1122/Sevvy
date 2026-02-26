@@ -1,6 +1,5 @@
 
 import React from 'react';
-import FadeInSection from '../FadeInSection';
 
 const NeedSevvy = () => {
     const cards = [
@@ -63,7 +62,7 @@ const NeedSevvy = () => {
 
     return (
         <section className="py-20">
-            <FadeInSection>
+           
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Heading Area */}
@@ -107,7 +106,7 @@ const NeedSevvy = () => {
                     ))}
                 </div>
                 </div>
-            </FadeInSection>
+           
         </section>
     );
 };

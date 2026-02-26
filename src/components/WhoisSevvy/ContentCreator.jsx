@@ -1,6 +1,5 @@
 
 import React from 'react';
-import FadeInSection from '../FadeInSection';
 
 const ContentCreator = () => {
   const features = [
@@ -41,7 +40,7 @@ const ContentCreator = () => {
         }}
       />
 
-      <FadeInSection>
+      
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12">
@@ -114,7 +113,7 @@ const ContentCreator = () => {
           </button>
         </div>
         </div>
-      </FadeInSection>
+    
     </section>
   );
 };

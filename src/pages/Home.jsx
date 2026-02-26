@@ -12,10 +12,9 @@ import FadeInSection from '../components/FadeInSection.jsx';
 export default function Home() {
     return (
         <>
-            <Hero />
-            <FadeInSection>
+            <Hero /> 
                 <Testimonials />
-            </FadeInSection>
+            
             <Teams />
             <Who />
             <Choose />

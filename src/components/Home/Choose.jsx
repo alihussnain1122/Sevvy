@@ -1,7 +1,6 @@
 
 import React from 'react';
 import './Choose.css';
-import FadeInSection from '../FadeInSection';
 
 const Choose = () => {
   const features = [
@@ -54,7 +53,7 @@ const Choose = () => {
         }}
       />
       <div className="choose-container">
-        <FadeInSection>
+    
           <div className="choose-header">
             <h2 className="choose-title">
               Why Agencies Choose <span className="highlight font-Instrument">Sevvy</span> Workflow
@@ -63,9 +62,9 @@ const Choose = () => {
               Not another tool, a system built for<br />real creative operations.
             </p>
           </div>
-        </FadeInSection>
+ 
 
-        <FadeInSection delay={0.1}>
+      
           <div className="features-grid">
             {features.map((feature, index) => (
               <div key={index} className="feature-card">
@@ -77,9 +76,8 @@ const Choose = () => {
               </div>
             ))}
           </div>
-        </FadeInSection>
+    
 
-        <FadeInSection delay={0.2}>
           <div className="benefits-section font-extrabold">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-3 mb-4 w-full max-w-sm mx-auto">
@@ -92,9 +90,7 @@ const Choose = () => {
               </div>
             ))}
           </div>
-        </FadeInSection>
 
-        <FadeInSection delay={0.3}>
           <div className="cta-section">
             <button className="inline-flex items-center 
                      bg-gradient-to-r from-orange-500 to-orange-200  
@@ -110,7 +106,7 @@ const Choose = () => {
 </svg>
             </button>
           </div>
-        </FadeInSection>
+      
       </div>
     </section>
   );

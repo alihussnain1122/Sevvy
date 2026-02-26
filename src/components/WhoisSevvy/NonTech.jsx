@@ -1,6 +1,5 @@
 
 import React from 'react';
-import FadeInSection from '../FadeInSection';
 
 const NontechCreativeTeams = () => {
   const features = [
@@ -39,7 +38,6 @@ const NontechCreativeTeams = () => {
       />
 
       {/* Container */}
-      <FadeInSection>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Heading */}
         <div className="text-center mb-12">
@@ -105,7 +103,7 @@ const NontechCreativeTeams = () => {
           </button>
         </div>
         </div>
-      </FadeInSection>
+    
     </section>
   );
 };

@@ -1,4 +1,11 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 32 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] },
+});
 
 export default function Hero() {
   return (
@@ -8,18 +15,27 @@ export default function Hero() {
 
         {/* --- Top Text Content --- */}
         <div className="text-center mb-12 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-poppins font-bold text-black">
+          <motion.h2
+            {...fadeUp(0)}
+            className="text-4xl md:text-5xl font-poppins font-bold text-black"
+          >
             From Idea to Published
-          </h2>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-poppins font-bold mb-2 leading-tight">
+          </motion.h2>
+          <motion.h2
+            {...fadeUp(0.12)}
+            className="text-3xl md:text-5xl lg:text-6xl font-poppins font-bold mb-2 leading-tight"
+          >
             <span className="bg-gradient-to-r from-orange-500 to-orange-200 bg-clip-text text-transparent">Without Losing Control</span>
-          </h2>
-          <p className="font-poppins text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p
+            {...fadeUp(0.24)}
+            className="font-poppins text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
+          >
             Creative work slows down when systems fragment. Sevvy replaces scattered tools
             with a unified, connected workflow that moves content forward without friction. Briefs,
             assets, feedback, approvals, publishing, and client visibility live inside one platform,
             so teams stay aligned and output stays predictable.
-          </p>
+          </motion.p>
         </div>
 
 
@@ -27,34 +43,55 @@ export default function Hero() {
         <div className="absolute bottom-48 relative flex justify-center items-center mx-auto mt-0 mb-8 max-w-5xl z-5" style={{ minHeight: '520px' }}>
 
           {/* Layer 1 (outermost): Elements.webp — subscribe, instagram, revenue, sales, wavy lines etc */}
-          <img
+          <motion.img
             src="/HowItWorks/hero/Elements.webp"
             alt="UI Elements Background"
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto object-contain z-0 pointer-events-none select-none"
           />
 
           {/* Layer 2 (middle): Kits.webp — data analytics, dashboard widgets */}
-          <img
+          <motion.img
             src="/HowItWorks/hero/Kits.webp"
             alt="Data Kits and Analytics"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }}
             className="absolute left-1/2 mt-[520px] -translate-x-1/2 -translate-y-[45%] w-[900px]  h-auto object-contain z-10 pointer-events-none select-none"
           />
 
           {/* Layer 3 (topmost): character.webp + "How Sevvy Works" text */}
           <div className="relative z-20 flex items-start justify-center gap-4 md:gap-6 -mt-8">
-            <img
+            <motion.img
               src="/HowItWorks/hero/character.webp"
               alt="Sevvy Character"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              animate-float="true"
               className="w-[220px] h-auto drop-shadow-2xl"
+              style={{ animation: 'heroFloat 4s ease-in-out infinite' }}
             />
-            <h3 className="text-3xl font-bold mt-[30px] -ml-[38px] text-orange-500 font-poppins leading-tight text-center">
+            <motion.h3
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
+              className="text-3xl font-bold mt-[30px] -ml-[38px] text-orange-500 font-poppins leading-tight text-center"
+            >
               How Sevvy<br />Works
-            </h3>
+            </motion.h3>
           </div>
         </div>
 
         {/* --- Bottom Buttons --- */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-5 -mt-52 relative z-40">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col sm:flex-row justify-center items-center gap-5 -mt-52 relative z-40"
+        >
           <button className="bg-gradient-to-r from-orange-500 to-orange-200 hover:bg-[#FF7A2D] text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-base md:text-lg cursor-pointer hover:shadow-orange-200 hover:scale-105">
             Start Your Creative Workflow
           </button>
@@ -67,9 +104,15 @@ export default function Hero() {
 
             Watch Sevvy In Action
           </button>
-        </div>
+        </motion.div>
 
       </div>
+      <style>{`
+        @keyframes heroFloat {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
+        }
+      `}</style>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Inside = () => {
   // Image ke mutabiq exact angles
@@ -16,13 +17,20 @@ const Inside = () => {
   // Oval shape settings
   const radiusX = 420; // Width of the oval
   const radiusY = 240; // Height of the oval (Kam karne se shape flat oval banegi)
+  const ovalOffsetX = -80; // Shift oval left on desktop to add right-side breathing room
 
   return (
     <section className="w-full py-4 bg-white overflow-hidden font-sans">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-2xl md:text-4xl text-gray-900 text-center mb-16">
+        <motion.h2
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-2xl md:text-4xl text-gray-900 text-center mb-16"
+        >
           What You Can Do <span className="italic text-orange-300 font-Instrument">Inside Sevvy</span>
-        </h2>
+        </motion.h2>
 
 
         {/* Responsive Oval Layout (Always visible, scales for mobile) */}
@@ -30,10 +38,16 @@ const Inside = () => {
         <div className="hidden md:block -mt-26 relative w-full h-[650px]">
           {/* Mascot Center */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-            <img 
-              src="/HowItWorks/Inside/mascot.webp" 
-              alt="Mascot" 
+            <motion.img
+              src="/HowItWorks/Inside/mascot.webp"
+              alt="Mascot"
               className="w-[280px] h-auto"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              animate={{ y: [0, -12, 0] }}
+              style={{ animation: 'mascotFloat 5s ease-in-out infinite' }}
             />
           </div>
           {items.map((item, index) => {
@@ -43,11 +57,15 @@ const Inside = () => {
             const x = rX * Math.cos(radian);
             const y = rY * Math.sin(radian);
             return (
-              <div
+              <motion.div
                 key={index}
                 className="absolute flex flex-col items-center text-center w-[220px]"
+                initial={{ opacity: 0, scale: 0.7 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.55, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
                 style={{
-                  left: `calc(50% + ${x}px)`,
+                  left: `calc(50% + ${x + ovalOffsetX}px)`,
                   top: `calc(50% + ${y}px)`,
                   transform: "translate(-50%, -50%)",
                 }}
@@ -62,14 +80,23 @@ const Inside = () => {
                     </span>
                   ))}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* Mobile mascot on top, animation below */}
         <div className="md:hidden w-full flex flex-col items-center">
-          <img src="/HowItWorks/Inside/mascot.webp" alt="Mascot" className="w-24 h-auto mb-2" />
+          <motion.img
+            src="/HowItWorks/Inside/mascot.webp"
+            alt="Mascot"
+            className="w-24 h-auto mb-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            style={{ animation: 'mascotFloat 5s ease-in-out infinite' }}
+          />
           <div className="w-full overflow-x-auto relative">
             <div
               className="flex flex-nowrap gap-4 px-2 animate-horizontal-scroll"
@@ -101,16 +128,26 @@ const Inside = () => {
               .animate-horizontal-scroll {
                 will-change: transform;
               }
+              @keyframes mascotFloat {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-12px); }
+              }
             `}</style>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-4">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mt-4"
+        >
           <button className="px-10 py-3.5 bg-gradient-to-r from-orange-500 to-orange-300 text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-all  hover:shadow-orange-200 cursor-pointer">
             Build Your Workflow Your Way
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
     

@@ -1,5 +1,4 @@
 import React from 'react';
-import FadeInSection from '../FadeInSection';
 
 const Agency = () => {
   const features = [
@@ -38,7 +37,7 @@ const Agency = () => {
       />
 
       {/* Container */}
-      <FadeInSection>
+     
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Heading */}
         <div className="text-center mb-12">
@@ -104,7 +103,7 @@ const Agency = () => {
           </button>
         </div>
         </div>
-      </FadeInSection>
+      
     </section>
   );
 };
