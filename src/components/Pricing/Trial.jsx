@@ -57,7 +57,7 @@ const TrialCTA = () => {
           <img
             src="/Pricing/hero/sa.webp"
             alt="Sevvy Mascot"
-            className="block md:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-[320px] opacity-60 pointer-events-none select-none z-0"
+            className="hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-[320px] opacity-60 pointer-events-none select-none z-0"
             aria-hidden="true"
           />
 
