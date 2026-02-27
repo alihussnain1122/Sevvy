@@ -8,8 +8,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <AppRoutes />
-      <Footer />
+      <div className="pt-[118px]">
+        <AppRoutes />
+        <Footer />
+      </div>
     </>
   );
 }
