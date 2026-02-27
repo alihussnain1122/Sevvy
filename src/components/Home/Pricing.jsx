@@ -101,7 +101,7 @@ const Pricing = () => {
               return (
                 <div 
                   key={index} 
-                  className={`${isPremium ? 'bg-gradient-to-r from-orange-500 to-orange-200 border-[#FFB380]' : 'bg-white border-[#E8E8E8] hover:border-orange-400'} border-2 rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:shadow-lg opacity-60 hover:opacity-100`}
+                  className={`${isPremium ? 'bg-gradient-to-r from-orange-500 to-orange-200 border-[#FFB380]' : 'bg-white border-[#E8E8E8] hover:border-orange-400'} border-2 rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:shadow-lg `}
                 >
                   {/* Card Header */}
                   <div className="mb-6">
