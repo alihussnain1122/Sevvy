@@ -10,7 +10,7 @@ function App() {
     <>
       <ScrollToTop />
       <Navbar />
-      <div className="pt-[118px]">
+      <div className="pt-[94px] md:pt-[118px]">
         <AppRoutes />
         <Footer />
       </div>

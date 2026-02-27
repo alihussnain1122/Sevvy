@@ -13,7 +13,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full bg-gray-100 py-6 z-50">
+    <nav className="fixed top-0 left-0 right-0 w-full bg-gray-100 pt-3 pb-3 md:py-6 z-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-white rounded-full shadow-sm flex items-center justify-between h-[70px] px-6">
           {/* Left: Logo + NavLinks */}
