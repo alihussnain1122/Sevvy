@@ -83,7 +83,7 @@ const Stages = () => {
             </motion.div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
-              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6">
+              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6 order-2 lg:order-1">
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Track progress clearly</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Flexible views and real-time dashboards help <br /> teams save 3–5 hours weekly by reducing <br /> coordination and manual status tracking.
@@ -112,7 +112,7 @@ const Stages = () => {
               </motion.div>
               
               {/* Image Right */}
-              <motion.div {...slideIn('right', 0.2)} className="flex justify-center">
+              <motion.div {...slideIn('right', 0.2)} className="flex justify-center order-1 lg:order-2">
                 <img 
                   src="/HowItWorks/stages/2.webp" 
                   alt="Workflow & Visibility" 
@@ -186,7 +186,7 @@ const Stages = () => {
             </motion.div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
-              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6">
+              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6 order-2 lg:order-1">
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Ship without delays</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Undefined approval states can extend timelines by <br /> 50%. Clear status controls and live notifications <br />prevent delivery bottlenecks.
@@ -214,7 +214,7 @@ const Stages = () => {
                 </button>
               </motion.div>
               {/* Image Right */}
-              <motion.div {...slideIn('right', 0.2)} className="flex justify-center">
+              <motion.div {...slideIn('right', 0.2)} className="flex justify-center order-1 lg:order-2">
                 <img 
                   src="/HowItWorks/stages/4.webp" 
                   alt="Approval & Version Control" 
