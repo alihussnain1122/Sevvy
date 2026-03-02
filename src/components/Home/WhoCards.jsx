@@ -33,6 +33,14 @@ const cards = [
     image: "/Home/who/freelancer.webp",
     alt: "Creative & Video Agencies workflow",
   },
+  {
+    title: "Social Media &",
+    subtitle: "Content Teams",
+    description:
+      "Manage content workflows, schedule posts, and grow your audience effortlessly.",
+    image: "/Home/who/media.webp",
+    alt: "Creative & Video Agencies workflow",
+  },
 ];
 
 const WhoCards = () => {
@@ -55,11 +63,11 @@ const WhoCards = () => {
           pauseOnMouseEnter: true,
         }}
         modules={[EffectCards, Autoplay]}
-        className="w-[260px] h-[380px]"
+        className="w-[200px] h-[300px]"
       >
         {[...cards, ...cards].map((card, index) => (
           <SwiperSlide key={index} className="rounded-2xl">
-            <div className="bg-white rounded-2xl shadow-xl p-4 h-full flex flex-col justify-between">
+            <div className="bg-white rounded-2xl shadow-xl p-2 h-full flex flex-col justify-between">
               
               {/* Header */}
               <div>
@@ -82,7 +90,7 @@ const WhoCards = () => {
               <img
                 src={card.image}
                 alt={card.alt}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-[140px] object-contain rounded-lg"
               />
             </div>
           </SwiperSlide>
