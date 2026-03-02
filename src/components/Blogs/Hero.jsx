@@ -63,7 +63,7 @@ const Hero = ({ featuredPost }) => {
         )}
 
         <div className="text-center mt-8">
-          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white font-semibold rounded-xl shadow-md cursor-pointer">
+          <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white font-semibold rounded-xl shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300">
             Get 14 Days Free Trial
           </button>
         </div>

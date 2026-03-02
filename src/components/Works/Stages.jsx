@@ -61,7 +61,7 @@ const Stages = () => {
                   <span><strong>Clear alignment </strong>from day one</span>
                 </li>
               </ul>
-              <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+              <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Create Your First Project
               </button>
             </motion.div>
@@ -106,7 +106,7 @@ const Stages = () => {
                     <span>Clear <strong>task ownership</strong></span>
                   </li>
                 </ul>
-                <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300  hover:shadow-orange-200 cursor-pointer">
+                <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300  hover:shadow-orange-200 cursor-pointer">
                   Control Your Workflow
                 </button>
               </motion.div>
@@ -164,7 +164,7 @@ const Stages = () => {
                   <span>Clean <strong>version tracking</strong></span>
                 </li>
               </ul>
-              <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+              <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Streamline Reviews
               </button>
             </motion.div>
@@ -209,7 +209,7 @@ const Stages = () => {
                     <span>Direct <strong> publishing </strong> to web or local</span>
                   </li>
                 </ul>
-                <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+                <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                   Accelerate Delivery
                 </button>
               </motion.div>
@@ -266,7 +266,7 @@ const Stages = () => {
                   <span><strong>Compaign ready</strong> reuse system</span>
                 </li>
               </ul>
-              <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+              <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Make Work Reusable
               </button>
             </motion.div>
