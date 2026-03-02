@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import FadeInSection from '../FadeInSection';
 
 const Pricing = () => {
+  const navigate = useNavigate();
   const pricingPlans = [
     {
       type: 'trial',
@@ -147,6 +149,7 @@ const Pricing = () => {
                   {/* Card Footer */}
                   <div>
                     <button 
+                      onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
                       className={`w-full py-3.5 px-6 rounded-lg text-sm font-semibold hover:shadow-xl hover:orange-200 transition-all duration-300 border-2 cursor-pointer ${isPremium ? 'bg-white text-orange-500 border-white' : 'bg-white text-black border-[#FF8C42]'}`}
                     >
                       {plan.buttonText}
@@ -173,7 +176,7 @@ const Pricing = () => {
         {/* CTA Button */}
         <FadeInSection delay={0.3}>
           <div className="flex justify-center">
-            <button className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
+            <button onClick={() => navigate('/pricing')} className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
               Pricing Detail
               <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 10.4971H20.5" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>

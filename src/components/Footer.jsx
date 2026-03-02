@@ -1,17 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
-    <footer className="bg-[#f5f5f5] text-gray-700 font-sans">
+    <footer className="bg-[#f5f5f5] text-gray-700">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-10 md:px-12">
           {/* Brand Section */}
           <div className="flex flex-col gap-6">
             <div>
-              <span className="font-bold text-3xl text-gray-900 tracking-tight flex items-center">
-                sevvy
-                <span className="text-orange-500 text-4xl ml-1" style={{lineHeight:0}}>.</span>
-              </span>
+              <img src="/logo.webp" alt="Sevvy" className="h-10 w-auto" />
             </div>
             <p className="mt-2 text-base leading-relaxed text-gray-700 max-w-xs">
               A centralized creative management engine for modern teams. From intake to publishing, everything lives in one connected workspace.
@@ -55,11 +54,11 @@ const Footer = () => {
           <nav aria-label="Solutions" className="flex flex-col gap-4">
             <h3 className="font-bold text-gray-900 text-lg mb-1 tracking-tight">Solutions</h3>
             <ul className="flex flex-col gap-2">
-              <li><a href="#" className="hover:text-orange-500 transition-colors">For Agencies</a></li>
-              <li><a href="#" className="hover:text-orange-500 transition-colors">For Content Teams</a></li>
-              <li><a href="#" className="hover:text-orange-500 transition-colors">For Creators</a></li>
-              <li><a href="#" className="hover:text-orange-500 transition-colors">For Freelancers</a></li>
-              <li><a href="#" className="hover:text-orange-500 transition-colors">For Non-Technical Teams</a></li>
+              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Agencies</span></li>
+              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Content Teams</span></li>
+              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Creators</span></li>
+              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Freelancers</span></li>
+              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Non-Technical Teams</span></li>
             </ul>
           </nav>
 
@@ -67,9 +66,9 @@ const Footer = () => {
           <nav aria-label="Company" className="flex flex-col gap-4">
             <h3 className="font-bold text-gray-900 text-lg mb-1 tracking-tight ">Company</h3>
             <ul className="flex flex-col gap-2">
-              <li><a href="#" className="hover:text-orange-500 transition-colors">About Sevvy</a></li>
-              <li><a href="#" className="hover:text-orange-500 transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-orange-500 transition-colors">Contact</a></li>
+              <li><span onClick={() => navigate('/who-is-sevvy')} className="hover:text-orange-500 transition-colors cursor-pointer">About Sevvy</span></li>
+              <li><span onClick={() => navigate('/blog')} className="hover:text-orange-500 transition-colors cursor-pointer">Blog</span></li>
+              <li><a href="mailto:hello@sevvy.app" className="hover:text-orange-500 transition-colors">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -83,7 +82,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-8 md:gap-16 mt-2 md:mt-0 md:pr-36">
             <a href="#" className="hover:text-orange-500 transition-colors">Legal</a>
-            <a href="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
+            <span onClick={() => navigate('/privacy')} className="hover:text-orange-500 transition-colors cursor-pointer">Privacy Policy</span>
           </div>
         </div>
       </div>

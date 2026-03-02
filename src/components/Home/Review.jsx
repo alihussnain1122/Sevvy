@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const testimonials = [
@@ -56,6 +57,7 @@ const StarIcon = (props) => (
 );
 
 const Review = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-12 md:py-24">
       <div className="container mx-auto px-4">
@@ -115,7 +117,7 @@ const Review = () => {
           </div>
 
           <div className="text-center mt-12 md:mt-16 ">
-            <button className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-200 font-semibold text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 md:text-base cursor-pointer hover:shadow-xl hover:shadow-orange-200">
+            <button onClick={() => navigate('/blog')} className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-200 font-semibold text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 transition-transform duration-300 md:text-base cursor-pointer hover:shadow-xl hover:shadow-orange-200">
               View All <svg width="12" height="12" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
                 <path d="M1.5 10.4971H20.5" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>

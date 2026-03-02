@@ -41,7 +41,7 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               No shared context. No single view.
             </p>
-            <button className="inline-flex items-center 
+            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="inline-flex items-center 
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
@@ -95,7 +95,7 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Manual publishing, delayed posting
             </p>
-            <button className="inline-flex items-center 
+            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="inline-flex items-center 
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
@@ -149,7 +149,7 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Too many voices. No clear signal.
             </p>
-            <button className="inline-flex items-center 
+            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="inline-flex items-center 
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
@@ -203,7 +203,7 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Internal expense rises, reducing profits
             </p>
-            <button className="inline-flex items-center 
+            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="inline-flex items-center 
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 

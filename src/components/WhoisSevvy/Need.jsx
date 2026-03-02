@@ -45,7 +45,7 @@ const NeedSevvy = () => {
             )
         },
         {
-            label: 'Approvals',
+            label: 'Get',
             main: '50x',
             description: 'faster approvals',
             icon: (

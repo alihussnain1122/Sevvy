@@ -1,8 +1,10 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Choose.css';
 
 const Choose = () => {
+  const navigate = useNavigate();
   const features = [
     {
       icon: '/Home/choose/creativity.webp',
@@ -107,7 +109,8 @@ const Choose = () => {
           </div>
 
           <div className="cta-section">
-            <button className="inline-flex items-center 
+            
+            <button onClick={() => navigate('/who-is-sevvy')} className="inline-flex items-center 
                      bg-gradient-to-r from-orange-500 to-orange-200  
                      text-white 
                      pl-10 pr-6 py-2 

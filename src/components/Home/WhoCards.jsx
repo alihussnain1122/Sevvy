@@ -18,19 +18,19 @@ const cards = [
     alt: "Creative & Video Agencies workflow",
   },
   {
-    title: "Creative &",
-    subtitle: "Video Agencies",
+    title: "Content Creators",
+    subtitle: "",
     description:
-      "Boost productivity: manage projects, collaborate, and deliver top-notch results faster.",
-    image: "/Home/who/agency.webp",
+      "Manage content workflows, schedule posts, and grow your audience effortlessly.",
+    image: "/Home/who/content.webp",
     alt: "Creative & Video Agencies workflow",
   },
   {
-    title: "Creative &",
-    subtitle: "Video Agencies",
+    title: "Freelance &",
+    subtitle: "Editors",
     description:
-      "Boost productivity: manage projects, collaborate, and deliver top-notch results faster.",
-    image: "/Home/who/agency.webp",
+      "Streamline client management, track projects, and get paid faster, all in one place.",
+    image: "/Home/who/freelancer.webp",
     alt: "Creative & Video Agencies workflow",
   },
 ];
@@ -48,14 +48,16 @@ const WhoCards = () => {
         effect="cards"
         grabCursor={true}
         loop={true}
+        speed={800}
         autoplay={{
-          delay: 2000,
+          delay: 2500,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         modules={[EffectCards, Autoplay]}
         className="w-[260px] h-[380px]"
       >
-        {cards.map((card, index) => (
+        {[...cards, ...cards].map((card, index) => (
           <SwiperSlide key={index} className="rounded-2xl">
             <div className="bg-white rounded-2xl shadow-xl p-4 h-full flex flex-col justify-between">
               

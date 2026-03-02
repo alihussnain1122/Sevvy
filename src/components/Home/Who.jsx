@@ -2,6 +2,7 @@
 import React from 'react';
 
 import WhoCards from './WhoCards';
+import { Link } from 'react-router-dom';
 
 const Who = () => {
   return (
@@ -106,6 +107,7 @@ const Who = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl futuristic-text underline decoration-2 underline-offset-8 font-bold text-orange-500 mb-6 md:mb-8 capitalize">
             Get 14 Days Free Trial<br />Before You Pay
           </h2>
+          <Link to="/pricing">
           <button className="inline-flex items-center gap-2 md:gap-3 text-white px-8 md:px-12 py-2 md:py-2.5 rounded-full font-medium transition-all text-base md:text-lg hover:scale-105 bg-gradient-to-r from-orange-500 to-orange-200 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
             Learn More
             <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,6 +116,7 @@ const Who = () => {
 </svg>
 
           </button>
+          </Link>
           </div>
        
 

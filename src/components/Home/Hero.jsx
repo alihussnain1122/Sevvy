@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
  return (
@@ -31,22 +32,24 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 hover:shadow-orange-200 flex items-center gap-2 text-sm md:text-base cursor-pointer">
-          Start 14 Days Free Trial
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            ></path>
-          </svg>
-        </button>
+        <Link to="/pricing">
+          <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 hover:shadow-orange-200 flex items-center gap-2 text-sm md:text-base cursor-pointer">
+            Start 14 Days Free Trial
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </Link>
       </div>
 
       {/* Diagram Section */}
