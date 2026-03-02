@@ -49,6 +49,7 @@ publication, in one workspace built for real teams.
 
             {/* Button - Responsive size and spacing */}
             <motion.button
+            onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
               className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-2 md:py-2.5 bg-orange-500 text-white font-semibold border-white border-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-xs sm:text-sm md:text-base mb-2 sm:mb-4 cursor-pointer"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}

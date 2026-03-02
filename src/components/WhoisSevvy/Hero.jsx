@@ -132,7 +132,8 @@ const Hero = () => {
               />
             </motion.div>
             <motion.button
-              className="mt-16 rounded-2xl bg-linear-to-r from-orange-500 to-orange-300 px-16 py-4 text-base font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400 hover:scale-105"
+            onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
+              className="mt-16 rounded-2xl bg-linear-to-r from-orange-500 to-orange-300 px-16 py-4 text-base font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400 hover:scale-105 cursor-pointer"
               {...fadeUp(0.6)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}

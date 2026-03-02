@@ -127,7 +127,8 @@ const SocialMedia = () => {
         {/* CTA */}
         <motion.div className="flex justify-center" {...fadeUp(0.6)}>
           <motion.button
-            className="bg-linear-to-r from-orange-500 to-orange-200 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer"
+          onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
+            className="bg-linear-to-r from-orange-500 to-orange-200 text-white font-semibold px-8 py-3 rounded-xl cursor-pointer hover:shadow-xl hover:shadow-orange-200 transition-transform duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
