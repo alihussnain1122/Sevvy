@@ -103,7 +103,7 @@ const Pricing = () => {
               return (
                 <div 
                   key={index} 
-                  className={`${isPremium ? 'bg-gradient-to-r from-orange-500 to-orange-200 border-[#FFB380]' : 'bg-white border-[#E8E8E8] hover:border-orange-400'} border-2 rounded-xl p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:shadow-lg `}
+                  className={`${isPremium ? 'bg-gradient-to-r from-orange-500 to-orange-200 border-[#FFB380]' : 'bg-white border-[#E8E8E8] hover:border-orange-400'} border-2 rounded-xl p-5 sm:p-6 lg:p-8 flex flex-col transition-all duration-300 hover:translate-y-2 hover:shadow-lg `}
                 >
                   {/* Card Header */}
                   <div className="mb-6">
@@ -163,7 +163,7 @@ const Pricing = () => {
 
         {/* Benefits */}
         <FadeInSection delay={0.2}>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3  mb-10 text-left">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3 mb-10 text-left pl-4 sm:pl-8 lg:pl-0">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-2 items-start md:items-center md:justify-center">
                 <span className="text-[#FF8C42] text-xl font-bold">✓</span>

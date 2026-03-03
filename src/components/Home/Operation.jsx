@@ -28,6 +28,20 @@ const Operation = () => {
 
   return (
     <FadeInSection>
+      <style>{`
+        .op-flip-card { perspective: 1200px; }
+        .op-flip-inner {
+          position: relative; width: 100%; height: 100%;
+          transform-style: preserve-3d;
+          transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .op-flip-card:hover .op-flip-inner { transform: rotateY(180deg); }
+        .op-flip-front, .op-flip-back {
+          position: absolute; inset: 0; border-radius: 1.5rem;
+          backface-visibility: hidden; -webkit-backface-visibility: hidden;
+        }
+        .op-flip-back { transform: rotateY(180deg); }
+      `}</style>
       <section className="bg-[#FAF9F7] py-4 md:py-6 px-4 md:px-5 flex justify-center items-center relative ">
       {/* Top background with gradient */}
       <div
@@ -57,16 +71,24 @@ const Operation = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="relative rounded-3xl overflow-hidden h-[220px] md:h-[320px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+            className="op-flip-card cursor-pointer h-[220px] md:h-[320px]"
           >
-            <img 
-              src={articles[0].image} 
-              alt={articles[0].title}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10 px-4">
-              <span className="text-2xl md:text-[38px] font-bold text-[#6B3F1D] text-center leading-tight mt-12">{articles[0].title}</span>
+            <div className="op-flip-inner">
+              {/* Front */}
+              <div className="op-flip-front overflow-hidden">
+                <img src={articles[0].image} alt={articles[0].title} className="w-full h-full object-cover" />
+                <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-4">
+                  <span className="text-2xl md:text-[38px] font-bold text-[#6B3F1D] text-center leading-tight mt-12">{articles[0].title}</span>
+                </div>
+              </div>
+              {/* Back */}
+              <div
+                className="op-flip-back flex flex-col justify-center items-center px-8 text-center"
+                style={{ background: 'linear-gradient(135deg, #FF8C42 0%, #ffb57a 100%)' }}
+              >
+                <span className="text-2xl md:text-[32px] font-bold text-white leading-tight">{articles[0].title}</span>
+                <div className="w-12 h-1 bg-white/50 rounded mt-4" />
+              </div>
             </div>
           </motion.div>
 
@@ -78,16 +100,24 @@ const Operation = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
-              className="relative rounded-3xl overflow-hidden h-30 w-1/2 min-w-0 md:w-80 md:h-[160px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+              className="op-flip-card cursor-pointer h-30 w-1/2 min-w-0 md:w-80 md:h-[160px]"
             >
-              <img 
-                src={articles[1].image} 
-                alt={articles[1].title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10 px-4">
-                <span className="text-lg md:text-[22px] font-bold text-white text-center leading-tight mt-8">{articles[1].title}</span>
+              <div className="op-flip-inner">
+                {/* Front */}
+                <div className="op-flip-front overflow-hidden">
+                  <img src={articles[1].image} alt={articles[1].title} className="w-full h-full object-cover" />
+                  <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-4">
+                    <span className="text-lg md:text-[22px] font-bold text-white text-center leading-tight mt-8">{articles[1].title}</span>
+                  </div>
+                </div>
+                {/* Back */}
+                <div
+                  className="op-flip-back flex flex-col justify-center items-center px-4 text-center"
+                  style={{ background: 'linear-gradient(135deg, #FF8C42 0%, #ffb57a 100%)' }}
+                >
+                  <span className="text-lg md:text-[20px] font-bold text-white leading-tight">{articles[1].title}</span>
+                  <div className="w-10 h-1 bg-white/50 rounded mt-3" />
+                </div>
               </div>
             </motion.div>
 
@@ -97,16 +127,24 @@ const Operation = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-              className="relative rounded-3xl overflow-hidden h-30 w-1/2 min-w-0 md:w-80 md:h-[160px] group cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+              className="op-flip-card cursor-pointer h-30 w-1/2 min-w-0 md:w-80 md:h-[160px]"
             >
-              <img 
-                src={articles[2].image} 
-                alt={articles[2].title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10 px-4">
-                <span className="text-lg md:text-[22px] font-bold text-white text-center leading-tight mt-8">{articles[2].title}</span>
+              <div className="op-flip-inner">
+                {/* Front */}
+                <div className="op-flip-front overflow-hidden">
+                  <img src={articles[2].image} alt={articles[2].title} className="w-full h-full object-cover" />
+                  <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-4">
+                    <span className="text-lg md:text-[22px] font-bold text-white text-center leading-tight mt-8">{articles[2].title}</span>
+                  </div>
+                </div>
+                {/* Back */}
+                <div
+                  className="op-flip-back flex flex-col justify-center items-center px-4 text-center"
+                  style={{ background: 'linear-gradient(135deg, #FF8C42 0%, #ffb57a 100%)' }}
+                >
+                  <span className="text-lg md:text-[20px] font-bold text-white leading-tight">{articles[2].title}</span>
+                  <div className="w-10 h-1 bg-white/50 rounded mt-3" />
+                </div>
               </div>
             </motion.div>
           </div>

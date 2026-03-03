@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
  return (
-    <section className="relative w-full bg-[#f8f9fa] pt-20 pb-20 overflow-hidden">
+    <section className="relative w-full bg-[#f8f9fa] pt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center z-10 relative">
         {/* Top Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-black rounded-full shadow-sm mb-8">

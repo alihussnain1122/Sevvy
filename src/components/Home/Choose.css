@@ -275,12 +275,7 @@
   }
 
   .features-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .benefits-section {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
@@ -290,6 +285,18 @@
 
   .feature-description {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .benefits-section {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 

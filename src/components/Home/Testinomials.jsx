@@ -202,7 +202,7 @@ const Testimonials = () => {
           {/* Right Side - Card */}
           <div className="lg:w-1/2">
             <div className="bg-white border border-black rounded-2xl p-4 h-full pb-0 flex flex-col justify-between min-h-[400px]">
-              <div className="border-t border-l border-r border-black rounded-t-2xl p-6 h-full flex flex-col gap-4">
+              <div className="border-t border-l border-r border-black rounded-t-2xl p-6 flex-1 flex flex-col gap-4">
                 {/* Card Header */}
                 <div className="flex items-center gap-3 mb-8">
                   <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center">
