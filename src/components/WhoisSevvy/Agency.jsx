@@ -82,12 +82,12 @@ const Agency = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-16">
           {/* Paragraph - Left Side */}
           <motion.div
-            className="flex items-center justify-center md:justify-start md:mt-12"
+            className="flex items-center justify-center md:justify-start md:mt-12 md:pl-10 lg:pl-16"
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md md:px-12">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md ">
               Agencies manage multiple clients, tight timelines, and layered feedback. Delays often happen because information lives across different tools. Sevvy centralizes projects, assets, and approvals in branded client-ready workspaces.
             </p>
           </motion.div>

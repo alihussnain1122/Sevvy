@@ -88,12 +88,12 @@ const ContentCreator = () => {
 
           {/* Paragraph - Left Side */}
           <motion.div
-            className="flex items-center justify-center md:justify-start md:mt-12"
+            className="flex items-center justify-center md:justify-start md:mt-12 md:pl-10 lg:pl-16"
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md md:px-12">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-md">
               Creators lose 25–40% of production time to revisions and scattered
               files. Sevvy manages the full lifecycle in one structured
               environment.

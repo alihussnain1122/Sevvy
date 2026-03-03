@@ -37,7 +37,7 @@ const Hero = () => {
 
           {/* Main Layout */}
           {/* Mobile view custom layout */}
-          <div className="lg:hidden mt-14 flex flex-col items-center justify-center">
+          <div className="md:hidden mt-14 flex flex-col items-center justify-center">
             {/* Mascot on top */}
             <motion.img
               src="/WhoIsSevvy/Hero/avatar.webp"
@@ -92,7 +92,7 @@ const Hero = () => {
         </div>
 
         {/* Desktop view original layout (unchanged) */}
-        <div className="hidden lg:flex relative mt-14 flex-row items-center justify-center">
+        <div className="hidden md:flex relative mt-14 flex-row items-center justify-center">
           {/* Left Side */}
           <motion.div className="flex flex-col items-center gap-8 absolute left-40 top-14" {...slideIn("left", 0.3)}>
             <div className="w-60">
