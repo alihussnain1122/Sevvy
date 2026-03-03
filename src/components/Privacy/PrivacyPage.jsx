@@ -27,7 +27,23 @@ function PrivacyContent({ setHeadings, activeId }) {
   return (
     <article ref={contentRef} className="max-w-3xl mx-auto">
       <h1 className="text-3xl font-semibold text-gray-900 mb-2">Sevvy’s Privacy Disclosure</h1>
-      <div className="text-sm text-gray-400 mb-8">Last Updated • 2 min ago</div>
+      <div className="text-sm text-gray-400 mb-8">
+        Last Updated • {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </div>
+      {/* Intro Paragraph */}
+      <section className="mb-8">
+        <p className="text-gray-600 leading-relaxed mb-4">
+          At Sevvy, privacy is foundational to how we build and operate our platform. Sevvy is designed for creative teams managing real client work, sensitive assets, and collaborative workflows. We understand that trust is not optional.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-4">
+          This Privacy Disclosure explains how Sevvy collects, uses, stores, and protects information when you use our website, applications, and services. It is written to be transparent, practical, and easy to understand.
+        </p>
+        <p className="text-gray-600 leading-relaxed">
+          By using Sevvy, you agree to the practices described in this disclosure. If you have questions, you can contact us at{' '}
+          <a href="mailto:privacy@sevvy.com" className="text-orange-400 hover:underline">privacy@sevvy.com</a>.
+        </p>
+      </section>
+
       {/* Section: Scope of This Privacy Disclosure */}
       <section>
         <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-4">Scope of This Privacy Disclosure</h2>
@@ -112,7 +128,7 @@ function PrivacyContent({ setHeadings, activeId }) {
       {/* Section: Data Sharing and Third Parties */}
       <section>
         <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-4">Data Sharing and Third Parties</h2>
-        <p className="text-gray-600 leading-relaxed mb-4">
+        <p className="text-gray-600 leading-relaxed mb-4 italic">
           Sevvy does not sell, rent, or trade personal data. We share limited data only when necessary to:
         </p>
         <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-4">

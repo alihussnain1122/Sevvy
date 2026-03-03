@@ -46,6 +46,7 @@ const CreativeJourneySection = () => {
             >
               High-performing creative teams rely on clarity, speed, and trust. Sevvy provides a system that
               supports all three without disrupting how teams already work.
+              <span className="block mt-2">Move from idea to delivery with a workflow built for modern creative operations.</span>
             </motion.p>
 
             {/* Button */}
@@ -59,16 +60,28 @@ const CreativeJourneySection = () => {
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-2 md:py-2.5 bg-orange-500 text-white font-semibold border-white border-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-xs sm:text-sm md:text-base mb-2 sm:mb-4 cursor-pointer"
             >
-              <span>Let's craft together</span>
+              <span>Start Your Sevvy's Journey</span>
               <div className="flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 bg-white rounded-full -mr-3 sm:-mr-4 md:-mr-6">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-black">
                   <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
             </motion.button>
+
+            {/* Sub-text below CTA */}
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.52, ease: [0.16, 1, 0.3, 1] }}
+              className="text-white/70 text-xs sm:text-sm mt-3"
+            >
+              14-day free trial. No setup. No contracts.
+            </motion.p>
           </div>
         </motion.div>
       </div>
+      
     </section>
   );
 };

@@ -47,14 +47,14 @@ const PlansComparison = () => {
 
   const premiumFeatures = [
     "Up to 3 active workspaces",
-    "8 team members collaborating in real time",
+    "6 team members collaborating in real time",
     "15GB storage",
     "Priority support",
     "Advanced workflow templates"
   ];
 
   const goldFeatures = [
-    "Upto 6 workspaces",
+    "Upto 6 workspaces (clients, brands, or departments)",
     "10 team members",
     "100GB storage",
     "24/7 phone support",
@@ -83,6 +83,8 @@ const PlansComparison = () => {
                 Our basic plan is built specifically for solo creators and small teams who want clarity from day one.
               </p>
               
+              <p className="text-xs font-bold mb-3">What you get</p>
+
               <ul className="space-y-3 mb-8">
                 {basicFeatures.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -158,7 +160,7 @@ const PlansComparison = () => {
                 Sevvy's premium plan is the most popular plan, designed for teams managing content consistently across formats, platforms, and clients.
               </p>
               
-              <p className="text-xs font-semibold text-gray-600 mb-3">Everything in Basic, plus</p>
+              <p className="text-xs font-bold mb-3">Everything in Basic, plus</p>
               
               <ul className="space-y-3 mb-8">
                 {premiumFeatures.map((feature, index) => (
@@ -193,7 +195,7 @@ const PlansComparison = () => {
               <p className="text-sm text-gray-700 mb-4">
                 Our gold plan offers special features for high-velocity teams where content is a core business function.
               </p>
-              
+               <p className="text-xs font-bold mb-3">Everything in Premium, plus</p>
               <ul className="space-y-3 mb-8">
                 {goldFeatures.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">

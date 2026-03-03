@@ -243,6 +243,14 @@ const Teams = () => {
           </div>
         </FadeInSection>
 
+        {/* Closing Statement */}
+        <FadeInSection delay={0.1}>
+          <p className="text-center text-xl md:text-xl lg:text-3xl font-bold text-gray-900 mt-20 mb-4">
+            Sevvy Workflow mends this by centralizing everything in one{' '}
+            <span className="text-orange-400 italic font-Instrument">visual engine.</span>
+          </p>
+        </FadeInSection>
+
       </div>
     </section>
   );

@@ -76,8 +76,19 @@ publication, in one workspace built for real teams.
                 </svg>
               </div>
             </motion.button>
+
+            <motion.p
+              className="text-white/70 text-xs sm:text-sm mt-1"
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.6, delay: 0.54, ease: [0.16, 1, 0.3, 1] }}
+            >
+              No setup. No contracts. Cancel anytime.
+            </motion.p>
           </motion.div>
+
         </div>
+        
       </div>
     </section>
   );

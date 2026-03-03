@@ -97,7 +97,7 @@ const Inside = () => {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             style={{ animation: 'mascotFloat 5s ease-in-out infinite' }}
           />
-          <div className="w-full overflow-x-auto relative">
+          <div className="w-full overflow-hidden relative">
             <div
               className="flex flex-nowrap gap-4 px-2 animate-horizontal-scroll"
               style={{

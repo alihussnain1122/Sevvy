@@ -119,7 +119,7 @@ const TrialCTA = () => {
           </div>
 
         {/* Bottom Center CTA Button */}
-        <motion.div className="flex justify-center" {...fadeUp(0.5)}>
+        {/* <motion.div className="flex justify-center" {...fadeUp(0.5)}>
           <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="bg-linear-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-2xl inline-flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform hover:shadow-xl hover:shadow-orange-200">
             Start my 14 Day Trial
             <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
@@ -127,7 +127,7 @@ const TrialCTA = () => {
 <path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

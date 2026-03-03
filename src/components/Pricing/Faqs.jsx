@@ -4,20 +4,36 @@ import { motion, useInView } from 'framer-motion';
 
 const faqData = [
   {
-    question: 'How does Sevvy handle my data and privacy?',
-    answer: 'Your content and team data are fully secure. Sevvy uses enterprise-grade encryption, adheres to strict privacy standards, and never shares your information with third parties without consent.',
+    question: 'Can I upgrade or downgrade my plan anytime?',
+    answer: 'Yes! Sevvy grows with your team. Upgrade, downgrade, or adjust your plan at any time without delays and penalties.'
   },
  {
-    question: 'Is Sevvy suitable for small teams or solo creators?',
-    answer: 'Absolutely. Sevvy is built to scale, offering solo creators clarity and small teams a structured way to collaborate without the chaos of messy docs.',
+    question: 'Do I need a credit card to start the 14-day free trial?',
+    answer: 'Not at all. Start your 14-day free trial with full access, completely risk-free. No credit card required.'
   },
   {
     question: 'What’s included in every plan?',
-    answer: 'Every plan includes core workflow tools: project briefing, feedback loops, asset management, and approval stages to keep your content moving.',
+    answer: 'Every plan comes with workspaces, templates, collaboration tools, and live support. Higher-tier plans add more workspaces, storage, team members, and priority support.'
   },
   {
-    question: 'How long until we deliver your first blog post?',
-    answer: 'Once onboarded, you’ll receive your first draft within 5-7 business days, depending on your specific requirements and feedback speed.',
+    question: 'Is Sevvy suitable for small teams or solo creators?',
+    answer: 'Absolutely. Our Basic plan is perfect for solo creators or small teams, giving you structure without unnecessary complexity.'
+  },
+  {
+    question: 'What if I don’t see results during my trial?',
+    answer: 'No worries! If Sevvy isn’t meeting your needs, you can cancel anytime or reach out to us. We can extend your trial to help you get the full experience.'
+  },
+  {
+    question: 'How does Sevvy handle my data and privacy?',
+    answer: 'Your content and team data are fully secure. Sevvy uses enterprise-grade encryption, adheres to strict privacy standards, and never shares your information with third parties without consent.'
+  },
+  {
+    question: 'Tired of Chaos? Meet Clarity.',
+    answer: 'Get full access to Sevvy for 14 days and see what your team can really achieve.'
+  },
+  {
+    question: 'Not sure which plan fits?',
+    answer: 'Start where you are, not where you think you should be.You can upgrade, downgrade, or adjust at any time as your content operation evolves.'
   }
 ];
 
