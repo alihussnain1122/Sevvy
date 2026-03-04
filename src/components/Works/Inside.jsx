@@ -34,8 +34,8 @@ const Inside = () => {
 
 
         {/* Responsive Oval Layout (Always visible, scales for mobile) */}
-        {/* Desktop oval layout */}
-        <div className="hidden md:block -mt-26 relative w-full h-[650px]">
+        {/* Desktop oval layout (lg and above only) */}
+        <div className="hidden lg:block -mt-26 relative w-full h-[650px]">
           {/* Mascot Center */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <motion.img
@@ -83,6 +83,43 @@ const Inside = () => {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Tablet grid layout (md to lg) */}
+        <div className="hidden md:flex lg:hidden flex-col items-center gap-10">
+          <motion.img
+            src="/HowItWorks/Inside/mascot.webp"
+            alt="Mascot"
+            className="w-36 h-auto"
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            style={{ animation: 'mascotFloat 5s ease-in-out infinite' }}
+          />
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 w-full max-w-2xl">
+            {items.map((item, index) => (
+              <motion.div
+                key={index}
+                className="flex flex-col items-center text-center p-2.5 rounded-xl border border-orange-100 bg-white hover:shadow-md transition duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <img src={item.img} alt="" className="w-7 h-7 object-contain mb-2" />
+                <p className="text-[10px] text-gray-800 leading-snug">
+                  {item.label.split("\n").map((line, idx) => (
+                    <span key={idx} className="block">
+                      {line.split("**").map((part, i) =>
+                        i % 2 === 1 ? <b key={i} className="font-bold text-black">{part}</b> : part
+                      )}
+                    </span>
+                  ))}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Mobile mascot on top, animation below */}

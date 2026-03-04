@@ -36,19 +36,19 @@ const Hero = () => {
           </motion.div>
 
           {/* Main Layout */}
-          {/* Mobile view custom layout */}
-          <div className="md:hidden mt-14 flex flex-col items-center justify-center">
+          {/* Mobile + Tablet stacked layout */}
+          <div className="lg:hidden mt-14 flex flex-col items-center justify-center">
             {/* Mascot on top */}
             <motion.img
               src="/WhoIsSevvy/Hero/avatar.webp"
               alt="Mascot"
-              className="h-35 w-35 xs:h-[180px] xs:w-[180px] sm:h-55 sm:w-55 object-contain drop-shadow-2xl mb-2"
+              className="h-40 w-40 xs:h-[180px] xs:w-[180px] sm:h-56 sm:w-56 md:h-64 md:w-64 object-contain drop-shadow-2xl mb-2"
               initial={{ opacity: 0, scale: 0.85 }}
               animate={inView ? { opacity: 1, scale: 1, y: [0, -10, 0] } : {}}
               transition={{ opacity: { duration: 0.6, delay: 0.15 }, scale: { duration: 0.6, delay: 0.15 }, y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 } }}
             />
             {/* Overview image below mascot */}
-            <motion.div className="w-55 xs:w-[260px] sm:w-[320px] mb-2" {...fadeUp(0.3)}>
+            <motion.div className="w-56 xs:w-[260px] sm:w-[320px] md:w-[400px] mb-2" {...fadeUp(0.3)}>
               <img
                 src="/WhoIsSevvy/Hero/overview.webp"
                 alt="Overview graph"
@@ -56,15 +56,15 @@ const Hero = () => {
               />
             </motion.div>
             {/* Card and Piechart in same row below overview */
-          <div className="flex flex-row w-full justify-center gap-2 mb-2">
-            <motion.div className="w-30 xs:w-[140px] sm:w-40" {...fadeUp(0.4)}>
+          <div className="flex flex-row w-full justify-center gap-3 mb-2">
+            <motion.div className="w-32 xs:w-[140px] sm:w-44 md:w-52" {...fadeUp(0.4)}>
               <img
                 src="/WhoIsSevvy/Hero/Card.webp"
                 alt="Customers card"
                 className="w-full object-contain drop-shadow-xl"
               />
             </motion.div>
-            <motion.div className="w-25 xs:w-[120px] sm:w-35" {...fadeUp(0.5)}>
+            <motion.div className="w-28 xs:w-[120px] sm:w-36 md:w-44" {...fadeUp(0.5)}>
               <img
                 src="/WhoIsSevvy/Hero/piechart.webp"
                 alt="Pie chart"
@@ -73,7 +73,7 @@ const Hero = () => {
             </motion.div>
           </div>
           /* Team image at last */}
-          <motion.div className="w-55 xs:w-[260px] sm:w-[320px] mt-2" {...fadeUp(0.55)}>
+          <motion.div className="w-56 xs:w-[260px] sm:w-[320px] md:w-[400px] mt-2" {...fadeUp(0.55)}>
             <img
               src="/WhoIsSevvy/Hero/team.webp"
               alt="Team list"
@@ -82,7 +82,8 @@ const Hero = () => {
           </motion.div>
           {/* CTA Button */}
           <motion.button
-            className="mt-8 rounded-2xl bg-linear-to-r from-orange-500 to-orange-300 px-8 py-3 text-sm font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400 w-full max-w-xs mx-auto"
+            onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
+            className="mt-8 rounded-2xl bg-linear-to-r from-orange-500 to-orange-300 px-8 py-3 text-sm md:text-base md:px-12 md:py-4 font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400 w-full max-w-xs md:max-w-sm mx-auto cursor-pointer"
             {...fadeUp(0.65)}
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
@@ -91,8 +92,8 @@ const Hero = () => {
           </motion.button>
         </div>
 
-        {/* Desktop view original layout (unchanged) */}
-        <div className="hidden md:flex relative mt-14 flex-row items-center justify-center">
+        {/* Desktop view layout (lg and above) */}
+        <div className="hidden lg:flex relative mt-14 flex-row items-center justify-center">
           {/* Left Side */}
           <motion.div className="flex flex-col items-center gap-8 absolute left-40 top-14" {...slideIn("left", 0.3)}>
             <div className="w-60">

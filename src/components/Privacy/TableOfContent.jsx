@@ -10,7 +10,7 @@ const TableOfContent = ({ headings, activeId, onClick }) => {
     <>
       {/* Desktop Premium Sidebar */}
       <nav
-        className="hidden md:block sticky top-0 w-[280px]"
+        className="hidden md:block sticky top-8 self-start w-[280px]"
         aria-label="Table of Contents"
       >
         <div className="relative p-6">

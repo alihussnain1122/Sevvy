@@ -309,7 +309,7 @@ const PrivacyPage = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-6 -pt-8 pb-12 md:py-12">
-        <div className="flex flex-col md:flex-row gap-0 md:gap-10">
+        <div className="flex flex-col md:flex-row md:items-start gap-0 md:gap-10">
           {/* TOC Sidebar */}
           <div className="md:w-[260px] flex-shrink-0">
             <TableOfContent headings={headings} activeId={activeId} onClick={handleTOCClick} />
