@@ -55,7 +55,7 @@ const Operation = () => {
       <div className="max-w-7xl mx-auto w-full z-20">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-[42px] text-black mb-3 leading-tight">
+          <h2 className="text-3xl md:text-[28px] lg:text-[42px] text-black mb-3 leading-tight">
             Creative Operations, <span className="text-[#FF8C42] font-Instrument italic">Explained</span>
           </h2>
           <p className="text-base md:text-lg text-black">
@@ -64,7 +64,7 @@ const Operation = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12 md:ml-8 lg:ml-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 md:ml-8 lg:ml-40">
           {/* Large Card - Left */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}

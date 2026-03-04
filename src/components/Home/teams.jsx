@@ -18,8 +18,8 @@ const Teams = () => {
       <div className="max-w-7xl mx-auto px-8 pl-8 sm:px-10 lg:px-14 relative z-10">
 
         {/* Header Section */}
-        <div className="text-center mb-20">
-          <h1 className="text-3xl md:text-4xl text-black mb-4">
+        <div className="text-center mb-12 md:mb-10 lg:mb-20">
+          <h1 className="text-3xl md:text-[28px] lg:text-4xl text-black mb-4">
             Creative Teams Don't Break<br /> from <span className="text-orange-300 italic font-Instrument">talent</span>
           </h1>
           <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">
@@ -28,11 +28,11 @@ const Teams = () => {
         </div>
 
         {/* Section 1: Fragmented Tools */}
-        <FadeInSection>
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-32">
+     
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 mb-16 lg:mb-32">
           {/* Left Content */}
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-[28px] lg:text-4xl font-bold text-gray-900 mb-6">
               Fragmented Tools Across the Creative Stack
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-4">
@@ -71,7 +71,7 @@ const Teams = () => {
           </div>
 
           {/* Right Image */}
-          <div className="lg:w-1/2">
+          <div className="md:w-1/2">
             <img
               src="/Home/teams/tools.webp"
               alt="Fragmented tools across creative stack"
@@ -79,14 +79,14 @@ const Teams = () => {
             />
           </div>
           </div>
-        </FadeInSection>
+       
 
         {/* Section 2: No System for Publishing */}
-        <FadeInSection delay={0.1}>
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 mb-32">
+        
+          <div className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-16 mb-16 lg:mb-32">
           {/* Right Content */}
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-[28px] lg:text-4xl font-bold text-gray-900 mb-6">
               No System for Publishing and Tracking
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-4">
@@ -125,7 +125,7 @@ const Teams = () => {
           </div>
 
           {/* Left Image */}
-          <div className="lg:w-1/2">
+          <div className="md:w-1/2">
             <img
               src="/Home/teams/system.webp"
               alt="No system for publishing"
@@ -133,14 +133,14 @@ const Teams = () => {
             />
           </div>
           </div>
-        </FadeInSection>
+      
 
         {/* Section 3: Unstructured Feedback */}
-        <FadeInSection delay={0.2}>
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-32">
+    
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 mb-16 lg:mb-32">
           {/* Left Content */}
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-[28px] lg:text-4xl font-bold text-gray-900 mb-6">
               Unstructured Feedback and Approval Loops
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-4">
@@ -179,7 +179,7 @@ const Teams = () => {
           </div>
 
           {/* Right Image */}
-          <div className="lg:w-1/2">
+          <div className="md:w-1/2">
             <img
               src="/Home/teams/cost.webp"
               alt="Unstructured feedback loops"
@@ -187,14 +187,14 @@ const Teams = () => {
             />
           </div>
           </div>
-        </FadeInSection>
+     
 
         {/* Section 4: Rising Costs */}
-        <FadeInSection delay={0.3}>
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
+       
+          <div className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-16">
           {/* Right Content */}
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-[28px] lg:text-4xl font-bold text-gray-900 mb-6">
               Rising Costs from Tool Stacking
             </h2>
             <p className="text-gray-600 text-base leading-relaxed mb-4">
@@ -233,7 +233,7 @@ const Teams = () => {
           </div>
 
           {/* Left Image */}
-          <div className="lg:w-1/2">
+          <div className="md:w-1/2">
             <img
               src="/Home/teams/cost.webp"
               alt="Rising costs from tool stacking"
@@ -241,15 +241,14 @@ const Teams = () => {
             />
           </div>
           </div>
-        </FadeInSection>
+
 
         {/* Closing Statement */}
-        <FadeInSection delay={0.1}>
-          <p className="text-center text-xl md:text-xl lg:text-3xl font-bold text-gray-900 mt-20 mb-4">
+       
+          <p className="text-center text-xl md:text-2xl font-bold text-gray-900 mt-20 mb-4">
             Sevvy Workflow mends this by centralizing everything in one{' '}
             <span className="text-orange-400 italic font-Instrument">visual engine.</span>
           </p>
-        </FadeInSection>
 
       </div>
     </section>

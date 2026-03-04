@@ -99,11 +99,11 @@ const FAQ = () => {
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading Area */}
         <FadeInSection>
-          <div className="text-center mb-10 md:mb-12 relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-800 mb-2">
+          <div className="text-center mb-10 md:mb-12 relative z-10 -mt-8">
+            <h2 className="text-3xl md:text-[28px] lg:text-5xl text-gray-800 mb-2">
               Got <span className="italic text-orange-400 font-Instrument">Questions</span> Before You Start?
             </h2>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-500 italic mb-4">
+            <h3 className="text-2xl md:text-[22px] lg:text-4xl font-bold text-orange-500 italic mb-4">
               We Got You !
             </h3>
             <p className="text-base md:text-lg text-gray-500 mt-4 px-4">

@@ -13,7 +13,7 @@ const cards = [
     title: "Creative &",
     subtitle: "Video Agencies",
     description:
-      "Boost productivity: manage projects, collaborate, and deliver top-notch results faster.",
+      "Boost productivity: manage projects, collaborate, and deliver results faster.",
     image: "/Home/who/agency.webp",
     alt: "Creative & Video Agencies workflow",
   },

@@ -86,7 +86,7 @@ const Pricing = () => {
         {/* Header */}
         <FadeInSection>
           <div className="text-center mb-10 md:mb-12">
-            <h2 className="text-3xl md:text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
+            <h2 className="text-3xl md:text-[28px] lg:text-[42px] font-semibold text-[#2D2D2D] mb-3 leading-tight">
               Start Where Your <span className="text-orange-400 font-Instrument italic">Workflow</span> is
             </h2>
             <p className="text-base md:text-lg text-[#6B6B6B]">
@@ -163,7 +163,7 @@ const Pricing = () => {
 
         {/* Benefits */}
         <FadeInSection delay={0.2}>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3 mb-10 text-left pl-4 sm:pl-8 lg:pl-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-3 mb-10 text-left pl-4 sm:pl-8 lg:pl-0">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-2 items-start md:items-center md:justify-center">
                 <span className="text-[#FF8C42] text-xl font-bold">✓</span>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
  return (
-    <section className="relative w-full bg-[#f8f9fa] pt-20 overflow-hidden">
+    <section className="relative w-full bg-[#f8f9fa] pt-20 md:pt-14 lg:pt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center z-10 relative">
         {/* Top Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-black rounded-full shadow-sm mb-8">
@@ -16,10 +16,10 @@ const Hero = () => {
         </div>
 
         {/* Headings */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight text-center mb-2">
+        <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-6xl font-bold text-gray-900 tracking-tight text-center mb-2">
           Streamline Your Content
         </h1>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent tracking-tight text-center mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent tracking-tight text-center mb-6">
           Workflow With Sevvy
         </h1>
 
@@ -53,7 +53,7 @@ const Hero = () => {
       </div>
 
       {/* Diagram Section */}
-      <div className="relative w-full max-w-[1200px] mx-auto h-[420px] md:h-[600px]">
+      <div className="relative w-full max-w-[1200px] mx-auto h-[420px] md:h-[480px] lg:h-[600px]">
         {/* SVG Connections Background */}
         <svg
           viewBox="0 0 1200 600"

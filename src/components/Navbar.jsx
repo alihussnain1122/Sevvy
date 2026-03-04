@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-white rounded-full shadow-sm flex items-center justify-between h-[70px] px-6">
           {/* Left: Logo + NavLinks */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center md:space-x-4 lg:space-x-8">
             <NavLink
               to="/"
               end
@@ -31,13 +31,13 @@ const Navbar = () => {
             >
               sevvy<span className="text-orange-500">.</span>
             </NavLink>
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center md:space-x-4 lg:space-x-8">
               {navLinks.slice(1).map((link) => (
                 <NavLink
                   key={link.name}
                   to={link.to}
                   className={({ isActive }) =>
-                    `text-base font-medium transition-colors duration-200 py-1 ${
+                    `md:text-sm lg:text-base font-medium transition-colors duration-200 py-1 whitespace-nowrap ${
                       isActive
                         ? 'text-orange-500 border-t-2 border-b-2 border-orange-400'
                         : 'text-gray-500 hover:text-black border-t-2 border-b-2 border-transparent'
@@ -75,7 +75,7 @@ const Navbar = () => {
           {/* Right Side Button */}
           <button
             onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
-            className="ml-4 bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium px-6 py-2 rounded-2xl shadow transition-transform duration-200 hover:scale-105 hidden md:inline-block hover:shadow-xl hover:shadow-orange-200 cursor-pointer"
+            className="ml-2 bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium md:px-4 md:py-1.5 lg:px-6 lg:py-2 md:text-sm lg:text-base rounded-xl shadow transition-transform duration-200 hover:scale-105 hidden md:inline-block hover:shadow-xl hover:shadow-orange-200 cursor-pointer whitespace-nowrap"
           >
             Join Waitlist →
           </button>
@@ -92,6 +92,7 @@ const Navbar = () => {
                   `text-base font-medium transition-colors duration-200 ${
                     isActive ? 'text-orange-500' : 'text-gray-700 hover:text-black'
                   }`
+                
                 }
                 onClick={() => setMenuOpen(false)}
               >
