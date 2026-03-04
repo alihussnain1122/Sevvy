@@ -108,7 +108,7 @@ const Who = () => {
             Get 14 Days Free Trial<br />Before You Pay
           </h2>
           <Link to="/pricing">
-          <button className="inline-flex items-center gap-2 md:gap-3 text-white px-8 md:px-12 py-2 md:py-2.5 rounded-full font-medium transition-all text-base md:text-base lg:text-lg hover:scale-105 bg-gradient-to-r from-orange-500 to-orange-200 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
+          <button className="inline-flex items-center gap-2 md:gap-3 text-white px-8 md:px-12 py-2 md:py-2.5 rounded-full font-bold transition-all text-base md:text-base lg:text-lg hover:scale-105 bg-gradient-to-r from-orange-500 to-orange-200 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
             Learn More
             <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>

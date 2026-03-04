@@ -113,7 +113,7 @@ const TrialCTA = () => {
               {/* Card Button */}
                       <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
 
-              <button className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-lg cursor-pointer hover:shadow-lg hover:scale-105 transition-transform whitespace-nowrap text-sm md:text-base">
+              <button className="w-full border-2 border-orange-500 text-orange-400 font-bold py-3 px-6 rounded-lg cursor-pointer hover:shadow-lg hover:scale-105 transition-transform whitespace-nowrap text-sm md:text-base">
                 Start My 14-Day Free Trial
               </button>
               </a>

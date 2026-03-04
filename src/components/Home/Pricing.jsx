@@ -177,7 +177,7 @@ const Pricing = () => {
         {/* CTA Button */}
         <FadeInSection delay={0.3}>
           <div className="flex justify-center">
-            <button onClick={() => navigate('/pricing')} className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg py-3 px-8 rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
+            <button onClick={() => navigate('/pricing')} className="bg-gradient-to-r from-[#FF8C42] to-[#FFD19C] text-white text-lg py-3 px-8 font-semibold rounded-full flex items-center gap-3 transition-all duration-300 focus:outline-none hover:scale-105 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
               Pricing Detail
               <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 10.4971H20.5" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>

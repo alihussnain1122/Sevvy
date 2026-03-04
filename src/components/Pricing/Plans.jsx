@@ -97,7 +97,7 @@ const PlansComparison = () => {
               </ul>
                       <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
 
-              <button  className="w-full border-2 border-orange-500 text-orange-400 font-medium py-3 px-6 rounded-xl  transition-colors cursor-pointer hover:shadow-xl hover:scale-105">
+              <button  className="w-full border-2 border-orange-500 text-orange-400 font-bold py-3 px-6 rounded-xl  transition-colors cursor-pointer hover:shadow-xl hover:scale-105">
                 Try for Free
               </button>
               </a>
@@ -111,7 +111,7 @@ const PlansComparison = () => {
               </p>
                       <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
 
-              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200 hover:scale-105">
+              <button className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200 hover:scale-105">
                 Upgrade anytime
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -143,7 +143,7 @@ const PlansComparison = () => {
               </p>
                       <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
 
-              <button  className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200 hover:scale-105">
+              <button  className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200 hover:scale-105">
                 Choose this Plan
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -182,7 +182,7 @@ const PlansComparison = () => {
               </ul>
                       <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
 
-              <button className="w-full bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-6 rounded-xl transition-colors cursor-pointer hover:shadow-xl hover:scale-105 transition-shadow hover:shadow-orange-200">
+              <button className="w-full bg-gradient-to-r from-orange-500 to-orange-200 text-white font-bold py-3 px-6 rounded-xl transition-colors cursor-pointer hover:shadow-xl hover:scale-105 transition-shadow hover:shadow-orange-200">
                 Subscribe Now  
               </button>
               </a>
@@ -218,7 +218,7 @@ const PlansComparison = () => {
               </ul>
                       <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
 
-              <button  className="w-full border-2 border-orange-500 text-orange-500 font-medium py-3 px-6 rounded-xl transition-colors cursor-pointer hover:scale-105">
+              <button  className="w-full border-2 border-orange-500 text-orange-500 font-bold py-3 px-6 rounded-xl transition-colors cursor-pointer hover:scale-105">
                 Contact Sales
               </button>
               </a>
@@ -232,7 +232,7 @@ const PlansComparison = () => {
               </p>
                       <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
 
-              <button  className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl inline-flex items-center gap-2 cursor-pointer hover:shadow-xl hover:scale-105 transition-shadow hover:shadow-orange-200">
+              <button  className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-bold py-3 px-8 rounded-xl inline-flex items-center gap-2 cursor-pointer hover:shadow-xl hover:scale-105 transition-shadow hover:shadow-orange-200">
                 Upgrade Now
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>

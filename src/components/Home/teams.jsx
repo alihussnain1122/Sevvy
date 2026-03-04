@@ -51,7 +51,7 @@ const Teams = () => {
                    hover:scale-105 
                    cursor-pointer hover:shadow-xl hover:shadow-orange-200">
 
-              <span className="font-medium">
+              <span className="font-bold">
                 View unified system
               </span>
 
@@ -103,10 +103,10 @@ const Teams = () => {
                    pl-8 pr-3 py-1 
                    rounded-full 
                    shadow transition-transform duration-200
-                   hover:scale-105 
+                   hover:scale-105  
                    cursor-pointer hover:shadow-xl hover:shadow-orange-200">
 
-              <span className="font-medium">
+              <span className="font-bold">
                 Extend content lifecycle
               </span>
 
@@ -159,10 +159,10 @@ const Teams = () => {
                    pl-8 pr-3 py-1 
                    rounded-full
                    shadow transition-transform duration-200
-                   hover:scale-105 
+                   hover:scale-105  
                    cursor-pointer hover:shadow-xl hover:shadow-orange-200">
 
-              <span className="font-medium">
+              <span className="font-bold">
                 Fix review flow
               </span>
 
@@ -216,10 +216,10 @@ const Teams = () => {
                    pl-8 pr-3 py-1 
                    rounded-full
                    shadow transition-transform duration-200
-                   hover:scale-105
+                   hover:scale-105 
                    cursor-pointer hover:shadow-xl hover:shadow-orange-200">
 
-              <span className="font-medium">
+              <span className="font-bold">
                 Reduce tool Costs
               </span>
 
