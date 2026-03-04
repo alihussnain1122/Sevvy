@@ -18,7 +18,7 @@ const RecentBlogs = ({ posts = [] }) => {
     const BlogCard = ({ post, isLarge }) => (
         <Link
             to={`/blog/${post.slug}`}
-            className="group bg-[#fffbf8] rounded-[25px] border border-gray-300 p-4 shadow-sm hover:shadow-md transition-all flex flex-col"
+            className="group bg-[#fffbf8] rounded-[25px] border border-gray-300 p-4 md:p-3 lg:p-4 shadow-sm hover:shadow-md transition-all flex flex-col"
         >
             {/* Image Section */}
             <div
@@ -32,7 +32,7 @@ const RecentBlogs = ({ posts = [] }) => {
             <div className="px-2 flex-grow">
                 <div className="flex items-center gap-3 mb-4">
                     {/* Badge */}
-                    <span className="px-3 py-1.5 bg-[#FFF5EE] text-[#FF710B] text-[11px] font-bold rounded-full uppercase tracking-wide">
+                    <span className="px-3 py-1.5 bg-[#FFF5EE] text-[#FF710B] text-[11px] font-bold rounded-full uppercase tracking-wide whitespace-nowrap">
                         Last Update
                     </span>
                     {/* Date */}
@@ -43,7 +43,7 @@ const RecentBlogs = ({ posts = [] }) => {
                             <line x1="8" y1="2" x2="8" y2="6"></line>
                             <line x1="3" y1="10" x2="21" y2="10"></line>
                         </svg>
-                        <span className="text-[12px] font-medium">{formatDate(post.date)}</span>
+                        <span className="text-[12px] font-medium whitespace-nowrap">{formatDate(post.date)}</span>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@ const RecentBlogs = ({ posts = [] }) => {
             
             <div className="relative max-w-7xl mx-auto z-10">
                 <div className="text-center mb-12">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-[28px] lg:text-4xl mb-4">
                         Recent <span className="italic text-orange-400 font-Instrument">Blogs</span>
                     </h2>
                     <p className="text-sm sm:text-base text-gray-700 max-w-xl mx-auto">
@@ -96,14 +96,14 @@ const RecentBlogs = ({ posts = [] }) => {
                 {posts.length > 0 && (
                     <>
                         {/* 1. Top Row: 2 Large Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 lg:gap-8 mb-8">
                             {displayedPosts.slice(0, 2).map((post) => (
                                 <BlogCard key={post.id} post={post} isLarge={true} />
                             ))}
                         </div>
 
                         {/* 2. Dynamic Grid: Rows of 3 */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-3 lg:gap-8">
                             {displayedPosts.slice(2).map((post) => (
                                 <BlogCard key={post.id} post={post} isLarge={false} />
                             ))}

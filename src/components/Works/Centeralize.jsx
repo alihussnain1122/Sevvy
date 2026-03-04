@@ -24,7 +24,7 @@ const Centralization = () => {
 
         {/* Heading Area */}
         <motion.div {...fadeUp(0)} className="text-center mb-6 bg-[linear-gradient(180deg,_#fffaf7_0%,_rgba(254,154,75,0.3)_60%,_transparent_100%)] mask-gradient-center">
-          <h2 className="text-2xl mt-4 md:text-4xl text-gray-900 mb-4 font-poppins">
+          <h2 className="text-2xl mt-4 md:text-[28px] lg:text-4xl text-gray-900 mb-4 font-poppins">
             One <span className="italic text-[#ffb47b] font-Instrument">Centralized Workspace</span> that
             <br />
             Replaces Everything

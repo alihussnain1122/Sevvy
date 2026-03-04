@@ -29,7 +29,7 @@ const CreativeJourneySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-2 text-xl sm:text-2xl md:text-4xl lg:text-4xl text-white mb-2 sm:mb-3 md:mb-4 leading-tight break-words max-w-xs sm:max-w-md md:max-w-2xl"
+              className="mt-2 text-xl sm:text-2xl md:text-[28px] lg:text-4xl text-white mb-2 sm:mb-3 md:mb-4 leading-tight break-words max-w-xs sm:max-w-md md:max-w-2xl"
             >
               Your Creative Journey
               <br className="block sm:hidden" />

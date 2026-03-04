@@ -27,7 +27,7 @@ const Stages = () => {
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Intake & Alignment</h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image Left */}
             <motion.div {...slideIn('left', 0.1)} className="flex justify-center">
               <img 
@@ -81,9 +81,9 @@ const Stages = () => {
               <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 2</p>
               <h2 className="text-2xl md:text-4xl font-semibold  text-gray-900">Workflow & Visibility</h2>
             </motion.div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
-              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6 order-2 lg:order-1">
+              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6 order-2 md:order-1">
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Track progress clearly</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Flexible views and real-time dashboards help <br /> teams save 3–5 hours weekly by reducing <br /> coordination and manual status tracking.
@@ -112,11 +112,11 @@ const Stages = () => {
               </motion.div>
               
               {/* Image Right */}
-              <motion.div {...slideIn('right', 0.2)} className="flex justify-center order-1 lg:order-2">
+              <motion.div {...slideIn('right', 0.2)} className="flex justify-center order-1 md:order-2">
                 <img 
                   src="/HowItWorks/stages/2.webp" 
                   alt="Workflow & Visibility" 
-                  className="max-w-md w-full h-auto object-contain"
+                  className="max-w-md md:max-w-xs lg:max-w-md w-full h-auto object-contain"
                 />
               </motion.div>
             </div>
@@ -130,7 +130,7 @@ const Stages = () => {
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Feedback & Collaboration</h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image Left */}
             <motion.div {...slideIn('left', 0.1)} className="flex justify-center">
               <img 
@@ -184,9 +184,9 @@ const Stages = () => {
               <p className="text-orange-400 font-bold text-xl tracking-wide mb-2">Stage 4</p>
               <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Approval & Publishing</h2>
             </motion.div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Content Left */}
-              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6 order-2 lg:order-1">
+              <motion.div {...slideIn('left', 0.1)} className="text-left p-1 md:p-6 order-2 md:order-1">
                 <h3 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-4">Ship without delays</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Undefined approval states can extend timelines by <br /> 50%. Clear status controls and live notifications <br />prevent delivery bottlenecks.
@@ -214,7 +214,7 @@ const Stages = () => {
                 </button>
               </motion.div>
               {/* Image Right */}
-              <motion.div {...slideIn('right', 0.2)} className="flex justify-center order-1 lg:order-2">
+              <motion.div {...slideIn('right', 0.2)} className="flex justify-center order-1 md:order-2">
                 <img 
                   src="/HowItWorks/stages/4.webp" 
                   alt="Approval & Version Control" 
@@ -232,7 +232,7 @@ const Stages = () => {
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">Showcase, Reuse & Scale</h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image Left */}
             <motion.div {...slideIn('left', 0.1)} className="flex justify-center">
               <img 

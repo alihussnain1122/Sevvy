@@ -52,10 +52,10 @@ const Partner = () => {
       <div className="relative max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
+          <h2 className="text-3xl md:text-[28px] lg:text-4xl font-semibold text-gray-800">
             More Than Software
           </h2>
-          <p className="mt-2 text-3xl md:text-4xl font-Instrument italic text-orange-400 font-serif tracking-wide">
+          <p className="mt-2 text-3xl md:text-[28px] lg:text-4xl font-Instrument italic text-orange-400 font-serif tracking-wide">
             A Creative Operations Partner
           </p>
           <p className="mt-4 text-gray-500 text-base">

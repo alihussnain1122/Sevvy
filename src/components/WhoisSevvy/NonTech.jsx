@@ -56,7 +56,7 @@ const NontechCreativeTeams = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Heading */}
         <motion.div className="text-center mb-12" {...fadeUp(0)}>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight">
+          <h2 className="text-2xl md:text-[28px] lg:text-4xl tracking-tight">
             <span className="text-gray-800">Non-Technical & </span>
             <span className="text-orange-400 italic font-Instrument">Creative Teams</span>
           </h2>

@@ -14,7 +14,7 @@ const Hero = ({ featuredPost }) => {
     <section className="py-12 sm:py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-orange-200 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-[36px] lg:text-6xl font-bold bg-gradient-to-r from-orange-500 to-orange-200 bg-clip-text text-transparent mb-4">
             The Sevvy Journal
           </h1>
           <h2 className="text-xl sm:text-2xl font-semibold text-black mb-4">

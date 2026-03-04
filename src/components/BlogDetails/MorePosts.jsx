@@ -113,7 +113,7 @@ const MorePosts = ({ currentSlug }) => {
       <div className="flex justify-center mt-10">
         <Link
           to="/blog"
-          className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-200"
+          className="bg-gradient-to-r from-orange-500 to-orange-200 hover:scale-105  text-white font-semibold px-8 py-3 rounded-full transition-colors duration-200"
         >
           Learn More
         </Link>

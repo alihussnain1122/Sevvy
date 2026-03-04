@@ -27,7 +27,7 @@ const Inside = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-2xl md:text-4xl text-gray-900 text-center mb-16"
+          className="text-2xl md:text-[28px] lg:text-4xl text-gray-900 text-center mb-16"
         >
           What You Can Do <span className="italic text-orange-300 font-Instrument">Inside Sevvy</span>
         </motion.h2>

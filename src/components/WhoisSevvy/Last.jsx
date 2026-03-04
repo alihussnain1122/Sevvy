@@ -27,12 +27,12 @@ const LastSection = () => {
           >
             {/* Heading - Responsive and keeps 'Starts Here' together */}
             <motion.h2
-              className="mt-2 text-xl sm:text-2xl md:text-4xl lg:text-4xl text-white mb-2 sm:mb-3 md:mb-4 leading-tight break-words max-w-xs sm:max-w-md md:max-w-2xl"
+              className="mt-2 text-xl sm:text-2xl md:text-[28px] lg:text-4xl text-white mb-2 sm:mb-3 md:mb-4 leading-tight break-words max-w-xs sm:max-w-md md:max-w-2xl"
               initial={{ opacity: 0, y: 25 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 25 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             >
-              Start Your
+              Start Your  
               <span className="bg-gradient-to-r from-orange-500 via-orange-500 to-orange-200 bg-clip-text text-transparent italic font-Instrument whitespace-nowrap">Creative Flow Journey Today </span>
             </motion.h2>
 
