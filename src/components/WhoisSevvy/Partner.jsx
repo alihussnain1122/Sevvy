@@ -35,7 +35,7 @@ const cards = [
 
 const Partner = () => {
   return (
-    <section className="relative bg-white py-20 overflow-hidden">
+    <section className="relative bg-white py-12 overflow-hidden">
       {/* Gradient Overlay */}
       <div
         className="absolute top-0 left-0 right-0 h-80 pointer-events-none"
