@@ -6,6 +6,7 @@ import ContentCreator from "../components/WhoisSevvy/ContentCreator";
 import Freelance from "../components/WhoisSevvy/Freelancer";
 import NontechCreativeTeams from "../components/WhoisSevvy/NonTech";
 import NeedSevvy from "../components/WhoisSevvy/Need";
+import Partner from "../components/WhoisSevvy/Partner";
 
 
 export default function WhoIsSevvy() {
@@ -18,6 +19,7 @@ export default function WhoIsSevvy() {
       <Freelance />
       <NontechCreativeTeams />
       <NeedSevvy />
+      <Partner />
       <LastSection />
     </>
   );
