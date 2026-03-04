@@ -70,7 +70,7 @@ const TableOfContents = ({ content }) => {
   if (!headings.length) return null;
 
   return (
-    <div className="sticky top-28">
+    <div className="sticky top-24">
       {/* Card */}
       <div className="relative bg-white/80 backdrop-blur-xl border border-gray-100 rounded-2xl shadow-lg p-6">
         

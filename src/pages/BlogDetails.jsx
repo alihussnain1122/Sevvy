@@ -120,7 +120,7 @@ const BlogDetails = () => {
         {/* Two-column grid: TOC left, content right */}
         <div className="lg:grid lg:grid-cols-[300px_1fr] gap-10 items-start">
           {/* Left: Table of Contents (sticky) */}
-          <aside className="hidden lg:block self-start sticky top-0">
+          <aside className="hidden lg:block self-start">
             <TableOfContents content={post.content.rendered} />
           </aside>
 
