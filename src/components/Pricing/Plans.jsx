@@ -103,12 +103,12 @@ const PlansComparison = () => {
 
             {/* Right - Content */}
             <motion.div className="space-y-6  order-1 md:order-none" {...slideX('right', basicInView, 0.15)}>
-              <h3 className="text-3xl lg:text-4xl font-bold text-orange-400">Best for:</h3>
+              <h3 className="text-3xl md:text-[24px] lg:text-4xl font-bold text-orange-400">Best for:</h3>
               <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
                 Creators validating ideas, early-stage teams, and anyone tired of messy Google Docs.
               </p>
               <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="bg-gradient-to-r from-orange-500 to-orange-200 text-white font-medium py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow inline-flex items-center gap-2 cursor-pointer hover:shadow-orange-200 hover:scale-105">
-                Upgrade anytime as your workflow grows
+                Upgrade anytime
                 <svg width="16" height="16" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-2 md:ml-2'>
 <path d="M1.5 10.4971H20.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10.999 1.5L20.499 10.4973L10.999 19.4947" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -130,7 +130,7 @@ const PlansComparison = () => {
           <div className="relative z-10  grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Content */}
             <motion.div className="space-y-6 " {...slideX('left', premiumInView, 0)}>
-              <h3 className="text-3xl lg:text-4xl font-bold leading-tight">
+              <h3 className="text-3xl md:text-[24px] lg:text-4xl font-bold leading-tight">
                 <span className="text-orange-400">Why teams choose this</span>
               </h3>
               <p className="text-gray-800 text-lg leading-relaxed">
@@ -214,7 +214,7 @@ const PlansComparison = () => {
 
             {/* Right - Content */}
             <motion.div className="space-y-6 order-1 md:order-none" {...slideX('right', goldInView, 0.15)}>
-              <h3 className="text-3xl lg:text-4xl font-bold text-orange-400">Built for:</h3>
+              <h3 className="text-3xl md:text-[24px] lg:text-4xl font-bold text-orange-400">Built for:</h3>
               <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
                 Agencies, in-house content teams, and media brands managing complex pipelines.
               </p>

@@ -28,14 +28,14 @@ const PricingHero = () => {
   });
 
   return (
-    <section className="w-full py-16 lg:py-24" ref={ref}>
+    <section className="w-full py-16 lg:py-24 md:mb-10 lg:mb-0" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Heading Section */}
           <div className="text-center mb-12 lg:mb-16">
-            <motion.h1 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2" {...fadeUp(0)}>
+            <motion.h1 className="text-2xl sm:text-3xl md:text-[36px] lg:text-5xl xl:text-6xl font-bold mb-2" {...fadeUp(0)}>
               <span className="text-gray-900">Plans That Match How</span>
             </motion.h1>
-            <motion.h2 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold mb-2" {...fadeUp(0.1)}>
+            <motion.h2 className="text-3xl sm:text-4xl md:text-[36px] lg:text-6xl xl:text-7xl font-bold mb-2" {...fadeUp(0.1)}>
               <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
                 Creative Teams{' '}
               </span>

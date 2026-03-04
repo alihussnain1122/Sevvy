@@ -49,16 +49,16 @@ const PricingDifference = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Top Center Heading */}
         <motion.div className="text-center mb-4" {...fadeUp(0)}>
-          <h2 className="text-3xl lg:text-4xl text-gray-900">
+          <h2 className="text-3xl md:text-[28px] lg:text-4xl text-gray-900">
             Why Sevvy <span className="text-orange-400 italic font-Instrument">Pricing</span> Is Different
           </h2>
         </motion.div>
 
         {/* Two Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
           <motion.div
-            className="space-y-6 pl-0 md:pl-12"
+            className="space-y-6 pl-0 md:pl-0 lg:pl-12 order-2 lg:order-1"
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
@@ -90,9 +90,9 @@ const PricingDifference = () => {
               ))}
             </motion.ul>
 
-            {/* Bottom Highlight Box */}
+            {/* Bottom Highlight Box - visible only on desktop inside column */}
             <motion.div
-              className="border-2 border-orange-400 rounded-xl p-5 mt-8"
+              className="hidden lg:block border-2 border-orange-400 rounded-xl p-5 mt-8"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -100,7 +100,7 @@ const PricingDifference = () => {
               <div className="space-y-2">
                 {highlights.map((highlight, index) => (
                   <div key={index} className="flex items-start gap-2">
-                    <div className="shrink-0 mt-0.5" >
+                    <div className="shrink-0 mt-0.5">
                       <CheckIcon />
                     </div>
                     <span className="text-gray-800 text-sm font-bold">
@@ -114,7 +114,7 @@ const PricingDifference = () => {
 
           {/* Right Column - Image with Animation */}
           <motion.div
-            className="flex justify-center items-center"
+            className="flex justify-center items-center order-1 lg:order-2"
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
             transition={{ duration: 0.85, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
@@ -256,6 +256,28 @@ const PricingDifference = () => {
             </div>
           </motion.div>
           </div>
+
+        {/* Tablet-only Full-Width Highlight Box */}
+        <motion.div
+          className="lg:hidden border-2 border-orange-400 rounded-xl p-5 mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {highlights.map((highlight, index) => (
+              <div key={index} className="flex items-start gap-2">
+                <div className="shrink-0 mt-0.5">
+                  <CheckIcon />
+                </div>
+                <span className="text-gray-800 text-sm font-bold">
+                  {highlight}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
