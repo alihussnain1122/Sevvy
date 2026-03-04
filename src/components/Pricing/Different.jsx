@@ -52,6 +52,9 @@ const PricingDifference = () => {
           <h2 className="text-3xl md:text-[28px] lg:text-4xl text-gray-900">
             Why Sevvy <span className="text-orange-400 italic font-Instrument">Pricing</span> Is Different
           </h2>
+          <p className="justify-center text-center mt-4 text-gray-600">
+            With Sevvy, you're not paying for features but for flow
+          </p>
         </motion.div>
 
         {/* Two Column Grid */}
@@ -64,9 +67,9 @@ const PricingDifference = () => {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
             {/* Main Bold Statement */}
-            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+            {/* <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
               With Sevvy, you're not paying for features but for flow
-            </h3>
+            </h3> */}
 
             {/* Paragraph */}
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed max-w-xl">

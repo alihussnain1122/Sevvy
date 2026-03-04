@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
  return (
@@ -32,7 +31,7 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <Link to="/pricing">
+        <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
           <button className="px-6 md:px-8 py-3 md:py-3.5 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 hover:shadow-orange-200 flex items-center gap-2 text-sm md:text-base cursor-pointer">
             Start 14 Days Free Trial
             <svg
@@ -49,7 +48,7 @@ const Hero = () => {
               ></path>
             </svg>
           </button>
-        </Link>
+        </a>
       </div>
 
       {/* Diagram Section */}

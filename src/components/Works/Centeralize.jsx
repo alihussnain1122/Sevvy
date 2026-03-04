@@ -132,9 +132,11 @@ const Centralization = () => {
 
         {/* CTA Button */}
         <motion.div {...fadeUp(0.1)} className="text-center mb-8">
-          <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-medium shadow-lg hover:shadow-xl hover:shadow-orange-200 hover:scale-105 transition-all duration-300 cursor-pointer">
+<a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-2xl font-bold shadow-lg hover:shadow-xl hover:shadow-orange-200 hover:scale-105 transition-all duration-300 cursor-pointer">
             Unify Your Creative Stack Today
           </button>
+          </a>
         </motion.div>
 
         </div>

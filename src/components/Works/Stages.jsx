@@ -61,9 +61,11 @@ const Stages = () => {
                   <span><strong>Clear alignment </strong>from day one</span>
                 </li>
               </ul>
-              <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+<a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Create Your First Project
               </button>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -106,9 +108,11 @@ const Stages = () => {
                     <span>Clear <strong>task ownership</strong></span>
                   </li>
                 </ul>
-                <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300  hover:shadow-orange-200 cursor-pointer">
+<a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+                <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300  hover:shadow-orange-200 cursor-pointer">
                   Control Your Workflow
                 </button>
+                </a>
               </motion.div>
               
               {/* Image Right */}
@@ -164,9 +168,11 @@ const Stages = () => {
                   <span>Clean <strong>version tracking</strong></span>
                 </li>
               </ul>
-              <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+<a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Streamline Reviews
               </button>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -209,9 +215,11 @@ const Stages = () => {
                     <span>Direct <strong> publishing </strong> to web or local</span>
                   </li>
                 </ul>
-                <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+<a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+                <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                   Accelerate Delivery
                 </button>
+                </a>
               </motion.div>
               {/* Image Right */}
               <motion.div {...slideIn('right', 0.2)} className="flex justify-center order-1 md:order-2">
@@ -266,9 +274,11 @@ const Stages = () => {
                   <span><strong>Compaign ready</strong> reuse system</span>
                 </li>
               </ul>
-              <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+<a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white rounded-lg font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
                 Make Work Reusable
               </button>
+              </a>
             </motion.div>
           </div>
         </div>

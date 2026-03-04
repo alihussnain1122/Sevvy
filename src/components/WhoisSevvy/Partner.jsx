@@ -82,9 +82,11 @@ const Partner = () => {
 
         {/* CTA Button */}
         <div className="mt-12 flex justify-center">
-          <button className="bg-gradient-to-r from-orange-500 to-orange-300 text-white font-semibold px-8 py-3 rounded-md transition duration-300 italic hover:scale-105 hover:shadow-xl hover:shadow-orange-200 cursor-pointer" onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}>
+          <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+          <button className="bg-gradient-to-r from-orange-500 to-orange-300 text-white font-semibold px-8 py-3 rounded-md transition duration-300 italic hover:scale-105 hover:shadow-xl hover:shadow-orange-200 cursor-pointer">
             Build the System Your Team Deserves
           </button>
+          </a>
         </div>
       </div>
     </section>

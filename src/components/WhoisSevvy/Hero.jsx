@@ -81,8 +81,10 @@ const Hero = () => {
             />
           </motion.div>
           {/* CTA Button */}
+                  <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+
           <motion.button
-            onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
+          
             className="mt-8 rounded-2xl bg-linear-to-r from-orange-500 to-orange-300 px-8 py-3 text-sm md:text-base md:px-12 md:py-4 font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400 w-full max-w-xs md:max-w-sm mx-auto cursor-pointer"
             {...fadeUp(0.65)}
             whileHover={{ scale: 1.04 }}
@@ -90,6 +92,7 @@ const Hero = () => {
           >
             Get 14 Days Free Trial
           </motion.button>
+          </a>
         </div>
 
         {/* Desktop view layout (lg and above) */}
@@ -132,15 +135,18 @@ const Hero = () => {
                 className="w-full object-contain drop-shadow-xl"
               />
             </motion.div>
+                    <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+
             <motion.button
-            onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
-              className="mt-16 rounded-2xl bg-linear-to-r from-orange-500 to-orange-300 px-16 py-4 text-base font-semibold text-white shadow-xl transition duration-300 hover:from-orange-600 hover:to-orange-400 hover:scale-105 cursor-pointer"
+           
+              className="mt-16 rounded-2xl bg-linear-to-r from-orange-500 to-orange-300 px-16 py-4 text-base font-semibold text-white shadow-xl transition duration-300 hover:shadow-orange-200 hover:scale-105 cursor-pointer"
               {...fadeUp(0.6)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
             >
               Get 14 Days Free Trial
             </motion.button>
+            </a>
           </div>
           {/* Right Side Team Card */}
           <motion.div className="flex flex-col items-center mt-10 absolute right-32.5 top-24 w-90" {...slideIn("right", 0.3)}>

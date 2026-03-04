@@ -54,11 +54,11 @@ const Footer = () => {
           <nav aria-label="Solutions" className="flex flex-col gap-4">
             <h3 className="font-bold text-gray-900 text-lg mb-1 tracking-tight">Solutions</h3>
             <ul className="flex flex-col gap-2">
-              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Agencies</span></li>
-              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Content Teams</span></li>
-              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Creators</span></li>
-              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Freelancers</span></li>
-              <li><span onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="hover:text-orange-500 transition-colors cursor-pointer">For Non-Technical Teams</span></li>
+              <li><a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">For Agencies</a></li>
+              <li><a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">For Content Teams</a></li>
+              <li><a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">For Creators</a></li>
+              <li><a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">For Freelancers</a></li>
+              <li><a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">For Non-Technical Teams</a></li>
             </ul>
           </nav>
 

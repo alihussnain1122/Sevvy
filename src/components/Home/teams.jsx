@@ -41,7 +41,8 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               No shared context. No single view.
             </p>
-            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="inline-flex items-center 
+            <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+            <button className="inline-flex items-center 
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
@@ -66,7 +67,7 @@ const Teams = () => {
                 </svg>
 
               </span>
-            </button>
+            </button>            </a>         
 
           </div>
 
@@ -95,7 +96,8 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Manual publishing, delayed posting
             </p>
-            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="inline-flex items-center 
+            <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+            <button className="inline-flex items-center 
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
@@ -121,6 +123,7 @@ const Teams = () => {
 
               </span>
             </button>
+            </a>
 
           </div>
 
@@ -149,7 +152,8 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Too many voices. No clear signal.
             </p>
-            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="inline-flex items-center 
+            <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+            <button className="inline-flex items-center 
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
@@ -175,6 +179,7 @@ const Teams = () => {
 
               </span>
             </button>
+            </a>
 
           </div>
 
@@ -203,7 +208,9 @@ const Teams = () => {
             <p className="text-gray-900 italic mb-8 font-bold">
               Internal expense rises, reducing profits
             </p>
-            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="inline-flex items-center 
+                    
+            <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+            <button  className="inline-flex items-center 
                    bg-gradient-to-r from-orange-500 to-orange-200  
                    text-white 
                    pl-8 pr-3 py-1 
@@ -229,7 +236,7 @@ const Teams = () => {
 
               </span>
             </button>
-
+            </a>
           </div>
 
           {/* Left Image */}

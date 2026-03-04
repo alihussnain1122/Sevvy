@@ -94,9 +94,11 @@ const Vision = () => {
 
           {/* CTA Button */}
           <motion.div {...fadeUp(0.2)} className="text-center mt-10 md:mt-16">
-            <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-6 md:px-10 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white font-semibold rounded-2xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
+<a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+            <button className="px-6 md:px-10 py-3 bg-gradient-to-r from-orange-500 to-orange-200 text-white font-semibold rounded-2xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-orange-200 cursor-pointer">
               Build the System Your Team Deserves
             </button>
+            </a>
           </motion.div>
 
         </div>

@@ -148,12 +148,13 @@ const Pricing = () => {
 
                   {/* Card Footer */}
                   <div>
-                    <button 
-                      onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
-                      className={`w-full py-3.5 px-6 rounded-lg text-sm font-semibold hover:shadow-xl hover:orange-200 transition-all duration-300 border-2 cursor-pointer ${isPremium ? 'bg-white text-orange-500 border-white' : 'bg-white text-black border-[#FF8C42]'}`}
+                            <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+
+                    <button                       className={`w-full py-3.5 px-6 rounded-lg text-sm font-semibold hover:shadow-xl hover:orange-200 transition-all duration-300 border-2 cursor-pointer ${isPremium ? 'bg-white text-orange-500 border-white' : 'bg-white text-black border-[#FF8C42]'}`}
                     >
                       {plan.buttonText}
                     </button>
+                    </a>
                   </div>
                 </div>
               );

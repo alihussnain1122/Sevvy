@@ -181,9 +181,11 @@ const Inside = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mt-4 md:mt-12"
         >
-          <button onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }} className="px-10 py-3.5 bg-gradient-to-r from-orange-500 to-orange-300 text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-all  hover:shadow-orange-200 cursor-pointer">
+<a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
+          <button className="px-10 py-3.5 bg-gradient-to-r from-orange-500 to-orange-300 text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-all  hover:shadow-orange-200 cursor-pointer">
             Build Your Workflow Your Way
           </button>
+          </a>
         </motion.div>
       </div>
     </section>

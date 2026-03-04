@@ -50,8 +50,8 @@ const CreativeJourneySection = () => {
             </motion.p>
 
             {/* Button */}
+            <a href="https://work.sevvy.app/login" target="_blank" rel="noopener noreferrer">
             <motion.button
-              onClick={() => { window.location.href = 'https://work.sevvy.app/login'; }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -67,6 +67,7 @@ const CreativeJourneySection = () => {
                 </svg>
               </div>
             </motion.button>
+            </a>
 
             {/* Sub-text below CTA */}
             <motion.p
